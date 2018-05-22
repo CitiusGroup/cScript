@@ -1,0 +1,1447 @@
+---
+app:
+  gdprmgt:
+    name:
+      en: GDPR Management
+      fi: GDPR-hallinta
+    abbreviation: cwgdpr
+    icon: gdprmgticon
+    requires:
+    - app: cwapps
+    - app: cwcore
+    - app: cwitam
+    version: "1.0.1"
+views:
+  leftPanel:
+    gdprmgtmenu:
+      type: menu
+      title:
+        en: GDPR Management menu
+        fi: GDPR-hallinnan valikko
+      items:
+        frontpageitem:
+          title:
+            en: Welcome!
+            fi: Tervetuloa!
+          icon: cwcore.homeicon
+          listeners:
+            click: onFrontPageClick
+        personaldataregistryitem:
+          title:
+            en: Personal Data Registries
+            fi: Henkilörekisterit
+          icon: personaldataregistryicon
+          listeners:
+            click: onPersonalDataRegistryClick
+        usecaseitem:
+          title:
+            en: Use Cases
+            fi: Käsittelytoimet
+          icon: usecaseicon
+          listeners:
+            click: onUseCaseClick
+        systemitem:
+          title:
+            en: Systems
+            fi: Järjestelmät
+          icon: cwitam.systemicon
+          listeners:
+            click: onSystemClick
+        contractitem:
+          title:
+            en: Contracts
+            fi: Sopimukset
+          icon: cwapps.documenticon
+          listeners:
+            click: onContractClick
+        organizationitem:
+          title:
+            en: Organizations
+            fi: Organisaatiot
+          icon: cwapps.organizationicon
+          listeners:
+            click: onOrganizationClick
+        contactitem:
+          title:
+            en: Contacts
+            fi: Yhteyshenkilöt
+          icon: cwapps.contacticon
+          listeners:
+            click: onContactClick
+        accessroleitem:
+          title:
+            en: Access Roles
+            fi: Pääsyoikeusroolit
+          icon: accessroleicon
+          listeners:
+            click: onAccessRoleClick
+        taskitem:
+          title:
+            en: Tasks
+            fi: Tehtävät
+          icon: cwapps.taskicon
+          listeners:
+            click: onTaskClick
+        fileitem:
+          title:
+            en: Files
+            fi: Tiedostot
+          icon: cwcore.fileicon
+          listeners:
+            click: onFileClick
+        reportitem:
+          title:
+            en: Reports
+            fi: Tulostukset
+          icon: cwcore.reporticon
+          items:
+            personaldataregistryreportitem:
+              title:
+                en: Personal Data Registry
+                fi: Henkilörekisterit
+              listeners:
+                click: onPersonalDataRegistryReportClick
+            registriesbyclassificationsreportitem:
+              title:
+                en: Registries by Classifications
+                fi: Henkilörekisterit luokittain
+              listeners:
+                click: onRegistriesByClassificationsReportClick
+            privacypolicyreportitem:
+              title:
+                en: Privace Policy
+                fi: Tietosuojaseloste
+              listeners:
+                click: onPrivacyPolicyReportClick
+            riskassessmentreportitem:
+              title:
+                en: List of Risks
+                fi: Rekisterien riskilistaus
+              listeners:
+                click: onRiskAssessmentReportClick
+            completionstatusreportitem:
+              title:
+                en: Completion Status
+                fi: Valmistumisasteet
+              listeners:
+                click: onCompletionStatusReportClick
+        settingsitem:
+          title:
+            en: Settings
+            fi: Perustiedot
+          icon: cwcore.settingicon
+          items:
+            personaldatatypespecialitem:
+              title:
+                en: Special Personal Data Types
+                fi: Erityiset henkilötietoryhmät
+              listeners:
+                click: onPersonalDataTypeSpecialClick
+            gdprstatusitem:
+              title:
+                en: GDPR Status
+                fi: GDPR-tila
+              listeners:
+                click: onGDPRStatusClick
+            personaldatatypeitem:
+              title:
+                en: Personal Data Types
+                fi: Henkilötietoryhmät
+              listeners:
+                click: onPersonalDataTypeClick
+            systemhostingtypeitem:
+              title:
+                en: System Hosting Types
+                fi: Järjestelmän hostaustyypit
+              listeners:
+                click: onSystemHostingTypeClick
+            systemdatalocationitem:
+              title:
+                en: System Data Locations
+                fi: Järjestelmän tietojen sijainnit
+              listeners:
+                click: onSystemDataLocationsClick
+            personaldataregistrybasisitem:
+              title:
+                en: Personal Data Registry Basis
+                fi: Käsittelyperusteet
+              listeners:
+                click: onPersonalDataRegistryBasisClick
+            personaldataregistryroleitem:
+              title:
+                en: Personal Data Registry Roles
+                fi: Käsittelyroolit
+              listeners:
+                click: onPersonalDataRegistryRoleClick
+            usecasetypeitem:
+              title:
+                en: Use Case Types
+                fi: Käsittelytoimen tyypit
+              listeners:
+                click: onUseCaseTypeClick
+            systemlogdatatypeitem:
+              title:
+                en: System Log Data Types
+                fi: Logiin kerättävien tietojen tyypit
+              listeners:
+                click: onSystemLogDataTypeClick
+            accessrolebasisitem:
+              title:
+                en: Basis for Access Role
+                fi: Roolin pääsyoikeusperusteet
+              listeners:
+                click: onAccessRoleBasisClick
+            accessrolelevelitem:
+              title:
+                en: Access Role Levels
+                fi: Roolin pääsyoikeustasot
+              listeners:
+                click: onAccessRoleLevelClick
+            contractgdprcomplianceitem:
+              title:
+                en: GDPR Compliances of Contract
+                fi: Sopimuksen GDPR-yhteensopivuudet
+              listeners:
+                click: onContractGDPRComplianceClick
+            contractvalidityperiodtypeitem:
+              title:
+                en: Contract Validity Period Types
+                fi: Sopimuksen keston tyypit
+              listeners:
+                click: onContractValidityPeriodTypeClick
+            personaldataregistrystoragefileitem:
+              title:
+                en: Storage Files
+                fi: Tallennustavat (tiedosto)
+              listeners:
+                click: onPersonalDataRegistryStorageFileClick
+            recurringeventtypeitem:
+              title:
+                en: Recurring Event Types
+                fi: Toistuvan tapahtuman tyypit
+              listeners:
+                click: onRecurringEventTypeClick
+            systemauthenticationmethoditem:
+              title:
+                en: System Authentication Methods
+                fi: Tunnistautumismenetelmät
+              listeners:
+                click: onSystemAuthenticationMethodClick
+  mainPanel:
+    meta:
+      grid:
+        doubleclickaction: edit
+    accessrole:
+      title:
+        en: Access Roles
+        fi: Pääsyoikeusroolit
+      type: grid
+      table: CWGDPR_AccessRole
+      icon: accessroleicon
+      formView: accessroleform
+      listViews:
+      - accessrolelist
+    accessrolebasis:
+      title:
+        en: Basis for Access Role
+        fi: Roolin pääsyoikeusperusteet
+      type: grid
+      table: CWGDPR_AccessRoleBasis
+      icon: cwcore.settingicon
+      formView: accessrolebasisform
+      listViews:
+      - accessrolebasislist
+    accessrolelevel:
+      title:
+        en: Access Role Levels
+        fi: Roolin pääsyoikeustasot
+      type: grid
+      table: CWGDPR_AccessRoleLevel
+      icon: cwcore.settingicon
+      formView: accessrolelevelform
+      listViews:
+      - accessrolelevellist
+    gdprstatus:
+      title:
+        en: GDPR Status
+        fi: GDPR-tila
+      type: grid
+      table: CWGDPR_Status
+      icon: cwcore.settingicon
+      formView: gdprstatusform
+      listViews:
+      - gdprstatuslist
+    frontpage:
+      title:
+        en: Welcome to GDPR Application!
+        fi: Tervetuloa GDPR sovellukseen!
+      type: page
+      ci:
+        fi: cwgdpr-6p3p
+        en: cwgdpr-3ter
+    personaldataregistry:
+      title:
+        en: Personal Data Registries
+        fi: Henkilörekisterit
+      type: grid
+      table: CWGDPR_PersonalDataRegistry
+      icon: personaldataregistryicon
+      formView: personaldataregistryform
+      listViews:
+      - personaldataregistrylist
+    task:
+      title:
+        en: Tasks
+        fi: Tehtävät
+      type: grid
+      table: CWAPPS_Task
+      formView: taskform
+      icon: cwapps.taskicon
+      listViews:
+      - tasklist
+    file:
+      title:
+        en: Files
+        fi: Tiedostot
+      type: grid
+      table: CWCORE_File
+      icon: cwcore.fileicon
+      listViews:
+      - filelist
+    contact:
+      title:
+        en: Contacts
+        fi: Yhteyshenkilöt
+      type: grid
+      table: CWAPPS_Contact
+      formView: contactform
+      icon: cwapps.contacticon
+      listViews:
+      - contactlist
+    contract:
+      title:
+        en: Contracts
+        fi: Sopimukset
+      type: grid
+      table: CWAPPS_Document
+      formView: contractform
+      icon: cwapps.documenticon
+      listViews:
+      - contractlist
+    contractgdprcompliance:
+      title:
+        en: GDPR Compliances of Contract
+        fi: Sopimuksen GDPR-yhteensopivuudet
+      type: grid
+      table: CWGDPR_ContractGDPRCompliance
+      icon: cwcore.settingicon
+      formView: contractgdprcomplianceform
+      listViews:
+      - contractgdprcompliancelist
+    contractvalidityperiodtype:
+      title:
+        en: Contract Validity Period Types
+        fi: Sopimuksen keston tyypit
+      type: grid
+      table: CWGDPR_ContractValidityPeriodType
+      icon: cwcore.settingicon
+      formView: contractvalidityperiodtypeform
+      listViews:
+      - contractvalidityperiodtypelist
+    organization:
+      title:
+        en: Organizations
+        fi: Organisaatiot
+      type: grid
+      table: CWAPPS_Organization
+      formView: organizationform
+      icon: cwapps.organizationicon
+      listViews:
+      - organizationgdprlist
+      - cwapps.organizationlist
+    system:
+      title:
+        en: Systems
+        fi: Järjestelmät
+      type: grid
+      table: CWITAM_System
+      icon: cwitam.systemicon
+      formView: systemform
+      listViews:
+      - systemalist
+    personaldataregistrybasis:
+      title:
+        en: Personal Data Registry Basis
+        fi: Käsittelyperusteet
+      type: grid
+      table: CWGDPR_PersonalDataRegistryBasis
+      icon: cwcore.settingicon
+      formView: personaldataregistrybasisform
+      listViews:
+      - personaldataregistrybasislist
+    personaldataregistryrole:
+      title:
+        en: Personal Data Registry Roles
+        fi: Käsittelyroolit
+      type: grid
+      table: CWGDPR_PersonalDataRegistryRole
+      icon: cwcore.settingicon
+      formView: personaldataregistryroleform
+      listViews:
+      - personaldataregistryrolelist
+    personaldataregistrystoragefile:
+      title:
+        en: Storage Files
+        fi: Tallennustavat (tiedosto)
+      type: grid
+      table: CWGDPR_PersonalDataRegistryStorageFile
+      icon: cwcore.settingicon
+      formView: personaldataregistrystoragefileform
+      listViews:
+      - personaldataregistrystoragefilelist
+    personaldataregistryreport:
+      title:
+        en: GDPR Report - Personal Data Registries
+        fi: GDPR-raportti - Henkilörekisterit
+      type: page
+      ci:
+        fi: cwgdpr-2mrz
+        en: cwgdpr-2mrz
+    personaldatatype:
+      title:
+        en: Personal Data Types
+        fi: Henkilötietoryhmät
+      type: grid
+      table: CWGDPR_PersonalDataType
+      icon: cwcore.settingicon
+      formView: personaldatatypeform
+      listViews:
+      - personaldatatypelist
+    personaldatatypespecial:
+      title:
+        en: Special Personal Data Types
+        fi: Erityiset henkilötietoryhmät
+      type: grid
+      table: CWGDPR_PersonalDataTypeSpecial
+      icon: cwcore.settingicon
+      formView: personaldatatypespecialform
+      listViews:
+      - personaldatatypespeciallist
+    privacypolicyreport:
+      title:
+        en: GDPR Report - Privacy Policy
+        fi: GDPR-raportti - Tietosuojaseloste
+      type: page
+      ci:
+        fi: cwgdpr-9fxm
+        en: cwgdpr-9fxm
+    recurringeventtype:
+      title:
+        en: Recurring Event Types
+        fi: Toistuvan tapahtuman tyypit
+      type: grid
+      table: CWGDPR_RecurringEventType
+      icon: cwcore.settingicon
+      formView: recurringeventtypeform
+      listViews:
+      - recurringeventtypelist
+    registriesbyclassificationsreport:
+      title:
+        en: GDPR Report - Registries by Classifications
+        fi: GDPR-raportti - Henkilörekisterit luokittain
+      type: page
+      ci:
+        fi: cwgdpr-f82n
+        en: cwgdpr-f82n
+    riskassessmentreport:
+      title:
+        en: GDPR Report - Risk Assessment
+        fi: GDPR-raportti - Riskiarvio
+      type: page
+      ci:
+        fi: cwgdpr-6263
+        en: cwgdpr-6263
+    completionstatusreport:
+      title:
+        en: GDPR Report - Completion Status
+        fi: GDPR-raportti - Valmistumisasteet
+      type: page
+      ci:
+        fi: cwgdpr-3fxk
+        en: cwgdpr-3fxk
+    systemauthenticationmethod:
+      title:
+        en: System Authentication Methods
+        fi: Tunnistautumismenetelmät
+      type: grid
+      table: CWGDPR_SystemAuthenticationMethod
+      icon: cwcore.settingicon
+      formView: systemauthenticationmethodform
+      listViews:
+      - systemauthenticationmethodlist
+    systemdatalocation:
+      title:
+        en: System Data Locations
+        fi: Järjestelmän tietojen sijainnit
+      type: grid
+      table: CWGDPR_SystemDataLocation
+      icon: cwcore.settingicon
+      formView: systemdatalocationform
+      listViews:
+      - systemdatalocationlist
+    systemhostingtype:
+      title:
+        en: System Hosting Types
+        fi: Järjestelmän hostaustyypit
+      type: grid
+      table: CWGDPR_SystemHostingType
+      icon: cwcore.settingicon
+      formView: systemhostingtypeform
+      listViews:
+      - systemhostingtypelist
+    systemlogdatatype:
+      title:
+        en: System Log Data Types
+        fi: Logiin kerättävien tietojen tyypit
+      type: grid
+      table: CWGDPR_SystemLogDataType
+      icon: cwcore.settingicon
+      formView: systemlogdatatypeform
+      listViews:
+      - systemlogdatatypelist
+    usecase:
+      title:
+        en: Use Cases
+        fi: Käsittelytoimet
+      type: grid
+      table: CWGDPR_UseCase
+      icon: usecaseicon
+      formView: usecaseform
+      listViews:
+      - usecaselist
+    usecasetype:
+      title:
+        en: Use Case Types
+        fi: Käsittelytoimen tyypit
+      type: grid
+      table: CWGDPR_UseCaseType
+      icon: cwcore.settingicon
+      formView: usecasetypeform
+      listViews:
+      - usecasetypelist
+models:
+  tables:
+    CWGDPR_PersonalDataRegistry:
+      icon: personaldataregistryicon
+    CWGDPR_PersonalDataRegistryBasis:
+      icon: cwcore.settingicon
+    CWGDPR_PersonalDataRegistryRole:
+      icon: cwcore.settingicon
+    CWGDPR_PersonalDataRegistryStorageFile:
+      icon: cwcore.settingicon
+controllers:
+  constructor:
+    url: frontpageitem
+  onAccessRoleClick:
+    url: accessrole
+  onAccessRoleBasisClick:
+    url: accessrolebasis
+  onAccessRoleLevelClick:
+    url: accessrolelevel
+  onCompletionStatusReportClick:
+    url: completionstatusreport
+  onContactClick:
+    url: contact
+  onContractClick:
+    url: contract
+  onContractGDPRComplianceClick:
+    url: contractgdprcompliance
+  onContractValidityPeriodTypeClick:
+    url: contractvalidityperiodtype
+  onFileClick:
+    url: file
+  onFrontPageClick:
+    url: frontpage
+  onGDPRStatusClick:
+    url: gdprstatus
+  onOrganizationClick:
+    url: organization
+  onPersonalDataRegistryClick:
+    url: personaldataregistry
+  onPersonalDataRegistryBasisClick:
+    url: personaldataregistrybasis
+  onPersonalDataRegistryRoleClick:
+    url: personaldataregistryrole
+  onPersonalDataRegistryReportClick:
+    url: personaldataregistryreport
+  onPersonalDataRegistryStorageFileClick:
+    url: personaldataregistrystoragefile
+  onPersonalDataTypeClick:
+    url: personaldatatype
+  onPersonalDataTypeSpecialClick:
+    url: personaldatatypespecial
+  onPrivacyPolicyReportClick:
+    url: privacypolicyreport
+  onRecurringEventTypeClick:
+    url: recurringeventtype
+  onRegistriesByClassificationsReportClick:
+    url: registriesbyclassificationsreport
+  onRiskAssessmentReportClick:
+    url: riskassessmentreport
+  onSystemAuthenticationMethodClick:
+    url: systemauthenticationmethod
+  onSystemClick:
+    url: system
+  onSystemDataLocationsClick:
+    url: systemdatalocation
+  onSystemHostingTypeClick:
+    url: systemhostingtype
+  onSystemLogDataTypeClick:
+    url: systemlogdatatype
+  onTaskClick:
+    url: task
+  onUseCaseClick:
+    url: usecase
+  onUseCaseTypeClick:
+    url: usecasetype
+definitions:
+  listViews:
+    accessrolelist:
+      name:
+        en: Access Roles
+        fi: Pääsyoikeusroolit
+      table: CWGDPR_AccessRole
+      csql: /CWGDPR_AccessRole{Name+,CIStatus,Description,BasisCIs,LevelCIs,AuditRecurrenceCIs,RelatedOrganizationCIs}
+    accessrolebasislist:
+      name:
+        en: Basis for Access Role
+        fi: Roolin pääsyoikeusperusteet
+      table: CWGDPR_AccessRoleBasis
+      csql: /CWGDPR_AccessRoleBasis{NameFI+}
+    accessrolelevellist:
+      name:
+        en: Access Role Levels
+        fi: Roolin pääsyoikeustasot
+      table: CWGDPR_AccessRoleLevel
+      csql: /CWGDPR_AccessRoleLevel{NameFI+}
+    contactlist:
+      name:
+        en: Contacts
+        fi: Yhteyshenkilöt
+      table: CWAPPS_Contact
+      csql: /CWAPPS_Contact{Name,OrganizationCI,Email,Mobile}.sort(Name+)
+    contractlist:
+      name:
+        en: Contracts
+        fi: Sopimukset
+      table: CWAPPS_Document
+      csql: /CWAPPS_Document{StartTime,Name,CIStatus,DescriptionShort,@CWGDPR_Document.VendorCIs,@CWGDPR_Document.GDPRComplianceCI}.sort(StartTime-,Name+).filter(CI!~'-')
+    contractgdprcompliancelist:
+      name:
+        en: GDPR Compliances of Contract
+        fi: Sopimuksen GDPR-yhteensopivuudet
+      table: CWGDPR_ContractGDPRCompliance
+      csql: /CWGDPR_ContractGDPRCompliance{NameFI+}
+    contractvalidityperiodtypelist:
+      name:
+        en: Contract Validity Period Types
+        fi: Sopimuksen keston tyypit
+      table: CWGDPR_ContractValidityPeriodType
+      csql: /CWGDPR_ContractValidityPeriodType{NameFI+}
+    filelist:
+      name:
+        en: Files
+        fi: Tiedostot
+      table: CWCORE_File
+      csql: /CWCORE_File{IconBase64,CreatedTime,ModifiedTime,Name,Description}.sort(CreatedTime-)
+    gdprstatuslist:
+      name:
+        en: GDPR Status
+        fi: GDPR-tila
+      table: CWGDPR_Status
+      csql: /CWGDPR_Status{NameFI,Value+}
+    organizationgdprlist:
+      name:
+        en: Organizations (GDPR)
+        fi: Organisaatiot (GDPR)
+      table: CWAPPS_Organization
+      csql: /CWAPPS_Organization{Name+,Email,Tel}
+    personaldataregistrylist:
+      name:
+        en: Personal Data Registries
+        fi: Henkilörekisterit
+      table: CWGDPR_PersonalDataRegistry
+      csql: /CWGDPR_PersonalDataRegistry{Name+,CIStatus,Description,OwnerCI,BasisCI,StorageSystemCIs}
+    personaldataregistrybasislist:
+      name:
+        en: Personal Data Registry Basis
+        fi: Käsittelyperusteet
+      table: CWGDPR_PersonalDataRegistryBasis
+      csql: /CWGDPR_PersonalDataRegistryBasis{NameFI+}
+    personaldataregistryrolelist:
+      name:
+        en: Personal Data Registry Roles
+        fi: Käsittelyroolit
+      table: CWGDPR_PersonalDataRegistryRole
+      csql: /CWGDPR_PersonalDataRegistryRole{NameFI+}
+    personaldataregistrystoragefilelist:
+      name:
+        en: Storage Files
+        fi: Tallennustavat (tiedosto)
+      table: CWGDPR_PersonalDataRegistryStorageFile
+      csql: /CWGDPR_PersonalDataRegistryStorageFile{NameFI+,RiskLevel}
+    personaldatatypelist:
+      name:
+        en: Personal Data Types
+        fi: Henkilötietoryhmät
+      table: CWGDPR_PersonalDataType
+      csql: /CWGDPR_PersonalDataType{NameFI+,RiskLevel}
+    personaldatatypespeciallist:
+      name:
+        en: Special Personal Data Types
+        fi: Erityiset henkilötietoryhmät
+      table: CWGDPR_PersonalDataTypeSpecial
+      csql: /CWGDPR_PersonalDataTypeSpecial{NameFI+,RiskLevel}
+    recurringeventtypelist:
+      name:
+        en: Recurring Event Types
+        fi: Toistuvan tapahtuman tyypit
+      table: CWGDPR_RecurringEventType
+      csql: /CWGDPR_RecurringEventType{NameFI+}
+    systemalist:
+      name:
+        en: Systems
+        fi: Järjestelmät
+      table: CWITAM_System
+      csql: /CWITAM_System{Name,CIStatus,OwnerOrganizationCI,VendorOrganizationCIs}.sort(Name+)
+    systemauthenticationmethodlist:
+      name:
+        en: System Authentication Methods
+        fi: Tunnistautumismenetelmät
+      table: CWGDPR_SystemAuthenticationMethod
+      csql: /CWGDPR_SystemAuthenticationMethod{NameFI+}
+    systemdatalocationlist:
+      name:
+        en: System Data Locations
+        fi: Järjestelmän tietojen sijainnit
+      table: CWGDPR_SystemDataLocation
+      csql: /CWGDPR_SystemDataLocation{NameFI+}
+    systemhostingtypelist:
+      name:
+        en: System Hosting Types
+        fi: Järjestelmän hostaustyypit
+      table: CWGDPR_SystemHostingType
+      csql: /CWGDPR_SystemHostingType{NameFI+}
+    systemlogdatatypelist:
+      name:
+        en: System Log Data Types
+        fi: Logiin kerättävien tietojen tyypit
+      table: CWGDPR_SystemLogDataType
+      csql: /CWGDPR_SystemLogDataType{NameFI+}
+    tasklist:
+      name:
+        en: Tasks
+        fi: Tehtävät
+      table: CWAPPS_Task
+      csql: /CWAPPS_Task{Name,Time,StatusCI,UrgencyCI,@CWGDPR_Task.PersonalDataRegistryCI,@CWGDPR_Task.SystemCI}.sort(StatusCI.Order,UrgencyCI.Order)
+    usecaselist:
+      name:
+        en: Use Cases
+        fi: Käsittelytoimet
+      table: CWGDPR_UseCase
+      # 26.12.2017/JJ: Väliaikaisesti pois päältä, koska CSQL antaa virheen (liian monta CI-kenttää)
+      # csql: /CWGDPR_UseCase{Name+,Description,BasisCI,TypeCIs,PersonalDataTypeCIs,PersonalDataTypeSpecialCIs,DataSourceOrganizationCIs,DataSourceContactCIs,SystemCIs,VendorOrganizationCIs,IsCrossBorderDataTransfer,IsProfiling}
+      csql: /CWGDPR_UseCase{Name+,CIStatus,Description,BasisCI,TypeCIs,PersonalDataTypeCIs,PersonalDataTypeSpecialCIs,DataSourceOrganizationCIs}
+    usecasetypelist:
+      name:
+        en: Use Case Types
+        fi: Käsittelytoimen tyypit
+      table: CWGDPR_UseCaseType
+      csql: /CWGDPR_UseCaseType{NameFI+}
+  formViews:
+    meta:
+      propertytype:
+        CWCORE_Text:
+          height: 3
+          adjustHeight: true
+          # 27.12.2017/JJ: Ei toimi vielä
+          # maxHeight: 10
+    personaldataregistryform:
+      name: Henkilörekisterit
+      groups:
+        namegroup:
+          name: Nimi, omistaja ja yhteyshenkilöt
+          fields:
+            namefield:
+              property: Name
+              #label: Nimi
+            fieldset1:
+              fields:
+                ownercifield:
+                  property: OwnerCI
+                  #label: Rekisterin omistaja
+                rolecifield:
+                  property: RoleCIs
+                  #label: Käsittelyroolit
+            fieldset2:
+              fields:
+                contactfield:
+                  property: Contact
+                  #label: Rekisterin yhteyshenkilö
+                contactcifield:
+                  property: ContactCI
+                  #label: Rekisterin yhteyshenkilö (linkki)
+            fieldset3:
+              fields:
+                dataprotectionofficerfield:
+                  property: DataProtectionOfficer
+                  #label: Tietosuojavastaava
+                dataprotectionofficercifield:
+                  property: DataProtectionOfficerCI
+                  #label: Tietosuojavastaava (linkki)
+        descriptiongroup:
+          name: Kuvaus ja käsittelytarkoitus
+          fields:
+            basiscifield:
+              property: BasisCI
+              #label: Käsittelyperuste
+            purposefield:
+              property: Purpose
+              #label: Tarkoitus
+            descriptionfield:
+              property: Description
+              #label: Kuvaus
+        contentgroup:
+          name: Sisältö ja tietolähteet
+          fields:
+            personaldatatypecisfield:
+              property: PersonalDataTypeCIs
+              #label: PersonalDataTypeCIs
+            datamaintenancefield:
+              property: DataMaintenance
+              #label: Mistä rekisterin henkilötiedot saadaan (säännönmukaiset tietolähteet)
+        sensitivegroup:
+          name: Arkaluonteiset tiedot ja riskit
+          fields:
+            fieldset1:
+              fields:
+                issocialsecuritynumberfield:
+                  property: IsSocialSecurityNumber
+                  #label: Sisältää henkilötunnuksen?
+                isdataofchildfield:
+                  property: IsDataOfChild
+                  #label: Käsitelläänkö lasten tietoja?
+            fieldset2:
+              fields:
+                ismedicalinformationfield:
+                  property: IsMedicalInformation
+                  #label: Sisältää terveystietoja?
+                issensitivedatafield:
+                  property: IsSensitiveData
+                  #label: Sisältää erityisiä henkilötietoja?
+            fieldset3:
+              fields:
+                personaldatatypespecialcisfield:
+                  property: PersonalDataTypeSpecialCIs
+                  #label: PersonalDataTypeSpecialCIs
+            fieldset4:
+              fields:
+                highriskdatatypefield:
+                  property: HighRiskDataType
+                  #label: Riskiarvio
+        transfergroup:
+          name: Tietojen luovutukset
+          fields:
+            datatransferfield:
+              property: DataTransfer
+              #label: Rekisterin säännönmukaiset tietojen luovutukset
+            iscrossborderdatatransferfield:
+              property: IsCrossBorderDataTransfer
+              #label: Luovutetaanko tietoja EU/ETA-alueen ulkopuolelle
+            crossborderdatatransferdescriptionfield:
+              property: CrossBorderDataTransferDescription
+              #label: Jos, niin minne ja miten suojataan?
+        profilinggroup:
+          name: Profilointi, tietojen poisto ja suojaus
+          fields:
+            profilingfield:
+              property: Profiling
+              #label: Tehdäänkö profilointia tai automaattista päätöksentekoa
+            dataerasefield:
+              property: DataErase
+              #label: Miten ja milloin henkilötiedot poistetaan
+            otherlegislationfield:
+              property: OtherLegislation
+              #label: Säilytykseen liittyvät lait ja vaatimukset
+            dataaccessfield:
+              property: DataAccess
+              #label: Rekisterin käsittelijät
+            registerprotectionfield:
+              property: RegisterProtection
+              #label: Miten rekisteri on suojattu
+        systemsgroup:
+          name: Järjestelmät ja tulosteet
+          fields:
+            storagesystemcisfield:
+              property: StorageSystemCIs
+              #label: Tietojärjestelmät 
+            outputfield:
+              property: Output
+              #label: Paperi ja tiedostotulosteet, joissa henkilötietoja esiintyy
+        rightsandadditionalinformationgroup:
+          name: Oikeudet ja lisätiedot
+          fields:
+            dataverifyfield:
+              property: DataVerify
+              #label: Miten rekisteritietojen tarkastus ja oikaisu tapahtuu
+            righttocomplainfield:
+              property: RightToComplain
+              #label: Valitusoikeus valvontaviranomaiselle
+            moreinformationfield:
+              property: MoreInformation
+              #label: Lisätietoja
+            linkfield:
+              property: Link
+              #label: Linkkejä
+            statuscifield:
+              property: StatusCI
+              #label: Tila
+    systemform:
+      name: Järjestelmät
+      groups:
+        systemownerandcontactsgroup:
+          name: Omistaja ja yhteyshenkilöt
+          fields:
+            fieldset1:
+              fields:
+                namefield:
+                  property: Name
+                  #label: Nimi
+                ownerorganizationcifield:
+                  property: OwnerOrganizationCI
+                  #label: Omistaja (organisaatio)
+            fieldset2:
+              fields:
+                descriptionfield:
+                  property: Description
+                  #label: Kuvaus
+            fieldset3:
+              fields:
+                ownercontactcifield:
+                  property: OwnerContactCI
+                  #label: Järjestelmävastaava
+                admincontactcisfield:
+                  property: AdminContactCIs
+                  #label: Pääkäyttäjät
+                itadministrationcontactcifield:
+                  property: ITAdministrationContactCI
+                  #label: Tietohallinnon yhteyshenkilö
+        systemvendorandhostinggroup:
+          name: Toimittaja ja hosting
+          fields:
+            vendororganizationcisfield:
+              property: VendorOrganizationCIs
+              #label: Toimittajat (organisaatiot)
+            vendorcontactcisfield:
+              property: VendorContactCIs
+              #label: Toimittajien yhteyshenkilöt
+            hostingtypecisfield:
+              property: "@CWGDPR_System.HostingTypeCIs"
+              #label: Järjestelmän hosting tyyppi
+        systempiiprocessinggroup:
+          name: Henkilötietojen käsittely
+          fields:
+            personaldatatypesfield:
+              property: "@CWGDPR_System.PersonalDataTypeCIs"
+              #label: Mitä henkilötietoja tallennetaan?
+            personaldatatypespecialcisfield:
+              property: "@CWGDPR_System.PersonalDataTypeSpecialCIs"
+              #label: Erityisiä henkilötietoryhmiä
+        datalocationandprofilinggroup:
+          name: Tietojen sijainti ja profilointi
+          fields:
+            iscrossborderdatatransferfield:
+              property: "@CWGDPR_System.IsCrossBorderDataTransfer"
+              #label: Siirtyvätkö tiedot käsittelytilanteessa EU:n ja ETA:n ulkopuolelle?
+            datalocationcisfield:
+              property: "@CWGDPR_System.DataLocationCIs"
+              #label: Missä tiedot sijaitsevat?
+            isprofilingfield:
+              property: "@CWGDPR_System.IsProfiling"
+              #label: Profilointia tai automaattista päätöksentekoa?
+        systemsecuritygroup:
+          name: Tietoturva
+          fields:
+            accessrolecisfield:
+              property: "@CWGDPR_System.AccessRoleCIs"
+              #label: Keillä on pääsy järjestelmään?
+            authenticationmethodcisfield:
+              property: "@CWGDPR_System.AuthenticationMethodCIs"
+              #label: Millaisia tunnistamistapoja käytetään?
+        systemlogsgroup:
+          name: Logit
+          fields:
+            isloggingfield:
+              property: "@CWGDPR_System.IsLogging"
+              #label: Kerääkö järjestelmä käyttäjälokitietoja?
+            logdatatypecisfield:
+              property: "@CWGDPR_System.LogDataTypeCIs"
+              #label: Mitä tietoja logi kerää?
+            logauditrecurrencecisfield:
+              property: "@CWGDPR_System.LogAuditRecurrenceCIs"
+              #label: Miten usein logeja tarkastellaan?
+            logretentionpolicyfield:
+              property: "@CWGDPR_System.LogRetentionPolicy"
+              #label: Kauanko logitietoja säilytetään?
+        systembackupgroup:
+          name: Varmuuskopiointi
+          fields:
+            backuprecurrencecisfield:
+              property: "@CWGDPR_System.BackupRecurrenceCIs"
+              #label: Kuinka usein järjetelmän varmuuskopioidaan?
+            backupsystemcisfield:
+              property: "@CWGDPR_System.BackupSystemCIs"
+              #label: Varmuuskopiointiin käytettävät järjestelmät
+            backupdescriptionfield:
+              property: "@CWGDPR_System.BackupDescription"
+              #label: Lisätietoja varmuuskopioinnista
+        #systemmoreinforgroup:
+          #name: Lisätietoja ja linkit
+          #fields:
+            #groupassociationfield:
+              #property: GroupAssociation
+              #label: Linkitykset
+            #associationcisfield:
+              #property: AssociationCIs
+              #label: Linkitykset
+            #tagcisfield:
+              #property: TagCIs
+              #label: Tagit
+    usecaseform:
+      name: Käsittelytoimet
+      groups:
+        usecasebasicinformationgroup:
+          name: Käsittelyn perustiedot
+          fields:
+            namefield:
+              property: Name
+              #label: Name
+            descriptionfield:
+              property: Description
+              #label: Description
+            basiscifield:
+              property: BasisCI
+              #label: BasisCI
+        usecasepiitypesgroup:
+          name: Rekisterit, toimet, henkilötiedot 
+          fields:
+            #storagesystemcisfield:
+              #property: StorageSystemCIs
+              #label: Tietojärjestelmät 
+            typecisfield:
+              property: TypeCIs
+              #label: TypeCIs
+            personaldatatypecisfield:
+              property: PersonalDataTypeCIs
+              #label: PersonalDataTypeCIs
+            personaldatatypespecialcisfield:
+              property: PersonalDataTypeSpecialCIs
+              #label: PersonalDataTypeSpecialCIs
+        usecasesourcegroup:
+          name: Tietolähteet
+          fields:
+            datasourceorganizationcisfield:
+              property: DataSourceOrganizationCIs
+              #label: DataSourceOrganizationCIs
+            datasourcecontactcisfield:
+              property: DataSourceContactCIs
+              #label: DataSourceContactCIs
+        usecasesystemspartnersgroup:
+          name: Järjestelmät ja kumppanit
+          fields:
+            systemcisfield:
+              property: SystemCIs
+              #label: SystemCIs
+            vendororganizationcisfield:
+              property: VendorOrganizationCIs
+              #label: VendorOrganizationCIs
+        usecasedatalocationandprofiling:
+          name: Tietojen siirto ja profilointi
+          fields:
+            iscrossborderdatatransferfield:
+              property: IsCrossBorderDataTransfer
+              #label: IsCrossBorderDataTransfer
+            isprofilingfield:
+              property: IsProfiling
+              #label: IsProfiling
+    accessroleform:
+      name: Pääsyoikeusroolit
+      groups:
+        usecasebasicinformationgroup:
+          name: Pääsyoikeusroolin perustiedot
+          fields:
+            namefield:
+              property: Name
+              #label: Name
+            descriptionfield:
+              property: Description
+              #label: Description
+        basisandrightsgroup:
+          name: Peruste ja käyttöoikeus
+          fields:
+            basiscisfield:
+              property: BasisCIs
+              #label: BasisCIs
+            levelcisfield:
+              property: LevelCIs
+              #label: LevelCIs
+            auditrecurrencecisfield:
+              property: AuditRecurrenceCIs
+              #label: AuditRecurrenceCIs
+        organdcontactgroup:
+          name: Organisaatiot ja kontaktit
+          fields:
+            relatedorganizationcisfield:
+              property: RelatedOrganizationCIs
+              #label: RelatedOrganizationCIs
+            relatedcontactcisfield:
+              property: RelatedContactCIs
+              #label: RelatedContactCIs
+    organizationform:
+      name: Organisaatiot
+      groups:
+        generalgroup:
+          name: Organisaation / yrityksen perustiedot
+          fields:
+            namefield:
+              property: Name
+              #label: Name
+            fieldset1:
+              fields:
+                addressfield:
+                  property: Address
+                  #label: Address
+                zipcodefield:
+                  property: ZIPCode
+                  #label: ZIPCode
+                cityfield:
+                  property: City
+                  #label: City
+            fieldset2:
+              fields:
+                telfield:
+                  property: Tel
+                  #label: Tel
+                emailfield:
+                  property: Email
+                  #label: Email
+                businessidfield:
+                  property: BusinessID
+                  #label: BusinessID
+            descriptionfield:
+              property: Description
+              #label: Description
+    contactform:
+      name: Yhteyshenkilöt
+      groups:
+        generalgroup:
+          name: Yhteyshenkilön perustiedot
+          fields:
+            fieldset1:
+              fields:
+                firstnamefield:
+                  property: FirstName
+                  #label: Etunimi
+                lastnamefield:
+                  property: LastName
+                  #label: Sukunimi
+                namefield:
+                  property: Name
+                  #label: Koko nimi
+            fieldset2:
+              fields:
+                mobilefield:
+                  property: Mobile
+                  #label: Matkapuhelin
+                emailfield:
+                  property: Email
+                  #label: Sähköposti
+            organizationfield:
+              property: OrganizationCI
+              #label: Organisaatio
+        #linkgroup:
+          #name: Linkit
+          #fields:
+            #associationfield:
+              #property: AssociationCIs
+              #label: Linkitykset
+            #tagfield:
+              #property: TagCIs
+              #label: Tagit
+    contractform:
+      name: Sopimukset
+      groups:
+        generalgroup:
+          name: Sopimuksen perustiedot ja voimassaolo
+          fields:
+            namefield:
+              property: Name
+              #label: Nimi
+            descriptionshortfield:
+              property: DescriptionShort
+              #label: Kuvaus
+            fieldset2:
+              fields:
+                validityperiodtypefield:
+                  property: "@CWGDPR_Document.ValidityPeriodTypeCI"
+                  #label: Sopimuksen keston tyyppi
+                starttimefield:
+                  property: StartTime
+                  #label: Alkamisaika
+                endtimefield:
+                  property: EndTime
+                  #label: Päättymisaika
+        companyandcontractgroup:
+          name: Yritykset ja yhteyshenkilöt
+          fields:
+            fieldset1:
+              fields:
+                clientfield:
+                  property: "@CWGDPR_Document.ClientCIs"
+                  #label: Asiakkaat
+                clientcontactsfield:
+                  property: "@CWGDPR_Document.ClientContactCIs"
+                  #label: Asiakkaan yhteyshenkilöt
+            fieldset2:
+              fields:
+                clientfield:
+                  property: "@CWGDPR_Document.VendorCIs"
+                  #label: Toimittajat
+                clientcontactsfield:
+                  property: "@CWGDPR_Document.VendorContactCIs"
+                  #label: Toimittajan yhteyshenkilöt
+        gdprcontractgroup:
+          name: Tietosuoja-asetuksen vaatimukset
+          fields:
+            personaldataregistry:
+              property: "@CWGDPR_Document.PersonalDataRegistryCI"
+              #label: Henkilörekisteri
+            systemsfield:
+              property: "@CWGDPR_Document.SystemCIs"
+              #label: Järjestelmät
+            gdprcompliancefield:
+              property: "@CWGDPR_Document.GDPRComplianceCI"
+              #label: GDPR-yhteensopivuus
+            statusfield:
+              property: "@CWGDPR_Document.StatusCI"
+              #label: Tila
+        #linkgroup:
+          #name: Linkit
+          #fields:
+            #associationfield:
+              #property: AssociationCIs
+              #label: Linkitykset
+            #tagfield:
+              #property: TagCIs
+              #label: Tagit
+    taskform:
+      name: GDPR-tehtävä
+      groups:
+        generalgroup:
+          name: Tehtävän perustiedot
+          fields:
+            namefield:
+              property: Name
+              #label: Nimi
+            fieldset2:
+              fields:
+                personaldataregistryfield:
+                  property: "@CWGDPR_Task.PersonalDataRegistryCI"
+                  #label: Henkilörekisteri
+                systemfield:
+                  property: "@CWGDPR_Task.SystemCI"
+                  #label: Järjestelmä
+            descriptionfield:
+              property: Description
+              #label: Kuvaus
+        schedulegroup:
+          name: Aikataulu, vastuu ja tila
+          fields:
+            fieldset1:
+              fields:
+                timefield:
+                  property: Time
+                  #label: Aika
+                organizationfield:
+                  property: OrganizationCI
+                  #label: Organisaatio
+                accountablefield:
+                  property: AccountableCI
+                  #label: Omistaja
+            fieldset2:
+              fields:
+                statusfield:
+                  property: StatusCI
+                  #label: Tehtävän tila
+                urgencyfield:
+                  property: UrgencyCI
+                  #label: Tehtävän kiireellisyys
+        #linkgroup:
+          #name: Linkit
+          #fields:
+            #associationfield:
+              #property: AssociationCIs
+              #label: Linkitykset
+            #tagfield:
+              #property: TagCIs
+              #label: Tagit
+    personaldatatypeform:
+      name: Henkilötietoryhmät
+      groups:
+        generalgroup:
+          name: Perustiedot
+          fields:
+            namefifield:
+              property: NameFI
+              #label: NameFI
+            risklevelfield:
+              property: RiskLevel
+              #label: RiskLevel
+    personaldatatypespecialform:
+      name: Erityiset henkilötietoryhmät
+      groups:
+        generalgroup:
+          name: Perustiedot
+          fields:
+            namefifield:
+              property: NameFI
+              #label: NameFI
+            risklevelfield:
+              property: RiskLevel
+              #label: RiskLevel
+    gdprstatusform:
+      name: GDPR-tila (status)
+      groups:
+        generalgroup:
+          name: Perustiedot
+          fields:
+            namefifield:
+              property: NameFI
+              #label: NameFI
+    systemhostingtypeform:
+      name: Järjestelmän hostaustyypit
+      groups:
+        generalgroup:
+          name: Perustiedot
+          fields:
+            namefifield:
+              property: NameFI
+              #label: NameFI
+    systemdatalocationform:
+      name: Järjestelmän tietojen sijainnit
+      groups:
+        generalgroup:
+          name: Perustiedot
+          fields:
+            namefifield:
+              property: NameFI
+              #label: NameFI
+    personaldataregistrybasisform:
+      name: Käsittelyperusteet
+      groups:
+        generalgroup:
+          name: Perustiedot
+          fields:
+            namefifield:
+              property: NameFI
+              #label: NameFI
+    personaldataregistryroleform:
+      name: Käsittelyroolit
+      groups:
+        generalgroup:
+          name: Perustiedot
+          fields:
+            namefifield:
+              property: NameFI
+              #label: NameFI
+    usecasetypeform:
+      name: Käsittelytoimen tyypit
+      groups:
+        generalgroup:
+          name: Perustiedot
+          fields:
+            namefifield:
+              property: NameFI
+              #label: NameFI
+    systemlogdatatypeform:
+      name: Logiin kerättävien tietojen tyypit
+      groups:
+        generalgroup:
+          name: Perustiedot
+          fields:
+            namefifield:
+              property: NameFI
+              #label: NameFI
+    accessrolebasisform:
+      name: Roolin pääsyoikeusperusteet
+      groups:
+        generalgroup:
+          name: Perustiedot
+          fields:
+            namefifield:
+              property: NameFI
+              #label: NameFI
+    accessrolelevelform:
+      name: Roolin pääsyoikeustasot
+      groups:
+        generalgroup:
+          name: Perustiedot
+          fields:
+            namefifield:
+              property: NameFI
+              #label: NameFI
+    contractgdprcomplianceform:
+      name: Sopimuksen GDPR-yhteensopivuus
+      groups:
+        generalgroup:
+          name: Perustiedot
+          fields:
+            namefifield:
+              property: NameFI
+              #label: NameFI
+    contractvalidityperiodtypeform:
+      name: Sopimuksen keston tyypit
+      groups:
+        generalgroup:
+          name: Perustiedot
+          fields:
+            namefifield:
+              property: NameFI
+              #label: NameFI
+    personaldataregistrystoragefileform:
+      name: Tallennustavat (tiedosto)
+      groups:
+        generalgroup:
+          name: Perustiedot
+          fields:
+            namefifield:
+              property: NameFI
+              #label: NameFI
+    recurringeventtypeform:
+      name: Toistuvan tapahtuman tyypit
+      groups:
+        generalgroup:
+          name: Perustiedot
+          fields:
+            namefifield:
+              property: NameFI
+              #label: NameFI
+    systemauthenticationmethodform:
+      name: Tunnistautumismenetelmät
+      groups:
+        generalgroup:
+          name: Perustiedot
+          fields:
+            namefifield:
+              property: NameFI
+              #label: NameFI

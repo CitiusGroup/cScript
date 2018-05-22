@@ -1,0 +1,902 @@
+title: A JSON Schema for cScript 1.1
+id: 'https://raw.githubusercontent.com/CitiusGroup/cScript-Specification/master/schemas/v1.1/schema.json'
+$schema: 'http://json-schema.org/draft-04/schema#'
+type: object
+description: This is the root document object of the cScript document.
+additionalProperties: false
+properties:
+
+  app:
+    additionalProperties: false
+    description: The object provides metadata about the application.
+    properties:
+      theme:
+        #$ref: '#/definitions/appTheme'
+        $ref: '#/definitions/appThemeVariables'
+        
+    patternProperties:
+      "^[a-zA-Z0-9]*$":
+        $ref: '#/definitions/appItem'
+
+  controllers:
+    $ref: '#/definitions/controllers'
+
+  definitions:
+    $ref: '#/definitions/definitions'
+
+  models:
+    $ref: '#/definitions/models'
+
+  views:
+    additionalProperties: false
+    description: Views of the application.
+    properties:
+      login:
+        $ref: '#/definitions/viewsLogin'
+      leftPanel:
+        $ref: '#/definitions/viewsLeftPanel'
+      mainPanel:
+        $ref: '#/definitions/viewsMainPanel'
+      meta:
+        $ref: '#/definitions/viewsMeta'
+      modal:
+        $ref: '#/definitions/viewsModal'
+
+definitions:
+  appItem:
+    description: Unique ID for the application. Will be used in the URL.
+    additionalProperties: false
+    required:
+      - name
+      - abbreviation
+      - version
+    properties:
+      abbreviation:
+        type: string
+        description: Abbreviation of the application. Must be lowercase and exactly 6 characters.
+        pattern: "^([a-z]{6})$"
+      defaultSite:
+        type: string
+        description: Default Site for the Application.
+      icon:
+        type: string
+        description: Icon for the application in BASE64 format
+      isInAppMenu:
+        description: Is application in the app menu. Default true.
+        type: boolean
+      name:
+        description: Name of the application.
+        anyOf:
+        - type: string
+        - additionalProperties: false
+          properties:
+            en:
+              description: Name in English
+              type: string
+            fi:
+              description: Name in Finnish
+              type: string
+      requires:
+        type: array
+        description: Applications required.
+      usernameAbbreviation:
+        description: Applications required.
+        properties:
+          abbreviation:
+            description: Abbreviation for the username.
+            type: string
+          username:
+            description: The username to be used with the abbreviation.
+            type: string
+      version:
+        type: string
+        description: Version of the application.
+
+  appTheme-valiaika:
+    description: The object provides theme for the application.
+    additionalProperties: false
+    properties:
+      primaryColor:
+        description: Primary color for the app.
+        type: string
+      fonts:
+        description: Fonts for the app.
+        additionalProperties: false
+        properties:
+          color:
+            description: Primary color for the font.
+            type: string
+          android:
+            description: Fonts for Android.
+            additionalProperties: false
+            properties:
+              fontFamily:
+                description: Primary Font Family for Android font.
+                type: string
+          ios:
+            description: Fonts for iOS.
+            additionalProperties: false
+            properties:
+              fontFamily:
+                description: Primary Font Family for iOS font.
+                type: string
+
+        color: "#000000"
+        android:
+          fontFamily: Roboto light
+        ios:
+          fontFamily: Avenir-Medium
+        noteluokka:
+          color: "#bbbdbf"
+        strongluokka:
+          color: "#0071b8"
+          fontSize: 16px
+          ios:
+            fontFamily: Avenir-Heavy
+          android:
+            fontFamily: Roboto
+
+  appTheme-vara:
+    description: The object provides theme for the application.
+    $ref: '#/definitions/appThemeVariables'
+    additionalProperties:
+      android:
+        $ref: '#/definitions/appThemeVariables'
+      base:
+        $ref: '#/definitions/appThemeVariables'
+      ios:
+        $ref: '#/definitions/appThemeVariables'
+      style:
+        description: The object provides styles theme for the theme.
+        additionalProperties: false
+        patternProperties:
+          "^[a-zA-Z0-9]*$":
+            additionalProperties: false
+            properties:
+              android:
+                $ref: '#/definitions/appThemeVariables'
+              base:
+                $ref: '#/definitions/appThemeVariables'
+              ios:
+                $ref: '#/definitions/appThemeVariables'
+
+  appTheme:
+    $ref: '#/definitions/appThemeVariables'
+    #description: The object provides theme for the application.
+    #properties:
+      #android:
+        #description: The object provides Android-theme for the application.
+        #$ref: '#/definitions/appThemeVariables'
+      #ios:
+        #description: The object provides iOS-theme for the application.
+        #$ref: '#/definitions/appThemeVariables'
+
+  appThemeVariables:
+    description: appTheme-description.
+    properties:
+      brandPrimary:
+        description: Primary color for the app.
+        type: string
+      color:
+        description: Primary color for the font.
+        type: string
+      fontFamily:
+        description: Primary Font Family.
+        type: string
+      fontSize:
+        description: Font size.
+        type: string
+      fontWeight:
+        description: Font weight.
+        type: string
+
+  appTheme2:
+    description: The object provides theme for the application.
+    additionalProperties: false
+    properties:
+      android:
+        $ref: '#/definitions/appThemeVariables'
+      base:
+        $ref: '#/definitions/appThemeVariables'
+      ios:
+        $ref: '#/definitions/appThemeVariables'
+      style:
+        description: The object provides styles theme for the theme.
+        additionalProperties: false
+        patternProperties:
+          "^[a-zA-Z0-9]*$":
+            additionalProperties: false
+            properties:
+              android:
+                $ref: '#/definitions/appThemeVariables'
+              base:
+                $ref: '#/definitions/appThemeVariables'
+              ios:
+                $ref: '#/definitions/appThemeVariables'
+
+  appThemeVariables2:
+    description: The object provides variables for theme.
+    additionalProperties: false
+    properties:
+      brandPrimary:
+        description: Primary color for the app.
+        type: string
+      color:
+        description: Primary color for the font.
+        type: string
+      fontFamily:
+        description: Primary Font Family.
+        type: string
+      fontSize:
+        description: Font size.
+        type: string
+      fontWeight:
+        description: Font weight.
+        type: string
+
+  controllers:
+    description: Controllers.
+    additionalProperties: false
+    properties:
+      constructor:
+        description: Constructor.
+        additionalProperties: false
+        properties:
+          url:
+            description: URL.
+            type: string
+    patternProperties:
+      "^[a-zA-Z0-9]*$":
+        $ref: '#/definitions/controllerItem'
+
+  controllerItem:
+    description: Controller item.
+    additionalProperties: false
+    properties:
+      url:
+        description: URL
+        type: string
+
+  definitions:
+    description: The object provides definitions for the application.
+    additionalProperties: false
+    properties:
+      files:
+        description: File definitions.
+        patternProperties:
+          "^[a-zA-Z0-9]*$":
+            $ref: '#/definitions/definitionsFileItem'
+      formViews:
+        description: Form View definitions.
+        properties:
+          meta:
+            description: Meta information for form views.
+            additionalProperties: false
+            properties:
+              # Tämän määrittely on vielä kesken
+              propertytype:
+                description: Tämän määrittely on vielä kesken. Meta information for the property type.
+                additionalProperties: false
+                properties:
+                  # Tämän määrittely on vielä kesken
+                  CWCORE_Text:
+                    description: Tämän määrittely on vielä kesken
+                    additionalProperties: false
+                    properties:
+                      height:
+                        description: Height of the text field
+                        type: number
+                      adjustHeight:
+                        description: Adjust height automatically.
+                        type: boolean
+        patternProperties:
+          "^[a-zA-Z0-9]*$":
+            $ref: '#/definitions/definitionsFormViewItem'
+      listViews:
+        description: List View definitions.
+        patternProperties:
+          "^[a-zA-Z0-9]*$":
+            $ref: '#/definitions/definitionsListViewItem'
+
+  definitionsFileItem:
+    description: Definition list view item.
+    additionalProperties: false
+    properties:
+      src:
+        description: Source.
+        type: string
+
+  definitionsFormViewItem:
+    description: Definition form view item.
+    additionalProperties: false
+    properties:
+      groups:
+        description: Groups.
+        additionalProperties: false
+        patternProperties:
+          "^[a-zA-Z0-9]*$":
+            description: Unique id for the group.
+            additionalProperties: false
+            properties:
+              name:
+                description: Name of the group
+                type: string
+              fields:
+                $ref: '#/definitions/definitionsListViewItemField'
+      name:
+        description: Form view name.
+        additionalProperties: false
+        anyOf:
+        - type: string
+        - properties:
+            en:
+              description: Name in English
+              type: string
+            fi:
+              description: Name in Finnish
+              type: string
+
+  definitionsListViewItemField:
+    description: Fields.
+    additionalProperties: false
+    patternProperties:
+      "^[a-zA-Z0-9]*$":
+        description: Unique id for the field.
+        additionalProperties: false
+        properties:
+          fields:
+            $ref: '#/definitions/definitionsListViewItemField'
+          label:
+            description: Label for the field.
+            type: string
+          property:
+            description: Property for the field.
+            type: string
+
+  definitionsListViewItem:
+    description: Definition list view item.
+    additionalProperties: false
+    properties:
+      name:
+        description: List view name.
+        additionalProperties: false
+        properties:
+          en:
+            description: Name in English
+            type: string
+          fi:
+            description: Name in Finnish
+            type: string
+      table:
+        description: Talbe.
+        type: string
+      csql:
+        description: CSQL for the list view.
+        type: string
+
+  listenersItem:
+    description: Listeners
+    anyOf:
+    - type: string
+    - additionalProperties: false
+      properties:
+        en:
+          description: Name in English
+          type: string
+        fi:
+          description: Name in Finnish
+          type: string
+
+  models:
+    description: Models.
+    additionalProperties: false
+    properties:
+      tables:
+        description: Models for tables.
+        additionalProperties: false
+        patternProperties:
+          "^[a-zA-Z0-9_]*$":
+            description: Table name.
+            additionalProperties: false
+            properties:
+              icon:
+                description: Icon for the table.
+                type: string
+
+  viewsLeftPanel:
+    description: Left panel (menu)
+    additionalProperties: false
+    properties:
+      header:
+        additionalProperties: false
+        description: Header section of the left panel.
+        properties:
+          backgroundColor:
+            description: Menun taustaväri
+            type: string
+          backgroundImage:
+            description: Menun taustakuva (png). Jos transparent, niin taustaväri näkyy. Kuva sovitetaan reunoilta siten, että aspect ratio säilyy.
+            anyOf:
+            - type: string
+            - additionalProperties: false
+              properties:
+                ios:
+                  description: Value for iOS
+                  type: string
+                android:
+                  description: Value for Android
+                  type: string
+          headerBackgroundColor:
+            description: Menun headerin taustakuva (png). Jos transparent, niin taustaväri näkyy. Kuva sovitetaan reunoilta siten, että aspect ratio säilyy.
+            anyOf:
+            - type: string
+            - additionalProperties: false
+              properties:
+                ios:
+                  description: iOS.
+                  type: string
+                android:
+                  description: Android.
+                  type: string
+          headerBackgroundImage:
+            description: Menun headerin taustaväri
+            anyOf:
+            - type: string
+            - additionalProperties: false
+              properties:
+                ios:
+                  description: iOS.
+                  type: string
+                android:
+                  description: Android.
+                  type: string
+          headerImage:
+            description: Menun headerin kuva (png).
+            type: string
+          repeatHeaderBackgroundImage:
+            type: boolean
+            description: Esitetäänkö menun headerin taustakuva (png) tile-versiona täyttäen ruudun.
+
+    patternProperties:
+      "^[a-zA-Z0-9]*$":
+        $ref: '#/definitions/viewsLeftPanelItem'
+
+  viewsLeftPanelItem:
+    description: Unique ID for the left panel view.
+    additionalProperties: false
+    properties:
+      type:
+        description: Type of the view.
+        type: string
+        enum:
+        - menu
+      title:
+        additionalProperties: false
+        properties:
+          en:
+            type: string
+            description: Title in English
+          fi:
+              type: string
+              description: Title in Finnish
+      items:
+        additionalProperties: false
+        patternProperties:
+          "^[a-zA-Z0-9]*$":
+            $ref: '#/definitions/viewsLeftPanelMenuItem'
+
+  viewsLeftPanelMenuItem:
+    description: Unique ID for the left panel menu item. Used in URL.
+    additionalProperties: false
+    properties:
+      title:
+        description: Titel of the menu item.
+        additionalProperties: false
+        properties:
+          en:
+            description: Title in English
+            type: string
+          fi:
+            description: Title in Finnish
+            type: string
+      separator:
+        description: Menu item is separator
+        type: boolean
+      icon:
+        description: Icon for the menu item
+        type: string
+      items:
+        patternProperties:
+          "^[a-zA-Z0-9]*$":
+            $ref: '#/definitions/viewsLeftPanelMenuItem'
+      listeners:
+        description: Listeners for the menu item.
+        additionalProperties: false
+        properties:
+          click:
+            description: Action and controller
+            type: string
+
+  viewsLogin:
+    description: Login screen
+    additionalProperties: false
+    properties:
+      applicationImage:
+        description: Login-ruudun applikaation kuva (png).
+        type: string
+      backgroundColor:
+        description: Login-ruudun taustaväri
+        anyOf:
+        - type: string
+        - additionalProperties: false
+          properties:
+            ios:
+              description: iOS.
+              type: string
+            android:
+              description: Android.
+              type: string
+      backgroundImage:
+        description: Login-ruudun taustakuva (png). Jos transparent, niin taustaväri näkyy. Kuva sovitetaan reunoilta siten, että aspect ratio säilyy.
+        anyOf:
+        - type: string
+        - additionalProperties: false
+          properties:
+            ios:
+              description: iOS.
+              type: string
+            android:
+              description: Android.
+              type: string
+      fieldBackgroundColor:
+        description: Kirjautumis- ja salasanakentän taustaväri.
+        type: string
+      fieldBorderColor:
+        description: Kirjautumis- ja salasanakentän reunuksen väri.
+      fieldBorderSize:
+        type: number
+        description: Kirjautumis- ja salasanakentän reunuksen koko pikseleinä.
+      fieldTextColor:
+        type: string
+        description: Kirjautumis- ja salasanakentän tekstin väri, kun tekstiä on kirjoitettu.
+      fieldTextDisabledColor:
+        type: string
+        description: Kirjautumis- ja salasanakentän tekstin väri, kun tekstiä on kirjoitettu.
+      loginButtonBackgroundColor:
+        type: string
+        description: Kirjaudu-napin taustaväri, kun kirjautumistiedot on annettu.
+      loginButtonDisabledBackgroundColor:
+        type: string
+        description: Kirjaudu-napin taustaväri, kirjautumistiedot ovat puutteelliset.
+      loginButtonTextColor:
+        type: string
+        description: Kirjaudu-napin tekstin väri, kun kirjautumistiedot on annettu.
+      loginButtonDisabledTextColor:
+        type: string
+        description: Kirjaudu-napin tekstin väri, kun kirjautumistiedot ovat puutteelliset.
+      repeatBackgroundImage:
+        type: boolean
+        description: Esitetäänkö login-ruudun taustakuva (png) tile-versiona täyttäen ruudun.
+
+  viewsMainPanel:
+    description: Main panel
+    additionalProperties: false
+    properties:
+      meta:
+        description: Meta information for main panel.
+        additionalProperties: false
+        properties:
+          grid:
+            description: Meta information for the grid.
+            additionalProperties: false
+            properties:
+              doubleclickaction:
+                description: Double click action for menu
+                type: string
+                enum:
+                - edit
+
+    patternProperties:
+      "^[a-zA-Z0-9]*$":
+        $ref: '#/definitions/viewsMainPanelItem'
+
+  viewsMainPanelItem:
+    description: Unique ID for the main panel view.
+    additionalProperties: false
+    properties:
+      body:
+        description: Body part of the list
+        additionalProperties: false
+        properties:
+          rows:
+            description: Rows for the left part of the list
+            type: array
+            additionalProperties: false
+            properties:
+              # Tämä ei näy vielä oikein
+              field:
+                description: Field of the row
+                type: string
+                additionalProperties: false
+                properties:
+                  texttype:
+                    description: Text type
+                    type: string
+                  ellipsis:
+                    description: Is ellipsis on.
+                    type: boolean
+
+      ci:
+        description: Content Item.
+        additionalProperties: false
+        properties:
+          en:
+            type: string
+            description: English page for the CI.
+          fi:
+            type: string
+            description: Finnishpage for the CI.
+      csql:
+        description: CSQL query.
+        type: string
+      expand:
+        description: Expand part of the list item
+        additionalProperties: false
+        properties:
+          csql:
+            description: CSQL query.
+            type: string
+          view:
+            description: View for the expand
+            additionalProperties: false
+            properties:
+              grid:
+                description: Grid for the view.
+                additionalProperties: false
+                properties:
+                  # Tämä ei näy vielä oikein
+                  row:
+                    description: Row of the grid.
+                    additionalProperties: false
+                    properties:
+                      col:
+                        description: Column of the row.
+                        additionalProperties: false
+                        properties:
+                          field:
+                            description: Name of the field.
+                            type: string
+                          suppressRowIfEmpty:
+                            description: Suppress Row If Empty.
+                            type: boolean
+                          text:
+                            description: Text.
+                            type: string
+                          texttype:
+                            description: Text type.
+                            type: string
+                          width:
+                            description: Width of the column.
+                            type: string
+              button:
+                description: Button for the view.
+                additionalProperties: false
+                properties:
+                  backgroundColor:
+                    description: Background color for the button.
+                    type: string                    
+                  listeners:
+                    description: Listeners of the button.
+                    additionalProperties: false
+                    properties:
+                      click:
+                        description: Action and controller
+                        type: string
+                  text:
+                    description: Text for the button.
+                    type: string                    
+
+      filter:
+        description: Filter part of the list
+        additionalProperties: false
+        properties:
+          csql:
+            description: CSQL for the list after the submit
+            type: string
+          form:
+            description: Form of the filter
+            additionalProperties: false
+            properties:
+              name:
+                description: Name of the form
+                type: string
+              type:
+                description: Type of the form
+                type: string
+              fields:
+                patternProperties:
+                  "^[a-zA-Z0-9]*$":
+                    description: Field of the form.
+                    additionalProperties: false
+                    properties:
+                      csql:
+                        description: SQL-query for select
+                        type: string
+                      defaultOption:
+                        description: Default optio for select
+                        type: string
+                      displayField:
+                        description: Display field for select
+                        type: string
+                      else:
+                        description: Else for the form.
+                        additionalProperties: false
+                        properties:
+                          value:
+                            description: Else value for the form.
+                            type: string
+                      if:
+                        description: If for the form.
+                        type: string
+                      name:
+                        description: Name of the Property
+                        type: string
+                      options:
+                        description: Name of the Property
+                        type: array
+                        additionalProperties: false
+                        properties:
+                          option:
+                            description: Option for the property
+                            type: string
+                          value:
+                            description: Value for the property
+                            type: string
+                      propertyType:
+                        description: Property Type of the form
+                        type: string
+                      value:
+                        description: If value for the form.
+                        type: string
+                      valueField:
+                        description: Value field for select
+                        type: string
+              submit:
+                properties:
+                  text:
+                    description: Text of the submit button
+                    type: string
+      formView:
+        description: Form View.
+        type: string
+      headerNumbering:
+        description: Wiki text header numbering on or off.
+        type: boolean
+      icon:
+        description: Name of the icon.
+        type: string
+      items:
+        patternProperties:
+          "^[a-zA-Z0-9]*$":
+            $ref: '#/definitions/viewsMainPanelItem'
+      left:
+        description: Left part of the list
+        additionalProperties: false
+        properties:
+          rows:
+            type: array
+            description: Rows for the left part of the list
+            additionalProperties: false
+            properties:
+              # Tämä ei näy vielä oikein
+              field:
+                description: Field of the row
+                type: string
+      listeners:
+        description: Listeners for the main panel item.
+        additionalProperties: false
+        properties:
+          click:
+            description: Action and controller
+            anyOf:
+            - type: string
+            - additionalProperties: false
+              properties:
+                controller:
+                  description: Controller for listener
+                  type: string
+                parameters:
+                  additionalProperties: false
+                  properties:
+                    ci:
+                      description: CI parameter
+                      type: string
+                    name:
+                      description: Name parameter
+                      type: string
+
+      listViews:
+        type: array
+        description: List views.
+      right:
+        description: Right part of the list
+        type: boolean
+      search:
+        description: Search part of the list
+        additionalProperties: false
+        patternProperties:
+          "^[a-zA-Z0-9]*$":
+            description: Unique ID for the search field.
+            additionalProperties: false
+            properties:
+              value:
+                type: string
+      table:
+        description: Name of the table
+        type: string
+      type:
+        description: Type of the view.
+        type: string
+        enum:
+        - grid
+        - list
+        - page
+        - tabs
+      title:
+        description: Title.
+        additionalProperties: false
+        properties:
+          en:
+            type: string
+            description: Title in English
+          fi:
+              type: string
+              description: Title in Finnish
+
+  viewsMeta:
+    description: Meta information for views.
+    additionalProperties: false
+    properties:
+      app:
+        description: Meta information for app views.
+        additionalProperties: false
+        properties:
+          mainColor:
+            description: Main color for the app.
+            type: string
+      fonts:
+        $ref: '#/definitions/viewsMetaFontProperties'
+
+  viewsMetaFontProperties:
+    description: Meta information for app fonts.
+    additionalProperties: false
+    properties:
+      android:
+        $ref: '#/definitions/viewsMetaFontProperties'
+      color:
+        description: Font color.
+        type: string      
+      fontFamily:
+        description: Font family.
+        type: string      
+      fontSize:
+        description: Font family.
+        type: string      
+      ios:
+        $ref: '#/definitions/viewsMetaFontProperties'
+      note:
+        $ref: '#/definitions/viewsMetaFontProperties'
+      strong:
+        $ref: '#/definitions/viewsMetaFontProperties'
+
+  viewsModal:
+    description: Modal
+    additionalProperties: false
+    patternProperties:
+      "^[a-zA-Z0-9]*$":
+        description: Name of the view. URL
+        additionalProperties: false
+        properties:
+          type:
+            description: Type of the view
+            type: string
