@@ -1,6 +1,6 @@
 {
   "app": {
-    "blitz": {
+    "spotlit": {
       "name": "Blitz App",
       "abbreviation": "blitza",
       "requires": [
