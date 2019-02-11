@@ -1,7 +1,7 @@
 {
   "app": {
     "spotlit": {
-      "name": "Blitz App",
+      "name": "Spotlit",
       "abbreviation": "blitza",
       "requires": [
         {
@@ -12,13 +12,16 @@
         }
       ],
       "icon": "citiusdemoicon",
-      "version": "1.1.1",
+      "version": "1.1.2",
       "defaultSite": "3nm9",
       "usernameAbbreviation": {
         "abbreviation": "demo",
         "username": "demo@citius.com"
       }
     },
+    "name": "Spotlit",
+    "abbreviation": "blitza",
+    "version": "1.1.2",
     "theme": {
       "color": "#000000",
       "android": {
@@ -48,7 +51,7 @@
   },
   "views": {
     "login": {
-      "applicationImage": "demo-login-applicationImage-transparent",
+      "applicationImage": "spotlit-login-applicationImage-transparent",
       "backgroundColor": {
         "ios": "#ffffff",
         "android": "#e1e7f6"
@@ -71,7 +74,7 @@
           "ios": "#ffffff",
           "android": "#e1e7f6"
         },
-        "headerImage": "demo-menu-headerImage-transparent"
+        "headerImage": "spotlit-menu-headerImage-transparent"
       },
       "mainmenu": {
         "type": "menu",
