@@ -14,7 +14,9 @@ app:
   name: Spotlit
   abbreviation: blitza
   version: 1.1.3
-  cScriptVersion: '8-alpha'
+  cScriptVersion: '9-alpha'
+
+  # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
     color: '#000000'
     android:
@@ -34,6 +36,7 @@ app:
         android:
           fontFamily: Roboto
 views:
+
   login:
     applicationImage: spotlit-login-applicationImage-transparent
     backgroundColor:
@@ -49,6 +52,7 @@ views:
     loginButtonDisabledBackgroundColor: '#ffffff'
     loginButtonTextColor: '#ffffff'
     loginButtonDisabledTextColor: '#bbbdbf'
+
   leftPanel:
     header:
       backgroundColor: '#ffffff'
@@ -59,8 +63,8 @@ views:
     mainmenu:
       type: menu
       title:
-        en: Citius DEMO Menu
-        fi: Citius DEMO valikko
+        en: Spotlit Menu
+        fi: Spotlit valikko
       items:
         flightsitem:
           title:
@@ -69,34 +73,20 @@ views:
           icon: 'materialcommunityicons:airplane-takeoff'
           listeners:
             click: onFlightsClick
-        planesitem:
+        eliaslonnrotitem:
           title:
-            fi: Lentokoneet
-            en: Airplanes
+            fi: Elias Lönnrot
+            en: Elias Lönnrot
           icon: 'ionicons:ios-plane'
           listeners:
-            click: onPlanesClick
-        airlinesitem:
+            click: onEliasLonnrotClick
+        jmbarrieitem:
           title:
-            fi: Lentoyhtiöt
-            en: Airlines
-          icon: 'fontawesome:building-o'
+            fi: J. M. Barrie
+            en: J. M. Barrie
+          icon: 'ionicons:ios-plane'
           listeners:
-            click: onAirlinesClick
-        stationsitem:
-          title:
-            fi: Asemat
-            en: Stations
-          icon: 'materialcommunityicons:radio-tower'
-          listeners:
-            click: onStationsClick
-        aboutitem:
-          title:
-            en: About the Demo (testing)
-            fi: Tietoa demosta (testi)
-          icon: 'ionicons:ios-information-circle-outline'
-          listeners:
-            click: onAboutClick
+            click: onJMBarrieClick
   mainPanel:
     flights:
       type: list
@@ -191,155 +181,13 @@ views:
       search:
         searchWordFlight:
           value: ".filter(ICAO24Hex~'%%searchWordFlight%%'¤DepartureStationCI.Name~'%%searchWordFlight%%')"
-    planes:
-      type: list
-      title:
-        fi: Lentokoneet
-        en: Airplanes
-      icon: 'ionicons:ios-plane'
-      table: CWDEMO_Plane
-      csql: '/CWDEMO_Plane{PhotoCI,Registration+,ICAO24Hex,Make,Model,Built,DeliveryDate}'
-      left:
-        rows:
-          - field: PhotoCI.IconBase64
-      body:
-        rows:
-          - field: Registration
-            texttype: strongluokka
-          - field: ICAO24Hex
-            texttype: noteluokka
-            ellipsis: false
-          - field: Make
-            texttype: noteluokka
-            ellipsis: false
-          - field: Model
-            texttype: noteluokka
-            ellipsis: false
-      right: false
-      expand:
-        csql: '/CWDEMO_Plane{PhotoCI,Registration+,ICAO24Hex,Make,Model,Built,DeliveryDate} .filter(CI=%%CI%%)'
-        view:
-          grid:
-            - row:
-                - col:
-                    width: 80px
-                    texttype: noteluokka
-                    text: 'Rekisteritunnus:'
-                - col:
-                    field: Registration
-                    suppressRowIfEmpty: true
-            - row:
-                - col:
-                    width: 80px
-                    texttype: noteluokka
-                    text: 'Valmistaja:'
-                - col:
-                    field: Make
-                    suppressRowIfEmpty: true
-            - row:
-                - col:
-                    width: 80px
-                    texttype: noteluokka
-                    text: 'Malli:'
-                - col:
-                    field: Model
-                    suppressRowIfEmpty: true
-            - row:
-                - col:
-                    width: 80px
-                    texttype: noteluokka
-                    text: 'Valmistusvuosi:'
-                - col:
-                    field: Built
-                    suppressRowIfEmpty: true
-            - row:
-                - col:
-                    width: 80px
-                    texttype: noteluokka
-                    text: 'Luovutuspäivä:'
-                - col:
-                    field: DeliveryDate
-                    suppressRowIfEmpty: true
-            - row:
-                - col:
-                    width: 80px
-                    texttype: noteluokka
-                    text: 'Tunnus (ICAO):'
-                - col:
-                    field: ICAO24Hex
-                    suppressRowIfEmpty: true
-      search:
-        searchWordPlane:
-          value: ".filter(Registration~'%%searchWordPlane%%'¤ICAO24Hex~'%%searchWordPlane%%')"
-    airlines:
-      type: list
-      title:
-        fi: Lentoyhtiöt
-        en: Airlines
-      icon: 'fontawesome:building-o'
-      table: CWDEMO_Airline
-      csql: '/CWDEMO_Airline{Name+,Alias,CountryCI,IATA,ICAO,CallSign}'
-      left: false
-      body:
-        rows:
-          - field: Name
-            texttype: strongluokka
-          - field: Alias
-            texttype: noteluokka
-            ellipsis: false
-          - field: IATA
-            texttype: noteluokka
-            ellipsis: false
-      right: false
-      search:
-        searchWordAirline:
-          value: ".filter(Name~'%%searchWordAirline%%'¤Alias~'%%searchWordAirline%%')"
-    stations:
-      type: list
-      title:
-        fi: Asemat
-        en: Stations
-      icon: 'materialcommunityicons:radio-tower'
-      table: CWDEMO_Station
-      csql: '/CWDEMO_Station{Name+,City,CountryCI,IATA,ICAO,Latitude,Longitude,Altitude}'
-      left: false
-      body:
-        rows:
-          - field: Name
-            texttype: strongluokka
-          - field: IATA
-            texttype: noteluokka
-            ellipsis: false
-          - field: City
-            texttype: noteluokka
-            ellipsis: false
-          - field: CountryCI
-            texttype: noteluokka
-            ellipsis: false
-      right: false
-      search:
-        searchWordStation:
-          value: ".filter(Name~'%%searchWordStation%%'¤IATA~'%%searchWordStation%%'¤City~'%%searchWordStation%%'¤CountryCI~'%%searchWordStation%%')"
-    about:
-      type: page
-      title:
-        en: About the Demo (testing)
-        fi: Tietoa demosta (testi)
-      ci:
-        fi: cwdemo-k9rn
-        en: cwdemo-k9rn
-      icon: 'ionicons:ios-information-circle-outline'
-      headerNumbering: false
+
 controllers:
   constructor:
     url: flights
-  onAboutClick:
+  onEliasLonnrotClick:
     url: about
-  onAirlinesClick:
-    url: airlines
+  onJMBarrieClick:
+    application: cwdemo
   onFlightsClick:
-    url: flights
-  onPlanesClick:
-    url: planes
-  onStationsClick:
-    url: stations
+    application: cwdemo
