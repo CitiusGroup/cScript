@@ -186,8 +186,8 @@ controllers:
   constructor:
     url: flights
   onEliasLonnrotClick:
-    url: about
+    application: cwdemo
   onJMBarrieClick:
     application: cwdemo
   onFlightsClick:
-    application: cwdemo
+    url: flights
