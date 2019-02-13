@@ -245,6 +245,9 @@ definitions:
           url:
             description: URL.
             type: string
+          application:
+            description: Abbreviation of the application.
+            type: string
     patternProperties:
       "^[a-zA-Z0-9]*$":
         $ref: '#/definitions/controllerItem'
@@ -255,6 +258,9 @@ definitions:
     properties:
       url:
         description: URL
+        type: string
+      application:
+        description: Abbreviation of the application.
         type: string
 
   definitions:
