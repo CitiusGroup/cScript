@@ -1,0 +1,193 @@
+app:
+  spotlit:
+    name: Spotlit
+    abbreviation: spotli
+    requires:
+      - app: cwapps
+      - app: cwcore
+    icon: citiusdemoicon
+    version: 1.1.3
+    defaultSite: 3nm9
+    usernameAbbreviation:
+      abbreviation: demo
+      username: demo@citius.com
+  name: Spotlit
+  abbreviation: spotli
+  version: 1.1.3
+  cScriptVersion: '10-alpha'
+
+  # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
+  theme:
+    color: '#000000'
+    android:
+      fontFamily: Roboto light
+      brandPrimary: '#0071b8'
+    ios:
+      fontFamily: Avenir-Medium
+    style:
+      noteluokka:
+        color: '#7c7e7f'
+      strongluokka:
+        color: '#0071b8'
+        fontSize: 16px
+        fontWeight: bold
+        ios:
+          fontFamily: Avenir-Heavy
+        android:
+          fontFamily: Roboto
+views:
+
+  login:
+    applicationImage: spotlit-login-applicationImage-transparent
+    backgroundColor:
+      ios: '#ffffff'
+      android: '#e1e7f6'
+    repeatBackgroundImage: true
+    fieldBackgroundColor: '#ffffff'
+    fieldBorderColor: '#0071b8'
+    fieldBorderSize: 1
+    fieldTextColor: '#0071b8'
+    fieldTextDisabledColor: '#bbbdbf'
+    loginButtonBackgroundColor: '#0071b8'
+    loginButtonDisabledBackgroundColor: '#ffffff'
+    loginButtonTextColor: '#ffffff'
+    loginButtonDisabledTextColor: '#bbbdbf'
+
+  leftPanel:
+    header:
+      backgroundColor: '#ffffff'
+      headerBackgroundColor:
+        ios: '#ffffff'
+        android: '#e1e7f6'
+      headerImage: spotlit-menu-headerImage-transparent
+    mainmenu:
+      type: menu
+      title:
+        en: Spotlit Menu
+        fi: Spotlit valikko
+      items:
+        flightsitem:
+          title:
+            en: Flights
+            fi: Lennot
+          icon: 'materialcommunityicons:airplane-takeoff'
+          listeners:
+            click: onFlightsClick
+        eliaslonnrotitem:
+          title:
+            fi: Elias Lönnrot
+            en: Elias Lönnrot
+          icon: 'ionicons:ios-plane'
+          listeners:
+            click: onEliasLonnrotClick
+        jmbarrieitem:
+          title:
+            fi: J. M. Barrie
+            en: J. M. Barrie
+          icon: 'ionicons:ios-plane'
+          listeners:
+            click: onJMBarrieClick
+  mainPanel:
+    flights:
+      type: list
+      title:
+        en: Flights
+        fi: Lennot
+      icon: 'materialcommunityicons:airplane-takeoff'
+      table: CWDEMO_Flight
+      csql: '/CWDEMO_Flight{DepartureTime,ICAO24Hex,PlaneCI.PhotoCI,PlaneCI.AirlineCI,DepartureStationCI,ArrivalStationCI,PlaneCI,ArrivalTime,FlightTime}.sort(DepartureTime-)'
+      left:
+        rows:
+          - field: PlaneCI.PhotoCI.IconBase64
+      body:
+        rows:
+          - field: DepartureTime
+            texttype: strongluokka
+          - field: ICAO24Hex
+            texttype: noteluokka
+            ellipsis: false
+          - field: DepartureStationCI
+            texttype: noteluokka
+            ellipsis: false
+      right: false
+      expand:
+        csql: '/CWDEMO_Flight{DepartureTime,ICAO24Hex,PlaneCI.PhotoCI,PlaneCI.AirlineCI,DepartureStationCI,ArrivalStationCI,PlaneCI,ArrivalTime,FlightTime}.filter(CI=%%CI%%)'
+        view:
+          grid:
+            - row:
+                - col:
+                    width: 80px
+                    texttype: noteluokka
+                    text: 'Lähtöaika:'
+                - col:
+                    field: DepartureTime
+                    suppressRowIfEmpty: true
+            - row:
+                - col:
+                    width: 80px
+                    texttype: noteluokka
+                    text: 'Lennon numero (ICAO):'
+                - col:
+                    field: ICAO24Hex
+                    suppressRowIfEmpty: true
+            - row:
+                - col:
+                    width: 80px
+                    texttype: noteluokka
+                    text: 'Lentoyhtiö:'
+                - col:
+                    field: PlaneCI.AirlineCI
+                    suppressRowIfEmpty: true
+            - row:
+                - col:
+                    width: 80px
+                    texttype: noteluokka
+                    text: 'Lentokone:'
+                - col:
+                    field: PlaneCI
+                    suppressRowIfEmpty: true
+            - row:
+                - col:
+                    width: 80px
+                    texttype: noteluokka
+                    text: 'Lähtöasema:'
+                - col:
+                    field: DepartureStationCI
+                    suppressRowIfEmpty: true
+            - row:
+                - col:
+                    width: 80px
+                    texttype: noteluokka
+                    text: 'Määränpää:'
+                - col:
+                    field: ArrivalStationCI
+                    suppressRowIfEmpty: true
+            - row:
+                - col:
+                    width: 80px
+                    texttype: noteluokka
+                    text: 'Saapumisaika:'
+                - col:
+                    field: ArrivalTime
+                    suppressRowIfEmpty: true
+            - row:
+                - col:
+                    width: 80px
+                    texttype: noteluokka
+                    text: 'Lentoaika:'
+                - col:
+                    field: FlightTime
+                    suppressRowIfEmpty: true
+      search:
+        searchWordFlight:
+          value: ".filter(ICAO24Hex~'%%searchWordFlight%%'¤DepartureStationCI.Name~'%%searchWordFlight%%')"
+
+controllers:
+  constructor:
+    url: flights
+  onEliasLonnrotClick:
+    application: cwdemo
+  onJMBarrieClick:
+    application: cwdemo
+  onFlightsClick:
+    url: flights
