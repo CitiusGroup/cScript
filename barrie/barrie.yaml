@@ -1,7 +1,7 @@
 app:
-  spotlit:
-    name: Spotlit
-    abbreviation: spotli
+  jmbarrie:
+    name: J. M. Barrie
+    abbreviation: barrie
     requires:
       - app: cwapps
       - app: cwcore
@@ -11,10 +11,10 @@ app:
     usernameAbbreviation:
       abbreviation: demo
       username: demo@citius.com
-  name: Spotlit
-  abbreviation: spotli
-  version: 1.1.3
-  cScriptVersion: '12-alpha'
+  name: J. M. Barrie
+  abbreviation: barrie
+  version: 1.0.0
+  cScriptVersion: '1-alpha'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -73,22 +73,6 @@ views:
           icon: 'materialcommunityicons:airplane-takeoff'
           listeners:
             click: onFlightsClick
-        separatoritem:
-          separator: true
-        kalevalaitem:
-          title:
-            fi: Kalevala
-            en: Kalevala
-          icon: 'ionicons:ios-plane'
-          listeners:
-            click: onKalevalaClick
-        jmbarrieitem:
-          title:
-            fi: J. M. Barrie
-            en: J. M. Barrie
-          icon: 'ionicons:ios-plane'
-          listeners:
-            click: onJMBarrieClick
   mainPanel:
     flights:
       type: list
@@ -187,9 +171,5 @@ views:
 controllers:
   constructor:
     url: flights
-  onKalevalaClick:
-    application: kaleva
-  onJMBarrieClick:
-    application: barruw
   onFlightsClick:
     url: flights
