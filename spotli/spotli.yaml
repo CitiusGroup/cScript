@@ -7,14 +7,14 @@ app:
       - app: cwcore
     icon: citiusdemoicon
     version: 1.1.3
-    defaultSite: 3nm9
+    defaultSite: n3e3
     usernameAbbreviation:
       abbreviation: demo
       username: demo@citius.com
   name: Spotlit
   abbreviation: spotli
   version: 1.1.3
-  cScriptVersion: '12-alpha'
+  cScriptVersion: '14-alpha'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -66,13 +66,13 @@ views:
         en: Spotlit Menu
         fi: Spotlit valikko
       items:
-        flightsitem:
+        welcomeitem:
           title:
-            en: Flights
-            fi: Lennot
+            en: Welcome
+            fi: Tervetuloa
           icon: 'materialcommunityicons:airplane-takeoff'
           listeners:
-            click: onFlightsClick
+            click: onWelcomeClick
         separatoritem:
           separator: true
         kalevalaitem:
@@ -89,100 +89,19 @@ views:
           icon: 'ionicons:ios-plane'
           listeners:
             click: onJMBarrieClick
+
   mainPanel:
-    flights:
-      type: list
+
+    welcome:
+      type: page
       title:
-        en: Flights
-        fi: Lennot
-      icon: 'materialcommunityicons:airplane-takeoff'
-      table: CWDEMO_Flight
-      csql: '/CWDEMO_Flight{DepartureTime,ICAO24Hex,PlaneCI.PhotoCI,PlaneCI.AirlineCI,DepartureStationCI,ArrivalStationCI,PlaneCI,ArrivalTime,FlightTime}.sort(DepartureTime-)'
-      left:
-        rows:
-          - field: PlaneCI.PhotoCI.IconBase64
-      body:
-        rows:
-          - field: DepartureTime
-            texttype: strongluokka
-          - field: ICAO24Hex
-            texttype: noteluokka
-            ellipsis: false
-          - field: DepartureStationCI
-            texttype: noteluokka
-            ellipsis: false
-      right: false
-      expand:
-        csql: '/CWDEMO_Flight{DepartureTime,ICAO24Hex,PlaneCI.PhotoCI,PlaneCI.AirlineCI,DepartureStationCI,ArrivalStationCI,PlaneCI,ArrivalTime,FlightTime}.filter(CI=%%CI%%)'
-        view:
-          grid:
-            - row:
-                - col:
-                    width: 80px
-                    texttype: noteluokka
-                    text: 'Lähtöaika:'
-                - col:
-                    field: DepartureTime
-                    suppressRowIfEmpty: true
-            - row:
-                - col:
-                    width: 80px
-                    texttype: noteluokka
-                    text: 'Lennon numero (ICAO):'
-                - col:
-                    field: ICAO24Hex
-                    suppressRowIfEmpty: true
-            - row:
-                - col:
-                    width: 80px
-                    texttype: noteluokka
-                    text: 'Lentoyhtiö:'
-                - col:
-                    field: PlaneCI.AirlineCI
-                    suppressRowIfEmpty: true
-            - row:
-                - col:
-                    width: 80px
-                    texttype: noteluokka
-                    text: 'Lentokone:'
-                - col:
-                    field: PlaneCI
-                    suppressRowIfEmpty: true
-            - row:
-                - col:
-                    width: 80px
-                    texttype: noteluokka
-                    text: 'Lähtöasema:'
-                - col:
-                    field: DepartureStationCI
-                    suppressRowIfEmpty: true
-            - row:
-                - col:
-                    width: 80px
-                    texttype: noteluokka
-                    text: 'Määränpää:'
-                - col:
-                    field: ArrivalStationCI
-                    suppressRowIfEmpty: true
-            - row:
-                - col:
-                    width: 80px
-                    texttype: noteluokka
-                    text: 'Saapumisaika:'
-                - col:
-                    field: ArrivalTime
-                    suppressRowIfEmpty: true
-            - row:
-                - col:
-                    width: 80px
-                    texttype: noteluokka
-                    text: 'Lentoaika:'
-                - col:
-                    field: FlightTime
-                    suppressRowIfEmpty: true
-      search:
-        searchWordFlight:
-          value: ".filter(ICAO24Hex~'%%searchWordFlight%%'¤DepartureStationCI.Name~'%%searchWordFlight%%')"
+        en: Welcome
+        fi: Tervetuloa
+      ci:
+        fi: 88rt
+        en: 88rt
+      icon: ionicons:ios-information-circle-outline
+      headerNumbering: false
 
 controllers:
   constructor:
@@ -191,6 +110,5 @@ controllers:
     application: kaleva
   onJMBarrieClick:
     application: barrie
-    #application: barruw
-  onFlightsClick:
-    url: flights
+  onWelcomeClick:
+    url: welcome
