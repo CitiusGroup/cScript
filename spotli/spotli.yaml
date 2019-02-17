@@ -73,7 +73,7 @@ views:
           title:
             en: Welcome to Kajaani
             fi: Tervetuloa Kajaanin
-          icon: 'materialcommunityicons:airplane-takeoff'
+          icon: 'materialcommunityicons:home'
           listeners:
             click: onWelcomeClick
 
@@ -81,7 +81,7 @@ views:
           title:
             en: Schedule
             fi: Aikataulu
-          icon: 'materialcommunityicons:airplane-takeoff'
+          icon: 'materialcommunityicons:home'
           listeners:
             click: onScheduleClick
 
@@ -92,7 +92,7 @@ views:
           title:
             fi: Juminkeko
             en: Juminkeko
-          icon: 'ionicons:ios-plane'
+          icon: 'materialcommunityicons:home'
           listeners:
             click: onJuminkekoClick
 
@@ -100,7 +100,7 @@ views:
           title:
             fi: Moat Brae
             en: Moat Brae
-          icon: 'ionicons:ios-plane'
+          icon: 'materialcommunityicons:home'
           listeners:
             click: onMoatBraeClick
 
@@ -114,7 +114,7 @@ views:
       ci:
         fi: 88rt
         en: 88rt
-      icon: ionicons:ios-information-circle-outline
+      icon: 'materialcommunityicons:home'
       headerNumbering: false
 
     welcome:
@@ -125,7 +125,7 @@ views:
       ci:
         fi: 88rt
         en: 88rt
-      icon: ionicons:ios-information-circle-outline
+      icon: 'materialcommunityicons:home'
       headerNumbering: false
 
 controllers:
