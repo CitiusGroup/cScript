@@ -69,15 +69,62 @@ views:
         fi: Jumikeko valikko
 
       items:
+
         welcomeitem:
           title:
-            en: Welcome to Juminkeko
-            fi: Tervetuloa Juminkekoon
+            en: About the Juminkeko
+            fi: Juminkeko
           icon: 'materialcommunityicons:home'
           listeners:
             click: onWelcomeClick
 
+        kalevalaitem:
+          title:
+            en: About the Kalevala
+            fi: Kalevala
+          icon: 'materialcommunityicons:home'
+          listeners:
+            click: onKalevalaClick
+
+        buildingitem:
+          title:
+            en: The Building
+            fi: Rakennus
+          icon: 'materialcommunityicons:home'
+          listeners:
+            click: onBuildingClick
+
+        activitiesitem:
+          title:
+            en: Activities
+            fi: Tapahtumat
+          icon: 'materialcommunityicons:home'
+          listeners:
+            click: onActivitiesClick
+
   mainPanel:
+
+    activities:
+      type: page
+      title:
+        en: Activities
+        fi: Tapahtumat
+      ci:
+        fi: 88rt
+        en: 88rt
+      icon: materialcommunityicons:home
+      headerNumbering: false
+
+    building:
+      type: page
+      title:
+        en: Building
+        fi: Rakennus
+      ci:
+        fi: 88rt
+        en: 88rt
+      icon: materialcommunityicons:home
+      headerNumbering: false
 
     welcome:
       type: page
@@ -93,5 +140,11 @@ views:
 controllers:
   constructor:
     url: welcome
+  onActivitiesClick:
+    url: activities
+  onBuildingClick:
+    url: building
+  onKalevalaClick:
+    url: kalevala
   onWelcomeClick:
     url: welcome
