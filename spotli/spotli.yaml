@@ -14,7 +14,7 @@ app:
   name: Spotlit
   abbreviation: spotli
   version: 1.1.3
-  cScriptVersion: '15-alpha'
+  cScriptVersion: '16-alpha'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -54,18 +54,21 @@ views:
     loginButtonDisabledTextColor: '#bbbdbf'
 
   leftPanel:
+
     header:
       backgroundColor: '#ffffff'
       headerBackgroundColor:
         ios: '#ffffff'
         android: '#e1e7f6'
       headerImage: spotlit-menu-headerImage-transparent
+
     mainmenu:
       type: menu
       title:
         en: Spotlit Menu
         fi: Spotlit valikko
       items:
+
         welcomeitem:
           title:
             en: Welcome to Kajaani
@@ -73,6 +76,7 @@ views:
           icon: 'materialcommunityicons:airplane-takeoff'
           listeners:
             click: onWelcomeClick
+
         scheduleitem:
           title:
             en: Schedule
@@ -80,15 +84,18 @@ views:
           icon: 'materialcommunityicons:airplane-takeoff'
           listeners:
             click: onScheduleClick
+
         separatoritem:
           separator: true
-        kalevalaitem:
+
+        juminkekoitem:
           title:
-            fi: Kalevala
-            en: Kalevala
+            fi: Juminkeko
+            en: Juminkeko
           icon: 'ionicons:ios-plane'
           listeners:
-            click: onKalevalaClick
+            click: onJuminkekoClick
+
         jmbarrieitem:
           title:
             fi: J. M. Barrie
@@ -124,10 +131,12 @@ views:
 controllers:
   constructor:
     url: welcome
-  onKalevalaClick:
-    application: kaleva
+  #onKalevalaClick:
+    #application: kaleva
   onJMBarrieClick:
     application: barrie
+  onJuminkekoClick:
+    application: jumink
   onScheduleClick:
     url: schedule
   onWelcomeClick:
