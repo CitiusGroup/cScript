@@ -190,6 +190,7 @@ controllers:
   onKalevalaClick:
     application: kaleva
   onJMBarrieClick:
-    application: barruw
+    application: barrie
+    #application: barruw
   onFlightsClick:
     url: flights
