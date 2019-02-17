@@ -21,7 +21,7 @@ app:
     color: '#000000'
     android:
       fontFamily: Roboto light
-      brandPrimary: '#0071b8'
+      brandPrimary: '#d19e18'
     ios:
       fontFamily: Avenir-Medium
     style:
