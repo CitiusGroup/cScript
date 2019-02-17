@@ -14,7 +14,7 @@ app:
   name: Spotlit
   abbreviation: spotli
   version: 1.1.3
-  cScriptVersion: '14-alpha'
+  cScriptVersion: '15-alpha'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -68,11 +68,18 @@ views:
       items:
         welcomeitem:
           title:
-            en: Welcome
-            fi: Tervetuloa
+            en: Welcome to Kajaani
+            fi: Tervetuloa Kajaanin
           icon: 'materialcommunityicons:airplane-takeoff'
           listeners:
             click: onWelcomeClick
+        scheduleitem:
+          title:
+            en: Schedule
+            fi: Aikataulu
+          icon: 'materialcommunityicons:airplane-takeoff'
+          listeners:
+            click: onScheduleClick
         separatoritem:
           separator: true
         kalevalaitem:
@@ -92,6 +99,17 @@ views:
 
   mainPanel:
 
+    schedule:
+      type: page
+      title:
+        en: Schedule
+        fi: Aikataulu
+      ci:
+        fi: 88rt
+        en: 88rt
+      icon: ionicons:ios-information-circle-outline
+      headerNumbering: false
+
     welcome:
       type: page
       title:
@@ -105,10 +123,12 @@ views:
 
 controllers:
   constructor:
-    url: flights
+    url: welcome
   onKalevalaClick:
     application: kaleva
   onJMBarrieClick:
     application: barrie
+  onScheduleClick:
+    url: schedule
   onWelcomeClick:
     url: welcome
