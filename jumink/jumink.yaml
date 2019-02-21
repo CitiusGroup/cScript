@@ -14,7 +14,7 @@ app:
   name: Juminkeko
   abbreviation: jumink
   version: 1.0.0
-  cScriptVersion: '4-alpha'
+  cScriptVersion: '5'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -74,23 +74,23 @@ views:
           title:
             en: About the Juminkeko
             fi: Juminkeko
-          icon: 'materialcommunityicons:home'
+          icon: 'simplelineicons:home'
           listeners:
             click: onWelcomeClick
 
-        kalevalaitem:
-          title:
-            en: About the Kalevala
-            fi: Kalevala
-          icon: 'materialcommunityicons:home'
-          listeners:
-            click: onKalevalaClick
+        #kalevalaitem:
+          #title:
+            #en: About the Kalevala
+            #fi: Kalevala
+          #icon: 'simplelineicons:book-open'
+          #listeners:
+            #click: onKalevalaClick
 
         buildingitem:
           title:
             en: The Building
             fi: Rakennus
-          icon: 'materialcommunityicons:home'
+          icon: 'simplelineicons:grid'
           listeners:
             click: onBuildingClick
 
@@ -98,7 +98,7 @@ views:
           title:
             en: Activities
             fi: Tapahtumat
-          icon: 'materialcommunityicons:home'
+          icon: 'simplelineicons:event'
           listeners:
             click: onActivitiesClick
 
@@ -110,9 +110,9 @@ views:
         en: Activities
         fi: Tapahtumat
       ci:
-        fi: thn6
         en: thn6
-      icon: materialcommunityicons:home
+        fi: thn6
+      icon: 'simplelineicons:event'
       headerNumbering: false
 
     building:
@@ -121,9 +121,9 @@ views:
         en: Building
         fi: Rakennus
       ci:
-        fi: thn6
         en: thn6
-      icon: materialcommunityicons:home
+        fi: thn6
+      icon: 'simplelineicons:grid'
       headerNumbering: false
 
     welcome:
@@ -132,9 +132,9 @@ views:
         en: Welcome to Juminkeko
         fi: Tervetuloa Juminkekoon
       ci:
+        en: mpnn
         fi: thn6
-        en: thn6
-      icon: materialcommunityicons:home
+      icon: 'simplelineicons:home'
       headerNumbering: false
 
 controllers:
