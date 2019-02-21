@@ -14,7 +14,7 @@ app:
   name: Spotlit
   abbreviation: spotli
   version: 1.1.3
-  cScriptVersion: '21-alpha'
+  cScriptVersion: '22'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -95,6 +95,9 @@ views:
 
         separatoritem:
           separator: true
+          title:
+            en: Demo Applications
+            fi: Demo-applikaatiot
 
         juminkekoitem:
           title:
@@ -120,8 +123,8 @@ views:
         en: Map
         fi: Kartta
       ci:
-        fi: thn6
         en: thn6
+        fi: thn6
       icon: 'materialcommunityicons:home'
       headerNumbering: false
 
@@ -131,8 +134,8 @@ views:
         en: Schedule
         fi: Aikataulu
       ci:
-        fi: thn6
-        en: thn6
+        en: fxt3
+        fi: n96x
       icon: 'materialcommunityicons:home'
       headerNumbering: false
 
@@ -142,8 +145,8 @@ views:
         en: Welcome
         fi: Tervetuloa
       ci:
-        fi: thn6
         en: thn6
+        fi: 88em
       icon: 'materialcommunityicons:home'
       headerNumbering: false
 
