@@ -14,7 +14,7 @@ app:
   name: Moat Brae
   abbreviation: moatbr
   version: 1.0.0
-  cScriptVersion: '3-alpha'
+  cScriptVersion: '5'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -73,7 +73,7 @@ views:
           title:
             en: Welcome to Moat Brae
             fi: Tervetuloa Moat Braeen
-          icon: 'materialcommunityicons:home'
+          icon: 'simplelineicons:home'
           listeners:
             click: onWelcomeClick
 
@@ -85,9 +85,9 @@ views:
         en: Welcome to Moat Brae
         fi: Tervetuloa Moat Braeen
       ci:
-        fi: thn6
-        en: thn6
-      icon: materialcommunityicons:home
+        en: ekcw
+        fi: 2ppx
+      icon: 'simplelineicons:home'
       headerNumbering: false
 
 controllers:
