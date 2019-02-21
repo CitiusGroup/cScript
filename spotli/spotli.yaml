@@ -123,8 +123,8 @@ views:
         en: Map
         fi: Kartta
       ci:
-        en: thn6
-        fi: thn6
+        en: hk3p
+        fi: rex8
       icon: 'materialcommunityicons:home'
       headerNumbering: false
 
