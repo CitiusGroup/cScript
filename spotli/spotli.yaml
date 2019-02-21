@@ -14,7 +14,7 @@ app:
   name: Spotlit
   abbreviation: spotli
   version: 1.1.3
-  cScriptVersion: '22'
+  cScriptVersion: '23'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -73,7 +73,7 @@ views:
           title:
             en: Welcome to Kajaani
             fi: Tervetuloa Kajaanin
-          icon: 'materialcommunityicons:home'
+          icon: 'materialcommunityicons:home-outline'
           listeners:
             click: onWelcomeClick
 
@@ -81,7 +81,7 @@ views:
           title:
             en: Schedule
             fi: Aikataulu
-          icon: 'materialcommunityicons:home'
+          icon: 'materialcommunityicons:clock-outline'
           listeners:
             click: onScheduleClick
 
@@ -89,7 +89,7 @@ views:
           title:
             en: Map
             fi: Kartta
-          icon: 'materialcommunityicons:home'
+          icon: 'materialcommunityicons:map-outline'
           listeners:
             click: onMapClick
 
@@ -103,7 +103,7 @@ views:
           title:
             fi: Juminkeko
             en: Juminkeko
-          icon: 'materialcommunityicons:home'
+          icon: 'materialcommunityicons:application'
           listeners:
             click: onJuminkekoClick
 
@@ -111,7 +111,7 @@ views:
           title:
             fi: Moat Brae
             en: Moat Brae
-          icon: 'materialcommunityicons:home'
+          icon: 'materialcommunityicons:application'
           listeners:
             click: onMoatBraeClick
 
