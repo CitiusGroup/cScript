@@ -73,7 +73,7 @@ views:
           title:
             en: Welcome to Kajaani
             fi: Tervetuloa Kajaanin
-          icon: 'materialcommunityicons:home-outline'
+          icon: 'simplelineicons:home'
           listeners:
             click: onWelcomeClick
 
@@ -89,9 +89,17 @@ views:
           title:
             en: Map
             fi: Kartta
-          icon: 'materialcommunityicons:map-outline'
+          icon: 'simplelineicons:map'
           listeners:
             click: onMapClick
+
+        privacyitem:
+          title:
+            en: Privacy
+            fi: Yksityisyys
+          icon: 'simplelineicons:lock'
+          listeners:
+            click: onPrivacyClick
 
         separatoritem:
           separator: true
@@ -125,7 +133,18 @@ views:
       ci:
         en: hk3p
         fi: rex8
-      icon: 'materialcommunityicons:home'
+      icon: 'simplelineicons:map'
+      headerNumbering: false
+
+    privacy:
+      type: page
+      title:
+        en: Privacy
+        fi: Yksityisyys
+      ci:
+        en: 9e8h
+        fi: remn
+      icon: 'simplelineicons:lock'
       headerNumbering: false
 
     schedule:
@@ -136,7 +155,7 @@ views:
       ci:
         en: fxt3
         fi: n96x
-      icon: 'materialcommunityicons:home'
+      icon: 'simplelineicons:clock'
       headerNumbering: false
 
     welcome:
@@ -147,7 +166,7 @@ views:
       ci:
         en: thn6
         fi: 88em
-      icon: 'materialcommunityicons:home'
+      icon: 'simplelineicons:home'
       headerNumbering: false
 
 controllers:
@@ -161,6 +180,8 @@ controllers:
     url: map
   onMoatBraeClick:
     application: moatbr
+  onPrivacyClick:
+    url: privacy
   onScheduleClick:
     url: schedule
   onWelcomeClick:
