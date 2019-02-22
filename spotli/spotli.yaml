@@ -168,7 +168,7 @@ views:
         fi: 88em
       icon: 'simplelineicons:home'
       headerNumbering: false
-      topImage: kajaani-winter
+      imageTop: kajaani-winter
 
 controllers:
   constructor:
