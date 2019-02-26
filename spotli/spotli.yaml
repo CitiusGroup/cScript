@@ -14,7 +14,7 @@ app:
   name: Spotlit
   abbreviation: spotli
   version: 1.1.3
-  cScriptVersion: '29'
+  cScriptVersion: '30'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -85,6 +85,22 @@ views:
           listeners:
             click: onScheduleClick
 
+        partnershipmeetingitem:
+          title:
+            en: Partnership Meeting
+            fi: Partnerikokous
+          icon: 'simplelineicons:doc'
+          listeners:
+            click: onPartnershipMeetingClick
+
+        steeringcommitteemeetingitem:
+          title:
+            en: Steering Committee Meeting
+            fi: Ohjausryhmän kokous
+          icon: 'simplelineicons:doc'
+          listeners:
+            click: onSteeringCommitteeMeetingClick
+
         mapitem:
           title:
             en: Map
@@ -139,6 +155,16 @@ views:
         latitudeDelta: 0.1622
       icon: 'simplelineicons:map'
 
+    partnershipmeeting:
+      type: pdf
+      title:
+        en: Partnership Meeting
+        fi: Partnerikokous
+      ci:
+        en: hh8z3xfnwfkwrmtk
+        fi: hh8z3xfnwfkwrmtk
+      icon: 'simplelineicons:doc'
+
     privacy:
       type: page
       title:
@@ -162,6 +188,16 @@ views:
       headerNumbering: false
       imageTopCI: w3kkkkzmkch9cw3f
       imageTopHeight: 150px
+
+    steeringcommitteemeeting:
+      type: pdf
+      title:
+        en: Steering Committee Meeting
+        fi: Ohjausryhmän kokous
+      ci:
+        en: z3h66x39mnkezfrx
+        fi: z3h66x39mnkezfrx
+      icon: 'simplelineicons:doc'
 
     welcome:
       type: page
@@ -187,9 +223,13 @@ controllers:
     url: map
   onMoatBraeClick:
     application: moatbr
+  onPartnershipMeetingClick:
+    url: partnershipmeeting
   onPrivacyClick:
     url: privacy
   onScheduleClick:
     url: schedule
+  onSteeringCommitteeMeetingClick:
+    url: steeringcommitteemeeting
   onWelcomeClick:
     url: welcome
