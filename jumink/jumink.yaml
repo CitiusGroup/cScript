@@ -14,7 +14,7 @@ app:
   name: Juminkeko
   abbreviation: jumink
   version: 1.0.0
-  cScriptVersion: '11'
+  cScriptVersion: '12'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -179,10 +179,10 @@ views:
         en: Map
         fi: Kartta
       items:
-        csql: "/RUKAST_Property{Name,NameEN,Description,DescriptionEN,Latitude,Longitude,ImageCI}.sort(Name).filter(City='Dumfries')"
+        csql: "/RUKAST_Property{Name,NameEN,Description,DescriptionEN,Latitude,Longitude,ImageCI}.sort(Name).filter(City='Kuhmo')"
       region:
-        latitude: 55.069
-        longitude: -3.61084
+        latitude: 64.12623
+        longitude: 29.51338
         latitudeDelta: 0.015
       icon: 'simplelineicons:map'
 
