@@ -111,6 +111,7 @@ views:
         fi: 2ppx
       icon: 'simplelineicons:home'
       headerNumbering: false
+      imageTopCI: cr6frtzmhnpmn2c3
 
 controllers:
   constructor:
