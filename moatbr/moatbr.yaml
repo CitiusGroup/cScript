@@ -14,7 +14,7 @@ app:
   name: Moat Brae
   abbreviation: moatbr
   version: 1.0.0
-  cScriptVersion: '17'
+  cScriptVersion: '18'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -82,7 +82,7 @@ views:
           title:
             en: History & Heritage
             fi: Historia ja perinteet
-          icon: 'simplelineicons:home'
+          icon: 'simplelineicons:hourglass'
           listeners:
             click: onHistoryClick
 
