@@ -112,7 +112,7 @@ views:
       icon: 'simplelineicons:home'
       headerNumbering: false
       imageTopCI: kf283rxteznk3x8c
-      #imageTopHeight: 140px
+      imageTopHeight: 140px
 
 controllers:
   constructor:
