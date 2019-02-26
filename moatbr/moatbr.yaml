@@ -14,7 +14,7 @@ app:
   name: Moat Brae
   abbreviation: moatbr
   version: 1.0.0
-  cScriptVersion: '6'
+  cScriptVersion: '7'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -111,7 +111,8 @@ views:
         fi: 2ppx
       icon: 'simplelineicons:home'
       headerNumbering: false
-      imageTopCI: cr6frtzmhnpmn2c3
+      imageTopCI: kf283rxteznk3x8c
+      #imageTopHeight: 150px
 
 controllers:
   constructor:
