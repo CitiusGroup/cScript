@@ -14,7 +14,7 @@ app:
   name: Juminkeko
   abbreviation: jumink
   version: 1.0.0
-  cScriptVersion: '8'
+  cScriptVersion: '9'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -78,14 +78,6 @@ views:
           listeners:
             click: onWelcomeClick
 
-        #kalevalaitem:
-          #title:
-            #en: About the Kalevala
-            #fi: Kalevala
-          #icon: 'simplelineicons:book-open'
-          #listeners:
-            #click: onKalevalaClick
-
         buildingitem:
           title:
             en: The Building
@@ -93,6 +85,14 @@ views:
           icon: 'simplelineicons:grid'
           listeners:
             click: onBuildingClick
+
+        kalevalaitem:
+          title:
+            en: Kalevala, national epic
+            fi: Kalevala, kansalliseepos
+          icon: 'simplelineicons:book-open'
+          listeners:
+            click: onKalevalaClick
 
         #activitiesitem:
           #title:
@@ -126,6 +126,18 @@ views:
       icon: 'simplelineicons:grid'
       headerNumbering: false
       imageTopCI: hhpr36x6zcz3kf69
+
+    kalevala:
+      type: page
+      title:
+        en: Kalevala, national epic
+        fi: Kalevala, kansalliseepos
+      ci:
+        en: rch6
+        fi: p29p
+      icon: 'simplelineicons:grid'
+      headerNumbering: false
+      imageTopCI: p38rr3t8xf83rwft
 
     welcome:
       type: page
