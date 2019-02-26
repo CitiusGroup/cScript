@@ -14,7 +14,7 @@ app:
   name: Moat Brae
   abbreviation: moatbr
   version: 1.0.0
-  cScriptVersion: '14'
+  cScriptVersion: '15'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -102,9 +102,9 @@ views:
       items:
         csql: "/RUKAST_Property{Name,NameEN,Description,DescriptionEN,Latitude,Longitude,ImageCI}.sort(Name).filter(City='Dumfries')"
       region:
-        latitude: 55.06868
-        longitude: -3.61232
-        latitudeDelta: 0.01
+        latitude: 55.069
+        longitude: -3.61084
+        latitudeDelta: 0.04
         #latitudeDelta: 0.1622
       icon: 'simplelineicons:map'
 
