@@ -14,7 +14,7 @@ app:
   name: Juminkeko
   abbreviation: jumink
   version: 1.0.0
-  cScriptVersion: '12'
+  cScriptVersion: '13'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -181,9 +181,9 @@ views:
       items:
         csql: "/RUKAST_Property{Name,NameEN,Description,DescriptionEN,Latitude,Longitude,ImageCI}.sort(Name).filter(City='Kuhmo')"
       region:
-        latitude: 64.12623
-        longitude: 29.51338
-        latitudeDelta: 0.015
+        latitude: 64.12356
+        longitude: 29.54923
+        latitudeDelta: 0.2
       icon: 'simplelineicons:map'
 
     welcome:
