@@ -14,7 +14,7 @@ app:
   name: Moat Brae
   abbreviation: moatbr
   version: 1.0.0
-  cScriptVersion: '19'
+  cScriptVersion: '20'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -86,6 +86,14 @@ views:
           listeners:
             click: onHistoryClick
 
+        jmbarrieitem:
+          title:
+            en: J. M. Barrie
+            fi: J. M. Barrie
+          icon: 'simplelineicons:user'
+          listeners:
+            click: onJMBarrieClick
+
         mapitem:
           title:
             en: Map
@@ -113,6 +121,19 @@ views:
       icon: 'simplelineicons:hourglass'
       headerNumbering: false
       imageTopCI: hcrptmnr69xpf9w8
+      #imageTopHeight: 100px
+
+    jmbarrie:
+      type: page
+      title:
+        en: J. M. Barrie
+        fi: J. M. Barrie
+      ci:
+        en: xten
+        fi: xten
+      icon: 'simplelineicons:user'
+      headerNumbering: false
+      imageTopCI: w6kk686mfrp3zzzf
       #imageTopHeight: 100px
 
     map:
@@ -146,6 +167,8 @@ controllers:
     url: welcome
   onHistoryClick:
     url: history
+  onJMBarrieClick:
+    url: jmbarrie
   onMapClick:
     url: map
   onWelcomeClick:
