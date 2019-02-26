@@ -14,7 +14,7 @@ app:
   name: Moat Brae
   abbreviation: moatbr
   version: 1.0.0
-  cScriptVersion: '10'
+  cScriptVersion: '11'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -104,7 +104,7 @@ views:
       region:
         latitude: 55.07159841662096
         longitude: -3.613418340682983
-        latitudeDelta: 0.1
+        latitudeDelta: 1.0
         #latitudeDelta: 0.1622
       icon: 'simplelineicons:map'
 
