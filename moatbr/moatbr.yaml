@@ -14,7 +14,7 @@ app:
   name: Moat Brae
   abbreviation: moatbr
   version: 1.0.0
-  cScriptVersion: '16'
+  cScriptVersion: '17'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -78,6 +78,14 @@ views:
           listeners:
             click: onWelcomeClick
 
+        historyitem:
+          title:
+            en: History & Heritage
+            fi: Historia ja perinteet
+          icon: 'simplelineicons:home'
+          listeners:
+            click: onHistoryClick
+
         mapitem:
           title:
             en: Map
@@ -94,6 +102,19 @@ views:
 
   mainPanel:
 
+    history:
+      type: page
+      title:
+        en: History & Heritage
+        fi: Historia ja perinteet
+      ci:
+        en: hrxr
+        fi: hrxr
+      icon: 'simplelineicons:hourglass'
+      headerNumbering: false
+      imageTopCI: hcrptmnr69xpf9w8
+      #imageTopHeight: 100px
+
     map:
       type: map
       title:
@@ -105,7 +126,6 @@ views:
         latitude: 55.069
         longitude: -3.61084
         latitudeDelta: 0.015
-        #latitudeDelta: 0.1622
       icon: 'simplelineicons:map'
 
     welcome:
@@ -124,6 +144,8 @@ views:
 controllers:
   constructor:
     url: welcome
+  onHistoryClick:
+    url: history
   onMapClick:
     url: map
   onWelcomeClick:
