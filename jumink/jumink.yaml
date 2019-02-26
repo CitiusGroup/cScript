@@ -14,7 +14,7 @@ app:
   name: Juminkeko
   abbreviation: jumink
   version: 1.0.0
-  cScriptVersion: '14'
+  cScriptVersion: '15'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -183,7 +183,7 @@ views:
       region:
         latitude: 64.12356
         longitude: 29.54923
-        latitudeDelta: 0.15
+        latitudeDelta: 0.12
       icon: 'simplelineicons:map'
 
     welcome:
