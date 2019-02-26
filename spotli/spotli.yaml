@@ -132,7 +132,7 @@ views:
         fi: Kartta
       items:
         #table: RUKAST_Property
-        csql: "/RUKAST_Property{Name,NameEN,Description,DescriptionEN,Latitude,Longitude}.sort(Name).filter(City='Kajaani')"
+        csql: "/RUKAST_Property{Name,NameEN,Description,DescriptionEN,Latitude,Longitude,ImageCI}.sort(Name).filter(City='Kajaani')"
       region:
         latitude: 64.2242471
         longitude: 27.7333388
