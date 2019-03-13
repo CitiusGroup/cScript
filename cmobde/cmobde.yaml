@@ -17,20 +17,15 @@ app:
       text:
         en: Welcome to the CitiusMobile Development application.
         fi: Tervetuloa testaamaan CitiusMobile Development applikaatiota
-    meeting:
-      title: Blitz Meeting
+    secondpage:
+      title: The second page
       text:
-        en: From the application, you will find the basic information about the meeting.
-        fi: Applikaatiotsta löydät kokousekn perustiedot
-    applications:
-      title: Applications
-      text:
-        en: As examples, Spotlit includes Juminkeko and Moat Brae applications.
-        fi: Esimerkkeinä Spotlit sisältää Juminkeko ja Moat Brae applikaatiot.
+        en: This is the seocnd page for the intro.
+        fi: Tämä on intron toinen sivu.
   name: CitiusMobile Development
   abbreviation: cmobde
   version: 1.1.3
-  cScriptVersion: '1'
+  cScriptVersion: '2'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -87,51 +82,11 @@ views:
 
         welcomeitem:
           title:
-            en: Welcome to Kajaani
-            fi: Tervetuloa Kajaanin
+            en: Welcome to CitiusMobile Development
+            fi: Tervetuloa CitiusMobile Development
           icon: 'simplelineicons:home'
           listeners:
             click: onWelcomeClick
-
-        scheduleitem:
-          title:
-            en: Schedule
-            fi: Aikataulu
-          icon: 'simplelineicons:clock'
-          listeners:
-            click: onScheduleClick
-
-        partnershipmeetingitem:
-          title:
-            en: Partnership Meeting
-            fi: Partnerikokous
-          icon: 'simplelineicons:doc'
-          listeners:
-            click: onPartnershipMeetingClick
-
-        steeringcommitteemeetingitem:
-          title:
-            en: Steering Committee Meeting
-            fi: Ohjausryhmän kokous
-          icon: 'simplelineicons:doc'
-          listeners:
-            click: onSteeringCommitteeMeetingClick
-
-        mapitem:
-          title:
-            en: Map
-            fi: Kartta
-          icon: 'simplelineicons:map'
-          listeners:
-            click: onMapClick
-
-        privacyitem:
-          title:
-            en: Privacy
-            fi: Yksityisyys
-          icon: 'simplelineicons:lock'
-          listeners:
-            click: onPrivacyClick
 
         separatoritem:
           separator: true
@@ -172,95 +127,25 @@ views:
 
   mainPanel:
 
-    map:
-      type: map
-      title:
-        en: Map
-        fi: Kartta
-      items:
-        #table: RUKAST_Property
-        csql: "/RUKAST_Property{Name,NameEN,Description,DescriptionEN,Latitude,Longitude,ImageCI}.sort(Name).filter(City='Kajaani')"
-      region:
-        latitude: 64.22524
-        longitude: 27.73745
-        latitudeDelta: 0.03
-      icon: 'simplelineicons:map'
-
-    partnershipmeeting:
-      type: pdf
-      title:
-        en: Partnership Meeting
-        fi: Partnerikokous
-      ci:
-        en: hh8z3xfnwfkwrmtk
-        fi: hh8z3xfnwfkwrmtk
-      icon: 'simplelineicons:doc'
-
-    privacy:
-      type: page
-      title:
-        en: Privacy
-        fi: Yksityisyys
-      ci:
-        en: 9e8h
-        fi: remn
-      icon: 'simplelineicons:lock'
-      headerNumbering: false
-
-    schedule:
-      type: page
-      title:
-        en: Schedule
-        fi: Aikataulu
-      ci:
-        en: fxt3
-        fi: n96x
-      icon: 'simplelineicons:clock'
-      headerNumbering: false
-      imageTopCI: fpkpfxknp383ttkr
-      #imageTopHeight: 150px
-
-    steeringcommitteemeeting:
-      type: pdf
-      title:
-        en: Steering Committee Meeting
-        fi: Ohjausryhmän kokous
-      ci:
-        en: z3h66x39mnkezfrx
-        fi: z3h66x39mnkezfrx
-      icon: 'simplelineicons:doc'
-
     welcome:
       type: page
       title:
         en: Welcome
         fi: Tervetuloa
       ci:
-        en: thn6
-        fi: 88em
+        en: 2zfm
+        fi: 3npt
       icon: 'simplelineicons:home'
       headerNumbering: false
-      imageTop: kajaani-winter
-      imageTopCI: w3kkkkzmkch9cw3f
+      #imageTop: kajaani-winter
+      #imageTopCI: w3kkkkzmkch9cw3f
 
 controllers:
   constructor:
     url: welcome
-  #onJMBarrieClick:
-    #application: barrie
   onJuminkekoClick:
     application: jumink
-  onMapClick:
-    url: map
   onMoatBraeClick:
     application: moatbr
-  onPartnershipMeetingClick:
-    url: partnershipmeeting
-  onPrivacyClick:
-    url: privacy
-  onScheduleClick:
-    url: schedule
-  onSteeringCommitteeMeetingClick:
-    url: steeringcommitteemeeting
   onWelcomeClick:
     url: welcome
