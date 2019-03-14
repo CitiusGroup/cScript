@@ -70,7 +70,6 @@ views:
 
       items:
 
-
         welcomeitem:
           title:
             en: About the Juminkeko
@@ -128,7 +127,7 @@ views:
   mainPanel:
 
     tabpanel:
-      type: map
+      type: tab
       items:
 
         welcome:
