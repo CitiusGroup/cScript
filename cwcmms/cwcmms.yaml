@@ -1,7 +1,7 @@
 app:
-  juminkeko:
+  cwcmms:
     name: Juminkeko
-    abbreviation: jumink
+    abbreviation: cwcmms
     requires:
       - app: cwapps
       - app: cwcore
@@ -12,9 +12,9 @@ app:
       abbreviation: demo
       username: demo@citius.com
   name: Juminkeko
-  abbreviation: jumink
+  abbreviation: cwcmms
   version: 1.0.0
-  cScriptVersion: '20'
+  cScriptVersion: '1'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -72,8 +72,8 @@ views:
 
         welcomeitem:
           title:
-            en: About the Juminkeko
-            fi: Juminkeko
+            en: Varikko
+            fi: Varikko
           icon: 'simplelineicons:home'
           listeners:
             click: onWelcomeClick
