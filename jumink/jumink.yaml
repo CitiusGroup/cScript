@@ -127,7 +127,7 @@ views:
   mainPanel:
 
     tabpanel:
-      type: tab
+      type: tabs
       items:
 
         welcome:
