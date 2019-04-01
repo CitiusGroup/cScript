@@ -1,0 +1,219 @@
+app:
+  cmmsde:
+    name: Kunnossapito testaus
+    abbreviation: cmmsde
+    requires:
+      - app: cwapps
+      - app: cwcore
+    icon: citiusdemoicon
+    version: 1.1.3
+    defaultSite: xthm
+    #usernameAbbreviation:
+      #abbreviation: demo
+      #username: demo@citius.com
+  name: Kunnossapito testaus
+  abbreviation: cmmsde
+  version: 1.0.0
+  cScriptVersion: '1'
+
+  # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
+  theme:
+    color: '#000000'
+    android:
+      fontFamily: Roboto light
+      brandPrimary: '#a14815'
+    ios:
+      fontFamily: Avenir-Medium
+    style:
+      noteluokka:
+        color: '#7c7e7f'
+      strongluokka:
+        color: '#0071b8'
+        fontSize: 16px
+        fontWeight: bold
+        ios:
+          fontFamily: Avenir-Heavy
+        android:
+          fontFamily: Roboto
+views:
+
+  login:
+    applicationImage: juminkeko-login-applicationImage-transparent
+    backgroundColor:
+      ios: '#ffffff'
+      android: '#e1e7f6'
+    repeatBackgroundImage: true
+    fieldBackgroundColor: '#ffffff'
+    fieldBorderColor: '#0071b8'
+    fieldBorderSize: 1
+    fieldTextColor: '#0071b8'
+    fieldTextDisabledColor: '#bbbdbf'
+    loginButtonBackgroundColor: '#0071b8'
+    loginButtonDisabledBackgroundColor: '#ffffff'
+    loginButtonTextColor: '#ffffff'
+    loginButtonDisabledTextColor: '#bbbdbf'
+
+  leftPanel:
+
+    header:
+      backgroundColor: '#ffffff'
+      headerBackgroundColor:
+        ios: '#ffffff'
+        android: '#ffffff'
+      headerImage: juminkeko-menu-headerImage-transparent
+
+    mainmenu:
+      type: menu
+      title:
+        en: Jumikeko Menu
+        fi: Jumikeko valikko
+
+      items:
+
+        welcomeitem:
+          title:
+            en: Varikko
+            fi: Varikko
+          icon: 'simplelineicons:home'
+          listeners:
+            click: onWelcomeClick
+
+        buildingitem:
+          title:
+            en: The Building
+            fi: Rakennus
+          icon: 'simplelineicons:grid'
+          listeners:
+            click: onBuildingClick
+
+        kalevalaitem:
+          title:
+            en: Kalevala, national epic
+            fi: Kalevala, kansalliseepos
+          icon: 'simplelineicons:book-open'
+          listeners:
+            click: onKalevalaClick
+
+        lonnrotitem:
+          title:
+            en: Elias Lönnrot
+            fi: Elias Lönnrot
+          icon: 'simplelineicons:user'
+          listeners:
+            click: onLonnrotClick
+
+        mapitem:
+          title:
+            en: Map
+            fi: Kartta
+          icon: 'simplelineicons:map'
+          listeners:
+            click: onMapClick
+
+        #activitiesitem:
+          #title:
+            #en: Activities
+            #fi: Tapahtumat
+          #icon: 'simplelineicons:event'
+          #listeners:
+            #click: onActivitiesClick
+
+        separatoritem:
+          separator: true
+          title:
+            en: Introduction
+            fi: Esittely
+
+  mainPanel:
+
+    tabpanel:
+      type: tabs
+      items:
+
+        welcome:
+          type: page
+          title:
+            en: Welcome to Juminkeko
+            fi: Tervetuloa Juminkekoon
+          ci:
+            en: mpnn
+            fi: rex3
+          icon: 'simplelineicons:home'
+          headerNumbering: false
+          imageTopCI: 3fhchx9zmn8znr6z
+
+        building:
+          type: page
+          title:
+            en: Building
+            fi: Rakennus
+          ci:
+            en: ketp
+            fi: wte8
+          icon: 'simplelineicons:grid'
+          headerNumbering: false
+          imageTopCI: hhpr36x6zcz3kf69
+
+        kalevala:
+          type: page
+          title:
+            en: Kalevala, national epic
+            fi: Kalevala, kansalliseepos
+          ci:
+            en: rch6
+            fi: p29p
+          icon: 'simplelineicons:book-open'
+          headerNumbering: false
+          imageTopCI: p38rr3t8xf83rwft
+
+        lonnrot:
+          type: page
+          title:
+            en: Elias Lönnrot
+            fi: Elias Lönnrot
+          ci:
+            en: khh9
+            fi: hemh
+          icon: 'simplelineicons:user'
+          headerNumbering: false
+          imageTopCI: 99z8r88whmhhrz6z
+
+        map:
+          type: map
+          title:
+            en: Map
+            fi: Kartta
+          items:
+            csql: "/RUKAST_Property{Name,NameEN,Description,DescriptionEN,Latitude,Longitude,ImageCI}.sort(Name).filter(City='Kuhmo')"
+          region:
+            latitude: 64.12356
+            longitude: 29.54923
+            latitudeDelta: 0.08
+          icon: 'simplelineicons:map'
+
+    activities:
+      type: page
+      title:
+        en: Activities
+        fi: Tapahtumat
+      ci:
+        en: thn6
+        fi: thn6
+      icon: 'simplelineicons:event'
+      headerNumbering: false
+
+controllers:
+  constructor:
+    url: welcome
+  onActivitiesClick:
+    url: activities
+  onBuildingClick:
+    url: building
+  onKalevalaClick:
+    url: kalevala
+  onLonnrotClick:
+    url: lonnrot
+  onMapClick:
+    url: map
+  onWelcomeClick:
+    url: welcome
