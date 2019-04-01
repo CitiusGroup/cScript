@@ -1,0 +1,132 @@
+app:
+  kamkhub:
+    name: KAMK Hub
+    abbreviation: kamkhu
+    requires:
+      - app: cwapps
+      - app: cwcore
+    icon: kamkhubicon
+    version: 1.1.3
+    defaultSite: enmx
+    usernameAbbreviation:
+      abbreviation: demo
+      username: demo@citius.com
+  intro:
+    spotlit:
+      title: KAMK Hub - Tervetuloa
+      text:
+        en: Welcome to the KAMK Hub application...
+        fi: Tervetuloa KAMK Hub applikaatioon...
+    meeting:
+      title: KAMK Hub - Page 2
+      text:
+        en: KAMK Hub application page 2...
+        fi: KAMK Hub applikaatio sivu 2...
+    applications:
+      title: KAMK Hub - Page 3
+      text:
+        en: KAMK Hub application page 3...
+        fi: KAMK Hub applikaatio sivu 3...
+  name: KAMK Hub
+  abbreviation: kamkhu
+  version: 1.1.0
+  cScriptVersion: '1'
+
+
+  # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
+  theme:
+    color: "#000000"
+    android:
+      fontFamily: Roboto light
+      brandPrimary: "#0071b8"
+    ios:
+      fontFamily: Avenir-Medium
+    style:
+      noteluokka:
+        color: "#7c7e7f"
+      strongluokka:
+        color: "#0071b8"
+        fontSize: 16px
+        fontWeight: "bold"
+        ios:
+          fontFamily: Avenir-Heavy
+        android:
+          fontFamily: Roboto
+
+views:
+
+  login:
+    applicationImage: kamkhub-login-applicationImage-transparent
+    backgroundColor:
+      ios: '#ffffff'
+      android: '#e1e7f6'
+    repeatBackgroundImage: true
+    fieldBackgroundColor: '#ffffff'
+    fieldBorderColor: '#0071b8'
+    fieldBorderSize: 1
+    fieldTextColor: '#0071b8'
+    fieldTextDisabledColor: '#bbbdbf'
+    loginButtonBackgroundColor: '#0071b8'
+    loginButtonDisabledBackgroundColor: '#ffffff'
+    loginButtonTextColor: '#ffffff'
+    loginButtonDisabledTextColor: '#bbbdbf'
+
+  leftPanel:
+
+    header:
+      backgroundColor: '#ffffff'
+      headerBackgroundColor:
+        ios: '#ffffff'
+        android: '#e1e7f6'
+      headerImage: spotlit-menu-headerImage-transparent
+
+    mainmenu:
+      type: menu
+      title:
+        en: KAMK Hub Menu
+        fi: KAMK Hub valikko
+      items:
+
+        welcomeitem:
+          title:
+            en: Welcome to KAMK Hub
+            fi: Tervetuloa KAMK Hubiin
+          icon: 'simplelineicons:home'
+          listeners:
+            click: onWelcomeClick
+
+        separatoritem:
+          separator: true
+          title:
+            en: Separator Text
+            fi: Jaottelun teksti
+
+        introduction:
+          title:
+            fi: App-esittely
+            en: App Intro
+          icon: 'materialcommunityicons:application'
+          listeners:
+            click:
+              app: intro
+
+  mainPanel:
+
+    welcome:
+      type: page
+      title:
+        en: Welcome
+        fi: Tervetuloa
+      ci:
+        en: p63z
+        fi: z9n3
+      icon: 'simplelineicons:home'
+      headerNumbering: false
+      #imageTop: kajaani-winter
+      #imageTopCI: w3kkkkzmkch9cw3f
+
+controllers:
+  constructor:
+    url: welcome
+  onWelcomeClick:
+    url: welcome
