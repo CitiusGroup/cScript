@@ -30,7 +30,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '11'
+  cScriptVersion: '12'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -63,9 +63,10 @@ views:
       android: '#009aa6'
     #repeatBackgroundImage: true
     fieldBackgroundColor: '#ffffff'
-    fieldBorderColor: '#00b2e3'
+    fieldBorderColor: '#ffffff'
     fieldBorderSize: 1
-    fieldTextColor: '#00b2e3'
+    fieldTextColor: '#ffffff'
+    #fieldTextColor: '#00b2e3'
     fieldTextDisabledColor: '#bbbdbf'
     #RGB: R0, G178, B227 (KAMK sininen) #00b2e3
     #RBG: R97, G33, B102 (KAMK violetti) #612166
