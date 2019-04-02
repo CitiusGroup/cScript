@@ -30,7 +30,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '4'
+  cScriptVersion: '5'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -78,8 +78,12 @@ views:
       headerBackgroundColor:
         ios: '#009aa6'
         android: '#009aa6'
-      headerImage: kamkhub-menu-headerImage-transparent
+      headerImage: kamkhub-menu-headerImage
       textColor: '#ffffff'
+      #headerBackgroundImage:
+        #ios: demo-login-backgroundImage-transparent
+      #repeatHeaderBackgroundImage: true
+
 
     mainmenu:
       type: menu
