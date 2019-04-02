@@ -30,7 +30,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '7'
+  cScriptVersion: '8'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -101,6 +101,14 @@ views:
           listeners:
             click: onWelcomeClick
 
+        CoreR&DCompetences:
+          title:
+            en: Core R&D Competences
+            fi: Tutkimus ja kehitys
+          icon: 'simplelineicons:home'
+          listeners:
+            click: onCoreR&DCompetencesClick
+
         tourismandsportsitem:
           title:
             en: Tourism and Sports
@@ -139,8 +147,23 @@ views:
       #imageTop: kajaani-winter
       #imageTopCI: w3kkkkzmkch9cw3f
 
+    CoreR&DCompetences:
+      type: page
+      title:
+        en: Core R&D Competences
+        fi: Tutkimus ja kehitys
+      ci:
+        en: nmwt
+        fi: c6mf
+      icon: 'simplelineicons:home'
+      headerNumbering: false
+      #imageTop: kajaani-winter
+      #imageTopCI: w3kkkkzmkch9cw3f
+
 controllers:
   constructor:
     url: welcome
+  onCoreR&DCompetencesClick:
+    url: CoreR&DCompetences
   onWelcomeClick:
     url: welcome
