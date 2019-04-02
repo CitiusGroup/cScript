@@ -13,31 +13,32 @@ app:
       username: demo@citius.com
   intro:
     spotlit:
-      title: KAMK Hub - Tervetuloa
+      title: KAMK Hub
       text:
         en: Welcome to the KAMK Hub application...
         fi: Tervetuloa KAMK Hub applikaatioon...
     meeting:
-      title: KAMK Hub - Page 2
+      title: Page 1
       text:
         en: KAMK Hub application page 2...
         fi: KAMK Hub applikaatio sivu 2...
     applications:
-      title: KAMK Hub - Page 3
+      title: Page 2
       text:
         en: KAMK Hub application page 3...
         fi: KAMK Hub applikaatio sivu 3...
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '1'
+  cScriptVersion: '2'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
     color: "#000000"
     android:
       fontFamily: Roboto light
-      brandPrimary: "#0071b8"
+      # RGB: 0, 154, 166
+      brandPrimary: "#009aa6"
     ios:
       fontFamily: Avenir-Medium
     style:
@@ -57,9 +58,9 @@ views:
   login:
     applicationImage: kamkhub-login-applicationImage-transparent
     backgroundColor:
-      ios: '#ffffff'
-      android: '#e1e7f6'
-    repeatBackgroundImage: true
+      ios: '#009aa6'
+      android: '#009aa6'
+    #repeatBackgroundImage: true
     fieldBackgroundColor: '#ffffff'
     fieldBorderColor: '#0071b8'
     fieldBorderSize: 1
@@ -73,11 +74,11 @@ views:
   leftPanel:
 
     header:
-      backgroundColor: '#ffffff'
+      backgroundColor: '#009aa6'
       headerBackgroundColor:
-        ios: '#ffffff'
-        android: '#e1e7f6'
-      headerImage: spotlit-menu-headerImage-transparent
+        ios: '#009aa6'
+        android: '#009aa6'
+      headerImage: kamkhub-menu-headerImage-transparent
 
     mainmenu:
       type: menu
@@ -93,6 +94,14 @@ views:
           icon: 'simplelineicons:home'
           listeners:
             click: onWelcomeClick
+
+        tourismandsportsitem:
+          title:
+            en: Tourism and Sports
+            fi: Matkailu-ja liikunta-alan
+          icon: 'simplelineicons:home'
+          listeners:
+            click: onTourismAndSportsClick
 
         separatoritem:
           separator: true
