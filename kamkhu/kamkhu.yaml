@@ -79,11 +79,11 @@ views:
         ios: '#009aa6'
         android: '#009aa6'
       headerImage: kamkhub-menu-headerImage
+      marginTop: 0
       textColor: '#ffffff'
       #headerBackgroundImage:
         #ios: demo-login-backgroundImage-transparent
       #repeatHeaderBackgroundImage: true
-
 
     mainmenu:
       type: menu
