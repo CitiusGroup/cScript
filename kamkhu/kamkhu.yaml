@@ -103,13 +103,13 @@ views:
           listeners:
             click: onWelcomeClick
 
-        corerdcompetencesitem:
+        CoreR&DCompetencesitem:
           title:
             en: 'Core R&D Competences'
             fi: 'Tutkimus ja kehitys'
           icon: 'simplelineicons:home'
           listeners:
-            click: onCoreRDcompetencesClick
+            click: onCoreR&DCompetencesClick
 
         businessservicesitem:
           title:
@@ -149,16 +149,14 @@ views:
       #imageTop: kajaani-winter
       #imageTopCI: w3kkkkzmkch9cw3f
 
-    corerdcompetences:
+    CoreR&DCompetences:
       type: page
       title:
-        en: 'Core R&D Competences'
-        fi: 'Tutkimus ja kehitys'
+        en: 'Core R&D Competences otsikko'
+        fi: 'Tutkimus ja kehitys otsikko'
       ci:
-        en: p63z
-        fi: z9n3
-        #en: nmwt
-        #fi: c6mf
+        en: nmwt
+        fi: c6mf
       icon: 'simplelineicons:home'
       headerNumbering: false
       #imageTop: kajaani-winter
@@ -167,7 +165,7 @@ views:
 controllers:
   constructor:
     url: welcome
-  onCoreRDcompetencesClick:
-    url: corerdcompetences
+  onCoreR&DCompetencesClick:
+    url: CoreR&DCompetences
   onWelcomeClick:
     url: welcome
