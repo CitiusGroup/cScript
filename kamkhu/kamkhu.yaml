@@ -30,7 +30,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '15'
+  cScriptVersion: '16'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -113,11 +113,11 @@ views:
 
         businessservicesitem:
           title:
-            en: Tourism and Sports
-            fi: Matkailu-ja liikunta-alan
+            en: Business Services
+            fi: Työelämän palvelut
           icon: 'simplelineicons:home'
           listeners:
-            click: onTourismAndSportsClick
+            click: onBusinessServicesClick
 
         separatoritem:
           separator: true
@@ -135,6 +135,9 @@ views:
               app: intro
 
   mainPanel:
+
+    businessservices:
+      type: tile
 
     welcome:
       type: page
@@ -165,6 +168,8 @@ views:
 controllers:
   constructor:
     url: welcome
+  onBusinessServicesClick:
+    url: businessservices
   onCoreR&DCompetencesClick:
     url: CoreR&DCompetences
   onWelcomeClick:
