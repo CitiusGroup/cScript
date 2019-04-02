@@ -30,7 +30,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '10'
+  cScriptVersion: '11'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -56,20 +56,22 @@ app:
 views:
 
   login:
+
     applicationImage: kamkhub-login-applicationImage-transparent
     backgroundColor:
       ios: '#009aa6'
       android: '#009aa6'
     #repeatBackgroundImage: true
     fieldBackgroundColor: '#ffffff'
-    fieldBorderColor: '#612166'
+    fieldBorderColor: '#00b2e3'
     fieldBorderSize: 1
-    fieldTextColor: '#612166'
+    fieldTextColor: '#00b2e3'
     fieldTextDisabledColor: '#bbbdbf'
-    #RBG: R97, G33, B102 (KAMK violetti)
-    loginButtonBackgroundColor: '#612166'
+    #RGB: R0, G178, B227 (KAMK sininen) #00b2e3
+    #RBG: R97, G33, B102 (KAMK violetti) #612166
+    loginButtonBackgroundColor: '#00b2e3'
     loginButtonDisabledBackgroundColor: 'ffffff'
-    loginButtonTextColor: '#612166'
+    loginButtonTextColor: '#00b2e3'
     loginButtonDisabledTextColor: '#bbbdbf'
 
   leftPanel:
