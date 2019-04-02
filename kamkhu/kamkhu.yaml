@@ -30,7 +30,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '13'
+  cScriptVersion: '14'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -57,6 +57,7 @@ views:
 
   login:
 
+    #RGB: R0, G178, B227 (KAMK sininen) #00b2e3
     applicationImage: kamkhub-login-applicationImage-transparent
     backgroundColor:
       ios: '#009aa6'
@@ -68,8 +69,6 @@ views:
     fieldTextColor: '#ffffff'
     #fieldTextColor: '#00b2e3'
     fieldTextDisabledColor: '#bbbdbf'
-    #RGB: R0, G178, B227 (KAMK sininen) #00b2e3
-    #RBG: R97, G33, B102 (KAMK violetti) #612166
     loginButtonBackgroundColor: '#00b2e3'
     loginButtonDisabledBackgroundColor: 'ffffff'
     loginButtonTextColor: '#00b2e3'
@@ -104,7 +103,7 @@ views:
           listeners:
             click: onWelcomeClick
 
-        corerdcompetences:
+        corerdcompetencesitem:
           title:
             en: 'Core R&D Competences'
             fi: 'Tutkimus ja kehitys'
@@ -112,7 +111,7 @@ views:
           listeners:
             click: onCoreRDcompetencesClick
 
-        tourismandsportsitem:
+        businessservicesitem:
           title:
             en: Tourism and Sports
             fi: Matkailu-ja liikunta-alan
@@ -126,7 +125,7 @@ views:
             en: Separator Text
             fi: Jaottelun teksti
 
-        introduction:
+        introductionitem:
           title:
             fi: App-esittely
             en: App Intro
