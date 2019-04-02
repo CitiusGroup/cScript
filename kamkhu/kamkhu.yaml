@@ -30,7 +30,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '2'
+  cScriptVersion: '4'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -43,9 +43,9 @@ app:
       fontFamily: Avenir-Medium
     style:
       noteluokka:
-        color: "#7c7e7f"
+        color: "#009aa6"
       strongluokka:
-        color: "#0071b8"
+        color: "#009aa6"
         fontSize: 16px
         fontWeight: "bold"
         ios:
@@ -79,6 +79,7 @@ views:
         ios: '#009aa6'
         android: '#009aa6'
       headerImage: kamkhub-menu-headerImage-transparent
+      textColor: '#ffffff'
 
     mainmenu:
       type: menu
