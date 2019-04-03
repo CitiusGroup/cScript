@@ -30,7 +30,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '18'
+  cScriptVersion: '19'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -182,8 +182,8 @@ views:
           tileBackgroundColor: '#1ABC9C'
           title:
             # Mahtuuko kolmelle riville vai pitäisikö muuttaa
-            en: AIKOPA - Adult and Continuing Education Services
-            fi: AIKOPA - Räätälöity koulutus ja valmennus
+            en: AIKOPA - Adult and Continuing Education
+            fi: AIKOPA - Koulutus ja valmennus
           listeners:
             click:
               webpage:
@@ -194,8 +194,8 @@ views:
           # Emerald: https://www.htmlcsscolor.com/hex/50C878
           tileBackgroundColor: '#50C878'
           title:
-            en: CEMIS - the Centre for Measurements and Information Systems
-            fi: CEMIS - the Centre for Measurements and Information Systems
+            en: CEMIS - Measurement and Information
+            fi: CEMIS - Measurement and Information
           listeners:
             click:
               webpage:
@@ -207,7 +207,7 @@ views:
           tileBackgroundColor: '#3498DB'
           title:
             en: Projects
-            fi: CEMIS - the Centre for Measurements and Information Systems
+            fi: Projektit
           listeners:
             click:
               webpage:
@@ -256,6 +256,56 @@ views:
       title:
         en: Core R&D Competences
         fi: Tutkimus ja kehitys
+      textAreaBackgroundColor: '#00b2e3b3'
+      textAreaHeight: 40%
+      textAreaPosition: bottom
+      items:
+
+        DataCentre:
+          #LightSeaGreen: https://www.htmlcsscolor.com/hex/1ABC9C
+          tileBackgroundColor: '#1ABC9C'
+          title:
+            # Mahtuuko kolmelle riville vai pitäisikö muuttaa
+            en: Data Centre
+            fi: Datakeskusosaaminen
+          listeners:
+            click:
+              webpage:
+                en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Data-Centre-competence-
+                fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Datakeskusosaaminen
+
+
+        EnterpriseAndBusinessDevelopment:
+          # Emerald: https://www.htmlcsscolor.com/hex/50C878
+          tileBackgroundColor: '#50C878'
+          title:
+            en: Enterprise and Business Development
+            fi: Yrittäjyys ja liiketoiminnan kehittäminen
+          listeners:
+            click:
+              webpage:
+                en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Enterprise-and-business-development
+                fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Yrittajyys-ja-liiketoiminnan-kehittaminen
+
+
+        ### TYÖN ALLA ###
+        IndustrialMaterialApplications:
+          # Summer Sky: https://www.htmlcsscolor.com/hex/3498DB
+          tileBackgroundColor: '#3498DB'
+          title:
+            en: Industrial Material Applications
+            fi: Teollisten materiaalien soveltaminen
+          listeners:
+            click:
+              webpage:
+                en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Industrial-materials-applications
+                fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Teollisten-materiaalien-soveltaminen
+
+        #MeasurementInformationAndRobotics:
+        #ProjectPreparationExpertise:
+        #SeriousGameApplications:
+        #TourismAndSports:
+        #WellbeingHealthAndGreenCare:
 
     welcome:
       type: page
