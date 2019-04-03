@@ -13,25 +13,22 @@ app:
       abbreviation: demo
       username: demo@citius.com
   intro:
-    spotlit:
+    kamkhubintro:
       title: KAMK Hub
       text:
-        en: Welcome to the KAMK Hub application...
-        fi: Tervetuloa KAMK Hub applikaatioon...
-    meeting:
-      title: Page 1
+        en: Welcome to the KAMK Hub application which introduces Kajaani University of Applied Sciences' service offering to companies and partners.
+        fi: Tervetuloa KAMK Hub applikaatioon, joka esittelee Kajaanin ammattikorkeakoulun palvelutarjonnan yrityksille ja yhteistyökumppaneille.
+    eufundingintro:
+      title:
+        en: Leverage from the EU
+        fi: Vipuvoimaa EU:lta
       text:
-        en: KAMK Hub application page 2...
-        fi: KAMK Hub applikaatio sivu 2...
-    applications:
-      title: Page 2
-      text:
-        en: KAMK Hub application page 3...
-        fi: KAMK Hub applikaatio sivu 3...
+        en: The KAMK Hub application has received EU funding. Read more from "About the App" in the menu.
+        fi: KAMK Hub applikaatio on saanut EU-tukea. Lue lisää valikon kohdasta "Tietoja ohjelmasta".
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '37'
+  cScriptVersion: '38'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
