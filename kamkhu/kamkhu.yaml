@@ -30,7 +30,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '24'
+  cScriptVersion: '25'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -270,7 +270,10 @@ views:
         DataCentre:
           #LightSeaGreen: https://www.htmlcsscolor.com/hex/1ABC9C
           #tileBackgroundColor: '#1ABC9C9E'
-          tileBackgroundColor: '#0000004d'
+          #tileBackgroundColor: '#0000004d'
+          textAreaBackgroundColor: '#0000004d'
+          textAreaHeight: 40%
+          textAreaPosition: bottom
           tileBackgroundImage: kamk-data-centre
           title:
             # Mahtuuko kolmelle riville vai pitäisikö muuttaa
