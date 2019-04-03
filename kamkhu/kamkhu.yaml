@@ -30,7 +30,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '29'
+  cScriptVersion: '30'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -269,8 +269,8 @@ views:
       items:
 
         TourismAndSports:
-          # Sininen (Iris Blue) #00B2E3: https://www.htmlcsscolor.com/hex/00B2E3
-          tileBackgroundColor: '#00B2E39E'
+          # Cello: https://www.htmlcsscolor.com/hex/34495E
+          tileBackgroundColor: '#34495E9E'
           tileBackgroundImage: kamk-tourism-and-sports
           title:
             en: Tourism and Sports
@@ -353,8 +353,8 @@ views:
                 fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Mittaus--ja-tietojarjestelmat
 
         ProjectPreparationExpertise:
-          # Cello: https://www.htmlcsscolor.com/hex/34495E
-          tileBackgroundColor: '#34495E9E'
+          # Sininen (Iris Blue) #00B2E3: https://www.htmlcsscolor.com/hex/00B2E3
+          tileBackgroundColor: '#00B2E39E'
           tileBackgroundImage: kamk-project-preparation-expertise
           title:
             en: Project Preparation Expertise
@@ -382,14 +382,14 @@ views:
     welcome:
       type: page
       title:
-        en: Welcome
+        en: R&D and Business Services
         fi: Tervetuloa
       ci:
         en: p63z
         fi: z9n3
       icon: 'simplelineicons:home'
       headerNumbering: false
-      #imageTop: kajaani-winter
+      imageTop: kamk-rd-and-business-services
       #imageTopCI: w3kkkkzmkch9cw3f
 
 controllers:
