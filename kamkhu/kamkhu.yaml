@@ -28,7 +28,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '39'
+  cScriptVersion: '40'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -165,7 +165,7 @@ views:
 
   mainPanel:
 
-    about:
+    About:
       type: page
       title:
         en: About the App
@@ -445,7 +445,7 @@ views:
                 en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Enterprise-and-business-development
                 fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Yrittajyys-ja-liiketoiminnan-kehittaminen
 
-    privacy:
+    Privacy:
       type: page
       title:
         en: Privacy
@@ -458,7 +458,7 @@ views:
       #imageTop: kajaani-winter
       #imageTopCI: w3kkkkzmkch9cw3f
 
-    welcome:
+    Welcome:
       type: page
       title:
         en: Welcome to KAMK Hub
@@ -488,7 +488,7 @@ controllers:
   onPrivacyClick:
     url: Privacy
   onWelcomeClick:
-    url: welcome
+    url: Welcome
 
 # KAMK värit:
 # Petrooli (Bondi Blue) #009AA6: https://www.htmlcsscolor.com/hex/009AA6
