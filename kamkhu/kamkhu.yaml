@@ -30,7 +30,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '23'
+  cScriptVersion: '24'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -269,7 +269,8 @@ views:
 
         DataCentre:
           #LightSeaGreen: https://www.htmlcsscolor.com/hex/1ABC9C
-          tileBackgroundColor: '#1ABC9C9E'
+          #tileBackgroundColor: '#1ABC9C9E'
+          tileBackgroundColor: '#0000004d'
           tileBackgroundImage: kamk-data-centre
           title:
             # Mahtuuko kolmelle riville vai pitäisikö muuttaa
@@ -283,7 +284,8 @@ views:
 
         EnterpriseAndBusinessDevelopment:
           # Emerald: https://www.htmlcsscolor.com/hex/50C878
-          tileBackgroundColor: '#50C8789E'
+          #tileBackgroundColor: '#50C8789E'
+          tileBackgroundColor: '#0000004d'
           tileBackgroundImage: kamk-enterprice-and-business-development
           title:
             en: Enterprise and Business Development
@@ -296,7 +298,8 @@ views:
 
         IndustrialMaterialApplications:
           # Summer Sky: https://www.htmlcsscolor.com/hex/3498DB
-          tileBackgroundColor: '#3498DB9E'
+          #tileBackgroundColor: '#3498DB9E'
+          tileBackgroundColor: '#0000004d'
           tileBackgroundImage: kamk-industrial-material-applications
           title:
             en: Industrial Material Applications
