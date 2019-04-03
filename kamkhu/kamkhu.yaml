@@ -30,7 +30,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '20'
+  cScriptVersion: '21'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -195,6 +195,7 @@ views:
         CEMIS:
           # Emerald: https://www.htmlcsscolor.com/hex/50C878
           tileBackgroundColor: '#50C878'
+          tileBackgroundImage: kamk-cemis
           title:
             en: CEMIS - Measurement and Information
             fi: CEMIS - Measurement and Information
@@ -207,6 +208,7 @@ views:
         Projects:
           # Summer Sky: https://www.htmlcsscolor.com/hex/3498DB
           tileBackgroundColor: '#3498DB'
+          tileBackgroundImage: kamk-projects
           title:
             en: Projects
             fi: Projektit
@@ -219,6 +221,7 @@ views:
         Publications:
           # Deep Lilac: https://www.htmlcsscolor.com/hex/9B59B6
           tileBackgroundColor: '#9B59B6'
+          tileBackgroundImage: kamk-projects
           title:
             en: Publications
             fi: Julkaisut
@@ -231,6 +234,7 @@ views:
         PublicationsDatabase:
           # Cello: https://www.htmlcsscolor.com/hex/34495E
           tileBackgroundColor: '#34495E'
+          tileBackgroundImage: kamk-projects
           title:
             en: Publications Database
             fi: Julkaisutietokanta
@@ -266,6 +270,7 @@ views:
         DataCentre:
           #LightSeaGreen: https://www.htmlcsscolor.com/hex/1ABC9C
           tileBackgroundColor: '#1ABC9C'
+          tileBackgroundImage: kamk-projects
           title:
             # Mahtuuko kolmelle riville vai pitäisikö muuttaa
             en: Data Centre
@@ -280,6 +285,7 @@ views:
         EnterpriseAndBusinessDevelopment:
           # Emerald: https://www.htmlcsscolor.com/hex/50C878
           tileBackgroundColor: '#50C878'
+          tileBackgroundImage: kamk-projects
           title:
             en: Enterprise and Business Development
             fi: Yrittäjyys ja liiketoiminnan kehittäminen
@@ -290,10 +296,10 @@ views:
                 fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Yrittajyys-ja-liiketoiminnan-kehittaminen
 
 
-        ### TYÖN ALLA ###
         IndustrialMaterialApplications:
           # Summer Sky: https://www.htmlcsscolor.com/hex/3498DB
           tileBackgroundColor: '#3498DB'
+          tileBackgroundImage: kamk-projects
           title:
             en: Industrial Material Applications
             fi: Teollisten materiaalien soveltaminen
