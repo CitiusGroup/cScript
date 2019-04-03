@@ -30,7 +30,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '16'
+  cScriptVersion: '17'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -105,19 +105,35 @@ views:
 
         CoreR&DCompetencesitem:
           title:
-            en: 'Core R&D Competences'
-            fi: 'Tutkimus ja kehitys'
+            en: Core R&D Competences (page)
+            fi: Tutkimus ja kehitys (sivu)
           icon: 'simplelineicons:home'
           listeners:
             click: onCoreR&DCompetencesClick
 
-        businessservicesitem:
+        BusinessServicesItem:
           title:
-            en: Business Services
-            fi: Työelämän palvelut
+            en: Business Services (page)
+            fi: Palvelut työelämälle (sivu)
           icon: 'simplelineicons:home'
           listeners:
             click: onBusinessServicesClick
+
+        CoreR&DCompetencesTileitem:
+          title:
+            en: Core R&D Competences (tile)
+            fi: Tutkimus ja kehitys (tile)
+          icon: 'simplelineicons:home'
+          listeners:
+            click: onCoreR&DCompetencesTileClick
+
+        BusinessServicesTileItem:
+          title:
+            en: Business Services (tile)
+            fi: Palvelut työelämälle (tile)
+          icon: 'simplelineicons:home'
+          listeners:
+            click: onBusinessServicesTileClick
 
         separatoritem:
           separator: true
@@ -136,8 +152,43 @@ views:
 
   mainPanel:
 
-    businessservices:
+    BusinessServices:
+      type: page
+      title:
+        en: Business Services
+        fi: Palvelut työelämälle
+      ci:
+        en: ch82
+        fi: 2ktm
+      icon: 'simplelineicons:home'
+      headerNumbering: false
+      #imageTop: kajaani-winter
+      #imageTopCI: w3kkkkzmkch9cw3f
+
+    BusinessServicesTile:
       type: tile
+      title:
+        en: Business Services
+        fi: Palvelut työelämälle
+
+    CoreR&DCompetences:
+      type: page
+      title:
+        en: Core R&D Competences otsikko
+        fi: Tutkimus ja kehitys otsikko
+      ci:
+        en: nmwt
+        fi: c6mf
+      icon: 'simplelineicons:home'
+      headerNumbering: false
+      #imageTop: kajaani-winter
+      #imageTopCI: w3kkkkzmkch9cw3f
+
+    CoreR&DCompetencesTile:
+      type: tile
+      title:
+        en: Core R&D Competences
+        fi: Tutkimus ja kehitys
 
     welcome:
       type: page
@@ -152,25 +203,16 @@ views:
       #imageTop: kajaani-winter
       #imageTopCI: w3kkkkzmkch9cw3f
 
-    CoreR&DCompetences:
-      type: page
-      title:
-        en: 'Core R&D Competences otsikko'
-        fi: 'Tutkimus ja kehitys otsikko'
-      ci:
-        en: nmwt
-        fi: c6mf
-      icon: 'simplelineicons:home'
-      headerNumbering: false
-      #imageTop: kajaani-winter
-      #imageTopCI: w3kkkkzmkch9cw3f
-
 controllers:
   constructor:
     url: welcome
   onBusinessServicesClick:
-    url: businessservices
+    url: BusinessServices
+  onBusinessServicesTileClick:
+    url: BusinessServicesTile
   onCoreR&DCompetencesClick:
     url: CoreR&DCompetences
+  onCoreR&DCompetencesTileClick:
+    url: CoreR&DCompetencesTile
   onWelcomeClick:
     url: welcome
