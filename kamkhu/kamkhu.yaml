@@ -1,3 +1,4 @@
+---
 app:
   kamkhub:
     name: KAMK Hub
@@ -30,7 +31,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '31'
+  cScriptVersion: '32'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -382,16 +383,16 @@ views:
     welcome:
       type: page
       title:
-        en: R&D and Business Services
-        fi: Tervetuloa
+        en: Welcome to KAMK Hub
+        fi: Tervetuloa KAMK Hubiin!
       ci:
         en: p63z
         fi: z9n3
       icon: 'simplelineicons:home'
       headerNumbering: false
       #imageTop: kamk-rd-and-business-services
-      imageTopCI: wtr9wxnmfmrrh36p
-      #imageTopCI: WTR9WXNMFMRRH36P
+      #imageTopCI: wtr9wxnmfmrrh36p
+      imageTopCI: WTR9WXNMFMRRH36P
 
 controllers:
   constructor:
