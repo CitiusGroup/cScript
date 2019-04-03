@@ -31,7 +31,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '34'
+  cScriptVersion: '35'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -259,8 +259,8 @@ views:
                 fi: https://www.kamk.fi/fi/KAMK
 
         Contact:
-          # Vihreä (Citrus) #80BC00: https://www.htmlcsscolor.com/hex/80BC00
-          tileBackgroundColor: '#80BC009E'
+          # Oranssi (Tahiti Gold) #EE7623: https://www.htmlcsscolor.com/hex/EE7623
+          tileBackgroundColor: '#EE76239E'
           tileBackgroundImage: kamk-contact
           title:
             en: Contact
@@ -268,8 +268,8 @@ views:
           listeners:
             click:
               webpage:
-                en: https://www.kamk.fi/fi/KAMK/Yhteystiedot
-                fi: https://www.kamk.fi/fi/KAMK
+                en: https://www.kamk.fi/en/KAMK/Contact-Information
+                fi: https://www.kamk.fi/fi/KAMK/Yhteystiedot
 
         CampusMap:
           # Petrooli (Bondi Blue) #009AA6: https://www.htmlcsscolor.com/hex/009AA6
@@ -280,9 +280,10 @@ views:
             fi: Kampuskartta
           listeners:
             click:
-              webpage:
-                en: https://www.kamk.fi/loader.aspx?id=0e3c6c63-fed4-4b83-97ae-2d45982be848
-                fi: https://www.kamk.fi/loader.aspx?id=98201729-ffa4-40f5-a7c0-6d42fda9b8d3
+              pdf:
+                ci:
+                  en: mfkrchrw2xzp8tf3
+                  fi: khf6kehhrnmne8n3
 
     CoreR&DCompetences:
       type: page
