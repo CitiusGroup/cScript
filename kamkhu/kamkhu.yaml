@@ -30,7 +30,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '22'
+  cScriptVersion: '23'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -262,15 +262,15 @@ views:
       title:
         en: Core R&D Competences
         fi: Tutkimus ja kehitys
-      textAreaBackgroundColor: '#00b2e3b3'
-      textAreaHeight: 40%
-      textAreaPosition: bottom
+      #textAreaBackgroundColor: '#00b2e3b3'
+      #textAreaHeight: 40%
+      #textAreaPosition: bottom
       items:
 
         DataCentre:
           #LightSeaGreen: https://www.htmlcsscolor.com/hex/1ABC9C
           tileBackgroundColor: '#1ABC9C9E'
-          tileBackgroundImage: kamk-projects
+          tileBackgroundImage: kamk-data-centre
           title:
             # Mahtuuko kolmelle riville vai pitäisikö muuttaa
             en: Data Centre
@@ -281,11 +281,10 @@ views:
                 en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Data-Centre-competence-
                 fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Datakeskusosaaminen
 
-
         EnterpriseAndBusinessDevelopment:
           # Emerald: https://www.htmlcsscolor.com/hex/50C878
           tileBackgroundColor: '#50C8789E'
-          tileBackgroundImage: kamk-projects
+          tileBackgroundImage: kamk-enterprice-and-business-development
           title:
             en: Enterprise and Business Development
             fi: Yrittäjyys ja liiketoiminnan kehittäminen
@@ -295,11 +294,10 @@ views:
                 en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Enterprise-and-business-development
                 fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Yrittajyys-ja-liiketoiminnan-kehittaminen
 
-
         IndustrialMaterialApplications:
           # Summer Sky: https://www.htmlcsscolor.com/hex/3498DB
           tileBackgroundColor: '#3498DB9E'
-          tileBackgroundImage: kamk-projects
+          tileBackgroundImage: kamk-industrial-material-applications
           title:
             en: Industrial Material Applications
             fi: Teollisten materiaalien soveltaminen
