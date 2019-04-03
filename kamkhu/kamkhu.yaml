@@ -30,7 +30,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '21'
+  cScriptVersion: '22'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -172,7 +172,7 @@ views:
         fi: Palvelut työelämälle
       # Jos on määritelty tänne, niin käytetään kaikissa items-asetuksissa
       # Väriin on määritelty myös alfa 70 % hex B3
-      backgroundColor: '#009aa6'
+      backgroundColor: '#009aa6aa'
       #textAreaBackgroundColor: '#00b2e3b3'
       #textAreaHeight: 40%
       #textAreaPosition: bottom
@@ -180,7 +180,7 @@ views:
 
         AIKOPA:
           #LightSeaGreen: https://www.htmlcsscolor.com/hex/1ABC9C
-          tileBackgroundColor: '#1ABC9CAA'
+          tileBackgroundColor: '#1ABC9C9E'
           tileBackgroundImage: kamk-aikopa
           title:
             # Mahtuuko kolmelle riville vai pitäisikö muuttaa
@@ -194,7 +194,7 @@ views:
 
         CEMIS:
           # Emerald: https://www.htmlcsscolor.com/hex/50C878
-          tileBackgroundColor: '#50C878'
+          tileBackgroundColor: '#50C8789E'
           tileBackgroundImage: kamk-cemis
           title:
             en: CEMIS - Measurement and Information
@@ -207,7 +207,7 @@ views:
 
         Projects:
           # Summer Sky: https://www.htmlcsscolor.com/hex/3498DB
-          tileBackgroundColor: '#3498DB'
+          tileBackgroundColor: '#3498DB9E'
           tileBackgroundImage: kamk-projects
           title:
             en: Projects
@@ -220,8 +220,8 @@ views:
 
         Publications:
           # Deep Lilac: https://www.htmlcsscolor.com/hex/9B59B6
-          tileBackgroundColor: '#9B59B6'
-          tileBackgroundImage: kamk-projects
+          tileBackgroundColor: '#9B59B69E'
+          tileBackgroundImage: kamk-publications
           title:
             en: Publications
             fi: Julkaisut
@@ -233,8 +233,8 @@ views:
 
         PublicationsDatabase:
           # Cello: https://www.htmlcsscolor.com/hex/34495E
-          tileBackgroundColor: '#34495E'
-          tileBackgroundImage: kamk-projects
+          tileBackgroundColor: '#34495E9E'
+          tileBackgroundImage: kamk-publications-database
           title:
             en: Publications Database
             fi: Julkaisutietokanta
@@ -269,7 +269,7 @@ views:
 
         DataCentre:
           #LightSeaGreen: https://www.htmlcsscolor.com/hex/1ABC9C
-          tileBackgroundColor: '#1ABC9C'
+          tileBackgroundColor: '#1ABC9C9E'
           tileBackgroundImage: kamk-projects
           title:
             # Mahtuuko kolmelle riville vai pitäisikö muuttaa
@@ -284,7 +284,7 @@ views:
 
         EnterpriseAndBusinessDevelopment:
           # Emerald: https://www.htmlcsscolor.com/hex/50C878
-          tileBackgroundColor: '#50C878'
+          tileBackgroundColor: '#50C8789E'
           tileBackgroundImage: kamk-projects
           title:
             en: Enterprise and Business Development
@@ -298,7 +298,7 @@ views:
 
         IndustrialMaterialApplications:
           # Summer Sky: https://www.htmlcsscolor.com/hex/3498DB
-          tileBackgroundColor: '#3498DB'
+          tileBackgroundColor: '#3498DB9E'
           tileBackgroundImage: kamk-projects
           title:
             en: Industrial Material Applications
