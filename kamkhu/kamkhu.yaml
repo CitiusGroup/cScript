@@ -31,7 +31,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '35'
+  cScriptVersion: '37'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -67,8 +67,7 @@ views:
     fieldBackgroundColor: '#ffffff'
     fieldBorderColor: '#ffffff'
     fieldBorderSize: 1
-    fieldTextColor: '#ffffff'
-    #fieldTextColor: '#00b2e3'
+    fieldTextColor: '#00b2e3'
     fieldTextDisabledColor: '#bbbdbf'
     loginButtonBackgroundColor: '#00b2e3'
     loginButtonDisabledBackgroundColor: 'ffffff'
