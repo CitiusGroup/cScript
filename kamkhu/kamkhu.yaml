@@ -30,7 +30,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '27'
+  cScriptVersion: '29'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -172,7 +172,7 @@ views:
         fi: Palvelut työelämälle
       # Jos on määritelty tänne, niin käytetään kaikissa items-asetuksissa
       # Väriin on määritelty myös alfa 70 % hex B3
-      backgroundColor: '#009aa6aa'
+      backgroundColor: '#CAE9EC'
       #textAreaBackgroundColor: '#00b2e3b3'
       #textAreaHeight: 40%
       #textAreaPosition: bottom
@@ -262,10 +262,50 @@ views:
       title:
         en: Core R&D Competences
         fi: Tutkimus ja kehitys
+      backgroundColor: '#CAE9EC'
       #textAreaBackgroundColor: '#00b2e3b3'
       #textAreaHeight: 40%
       #textAreaPosition: bottom
       items:
+
+        TourismAndSports:
+          # Sininen (Iris Blue) #00B2E3: https://www.htmlcsscolor.com/hex/00B2E3
+          tileBackgroundColor: '#00B2E39E'
+          tileBackgroundImage: kamk-tourism-and-sports
+          title:
+            en: Tourism and Sports
+            fi: Matkailun ja liikunnan osaaminen
+          listeners:
+            click:
+              webpage:
+                en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Tourism-and-sports-competence
+                fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Matkailun-ja-liikunnan-osaaminen
+
+        WellbeingHealthAndGreenCare:
+          # Violetti (Palatinate Purple) #612166: https://www.htmlcsscolor.com/hex/612166
+          tileBackgroundColor: '#6121669E'
+          tileBackgroundImage: kamk-wellbeing-health-and-green-care
+          title:
+            en: Wellbeing, Health and Green Care
+            fi: Hyvinvointi-, terveysosaaminen ja Green Care
+          listeners:
+            click:
+              webpage:
+                en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Wellbeing-and-health-competence--Green-Care
+                fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Hyvinvointi---ja-terveysosaaminen
+
+        SeriousGameApplications:
+          # Petrooli (Bondi Blue) #009AA6: https://www.htmlcsscolor.com/hex/009AA6
+          tileBackgroundColor: '#009AA69E'
+          tileBackgroundImage: kamk-serious-game-applications
+          title:
+            en: Serious Game Applications
+            fi: Pelien hyötysovellukset (VR/AR)
+          listeners:
+            click:
+              webpage:
+                en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Serious-game-applications-(VRAR)
+                fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Pelien-hyotysovellukset
 
         DataCentre:
           #LightSeaGreen: https://www.htmlcsscolor.com/hex/1ABC9C
@@ -284,20 +324,6 @@ views:
               webpage:
                 en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Data-Centre-competence-
                 fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Datakeskusosaaminen
-
-        EnterpriseAndBusinessDevelopment:
-          # Emerald: https://www.htmlcsscolor.com/hex/50C878
-          tileBackgroundColor: '#50C8789E'
-          #tileBackgroundColor: '#0000004d'
-          tileBackgroundImage: kamk-enterprice-and-business-development
-          title:
-            en: Enterprise and Business Development
-            fi: Yrittäjyys ja liiketoiminnan kehittäminen
-          listeners:
-            click:
-              webpage:
-                en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Enterprise-and-business-development
-                fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Yrittajyys-ja-liiketoiminnan-kehittaminen
 
         IndustrialMaterialApplications:
           # Summer Sky: https://www.htmlcsscolor.com/hex/3498DB
@@ -339,44 +365,19 @@ views:
                 en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Project-preparation-expertise
                 fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Asiantuntijuutta-projektien-valmisteluun
 
-        SeriousGameApplications:
-          # Petrooli (Bondi Blue) #009AA6: https://www.htmlcsscolor.com/hex/009AA6
-          tileBackgroundColor: '#009AA69E'
-          tileBackgroundImage: kamk-serious-game-applications
+        EnterpriseAndBusinessDevelopment:
+          # Emerald: https://www.htmlcsscolor.com/hex/50C878
+          tileBackgroundColor: '#50C8789E'
+          #tileBackgroundColor: '#0000004d'
+          tileBackgroundImage: kamk-enterprice-and-business-development
           title:
-            en: Serious Game Applications
-            fi: Pelien hyötysovellukset (VR/AR)
+            en: Enterprise and Business Development
+            fi: Yrittäjyys ja liiketoiminnan kehittäminen
           listeners:
             click:
               webpage:
-                en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Serious-game-applications-(VRAR)
-                fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Pelien-hyotysovellukset
-
-        TourismAndSports:
-          # Pinkki (Razzmatazz) #D6006D: https://www.htmlcsscolor.com/hex/D6006D
-          tileBackgroundColor: '#D6006D9E'
-          tileBackgroundImage: kamk-tourism-and-sports
-          title:
-            en: Matkailun ja liikunnan osaaminen
-            fi: Tourism and Sports
-          listeners:
-            click:
-              webpage:
-                en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Tourism-and-sports-competence
-                fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Matkailun-ja-liikunnan-osaaminen
-
-        WellbeingHealthAndGreenCare:
-          # Violetti (Palatinate Purple) #612166: https://www.htmlcsscolor.com/hex/612166
-          tileBackgroundColor: '#6121669E'
-          tileBackgroundImage: kamk-wellbeing-health-and-green-care
-          title:
-            en: Hyvinvointi-, terveysosaaminen ja Green Care
-            fi: Wellbeing, Health and Green Care
-          listeners:
-            click:
-              webpage:
-                en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Wellbeing-and-health-competence--Green-Care
-                fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Hyvinvointi---ja-terveysosaaminen
+                en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Enterprise-and-business-development
+                fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Yrittajyys-ja-liiketoiminnan-kehittaminen
 
     welcome:
       type: page
