@@ -20,15 +20,15 @@ app:
         fi: Tervetuloa KAMK Hub applikaatioon, joka esittelee Kajaanin ammattikorkeakoulun palvelutarjonnan yrityksille ja yhteistyökumppaneille.
     eufundingintro:
       title:
-        en: Leverage from the EU
-        fi: Vipuvoimaa EU:lta
+        en: Leverage...
+        fi: Vipuvoimaa...
       text:
-        en: The KAMK Hub application has received EU funding. Read more from "About the App" in the menu.
-        fi: KAMK Hub applikaatio on saanut EU-tukea. Lue lisää valikon kohdasta "Tietoja ohjelmasta".
+        en: ...from the EU. The KAMK Hub application has received EU funding. Read more from "About the App" in the menu.
+        fi: ...EU:lta. KAMK Hub applikaatio on saanut EU-tukea. Lue lisää valikon kohdasta "Tietoja ohjelmasta".
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '38'
+  cScriptVersion: '39'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -120,7 +120,7 @@ views:
           title:
             en: Core R&D Competences
             fi: Tutkimus ja kehitys
-          icon: 'simplelineicons:home'
+          icon: 'simplelineicons:magnifier'
           listeners:
             click: onCoreR&DCompetencesTileClick
 
@@ -128,7 +128,7 @@ views:
           title:
             en: Business Services
             fi: Palvelut työelämälle
-          icon: 'simplelineicons:home'
+          icon: 'simplelineicons:briefcase'
           listeners:
             click: onBusinessServicesTileClick
 
@@ -138,16 +138,45 @@ views:
             en: Separator Text
             fi: Jaottelun teksti
 
+        aboutitem:
+          title:
+            en: About the App
+            fi: Tietoja ohjelmasta
+          icon: 'simplelineicons:info'
+          listeners:
+            click: onAboutClick
+
+        privacyitem:
+          title:
+            en: Privacy
+            fi: Yksityisyys
+          icon: 'simplelineicons:lock'
+          listeners:
+            click: onPrivacyClick
+
         introductionitem:
           title:
             fi: App-esittely
             en: App Intro
-          icon: 'materialcommunityicons:application'
+          icon: 'simplelineicons:control-play'
           listeners:
             click:
               app: intro
 
   mainPanel:
+
+    about:
+      type: page
+      title:
+        en: About the App
+        fi: Tietoja ohjelmasta
+      ci:
+        en: rwee
+        fi: wmwt
+      icon: 'simplelineicons:info'
+      headerNumbering: false
+      #imageTop: kajaani-winter
+      #imageTopCI: w3kkkkzmkch9cw3f
 
     BusinessServices:
       type: page
@@ -416,6 +445,19 @@ views:
                 en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Enterprise-and-business-development
                 fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Yrittajyys-ja-liiketoiminnan-kehittaminen
 
+    privacy:
+      type: page
+      title:
+        en: Privacy
+        fi: Yksityisyys
+      ci:
+        en: cre9
+        fi: n8rh
+      icon: 'simplelineicons:lock'
+      headerNumbering: false
+      #imageTop: kajaani-winter
+      #imageTopCI: w3kkkkzmkch9cw3f
+
     welcome:
       type: page
       title:
@@ -433,6 +475,8 @@ views:
 controllers:
   constructor:
     url: welcome
+  onAboutClick:
+    url: About
   onBusinessServicesClick:
     url: BusinessServices
   onBusinessServicesTileClick:
@@ -441,6 +485,8 @@ controllers:
     url: CoreR&DCompetences
   onCoreR&DCompetencesTileClick:
     url: CoreR&DCompetencesTile
+  onPrivacyClick:
+    url: Privacy
   onWelcomeClick:
     url: welcome
 
