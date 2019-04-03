@@ -170,6 +170,73 @@ views:
       title:
         en: Business Services
         fi: Palvelut työelämälle
+      # Jos on määritelty tänne, niin käytetään kaikissa items-asetuksissa
+      # Väriin on määritelty myös alfa 70 % hex B3
+      textAreaBackgroundColor: '#00b2e3b3'
+      textAreaHeight: 40%
+      textAreaPosition: bottom
+      items:
+
+        AIKOPA:
+          #LightSeaGreen: https://www.htmlcsscolor.com/hex/1ABC9C
+          tileBackgroundColor: '#1ABC9C'
+          title:
+            # Mahtuuko kolmelle riville vai pitäisikö muuttaa
+            en: AIKOPA - Adult and Continuing Education Services
+            fi: AIKOPA - Räätälöity koulutus ja valmennus
+          listeners:
+            click:
+              webpage:
+                en: https://www.kamk.fi/en/RD-and-Business-Services/AIKOPA
+                fi: https://www.kamk.fi/fi/Palvelut-tyoelamalle/Raataloity-koulutus-ja-valmennus
+
+        CEMIS:
+          # Emerald: https://www.htmlcsscolor.com/hex/50C878
+          tileBackgroundColor: '#50C878'
+          title:
+            en: CEMIS - the Centre for Measurements and Information Systems
+            fi: CEMIS - the Centre for Measurements and Information Systems
+          listeners:
+            click:
+              webpage:
+                en: https://www.kamk.fi/en/RD-and-Business-Services/Centre-for-Measurements-and-Information-Systems
+                fi: https://www.kamk.fi/fi/Palvelut-tyoelamalle/Cemis-Business-Development--palvelut-
+
+        Projects:
+          # Summer Sky: https://www.htmlcsscolor.com/hex/3498DB
+          tileBackgroundColor: '#3498DB'
+          title:
+            en: Projects
+            fi: CEMIS - the Centre for Measurements and Information Systems
+          listeners:
+            click:
+              webpage:
+                en: https://www.kamk.fi/en/RD-and-Business-Services/Projects
+                fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Projektit
+
+        Publications:
+          # Deep Lilac: https://www.htmlcsscolor.com/hex/9B59B6
+          tileBackgroundColor: '#9B59B6'
+          title:
+            en: Publications
+            fi: Julkaisut
+          listeners:
+            click:
+              webpage:
+                en: https://www.kamk.fi/en/RD-and-Business-Services/Publications
+                fi: https://www.kamk.fi/en/RD-and-Business-Services/Publications
+
+        PublicationsDatabase:
+          # Cello: https://www.htmlcsscolor.com/hex/34495E
+          tileBackgroundColor: '#34495E'
+          title:
+            en: Publications Database
+            fi: Julkaisutietokanta
+          listeners:
+            click:
+              webpage:
+                en: https://www.theseus.fi/handle/10024/1967
+                fi: https://www.theseus.fi/handle/10024/1967
 
     CoreR&DCompetences:
       type: page
