@@ -30,7 +30,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '25'
+  cScriptVersion: '26'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -198,7 +198,7 @@ views:
           tileBackgroundImage: kamk-cemis
           title:
             en: CEMIS - Measurement and Information
-            fi: CEMIS - Measurement and Information
+            fi: Teknologian kaupallistaminen
           listeners:
             click:
               webpage:
@@ -269,16 +269,16 @@ views:
 
         DataCentre:
           #LightSeaGreen: https://www.htmlcsscolor.com/hex/1ABC9C
-          #tileBackgroundColor: '#1ABC9C9E'
+          tileBackgroundColor: '#1ABC9C9E'
           #tileBackgroundColor: '#0000004d'
-          textAreaBackgroundColor: '#0000004d'
-          textAreaHeight: 40%
-          textAreaPosition: bottom
+          #textAreaBackgroundColor: '#0000004d'
+          #textAreaHeight: 40%
+          #textAreaPosition: bottom
           tileBackgroundImage: kamk-data-centre
           title:
             # Mahtuuko kolmelle riville vai pitäisikö muuttaa
             en: Data Centre
-            fi: Datakeskusosaaminen
+            fi: Datakeskus- osaaminen
           listeners:
             click:
               webpage:
@@ -287,8 +287,8 @@ views:
 
         EnterpriseAndBusinessDevelopment:
           # Emerald: https://www.htmlcsscolor.com/hex/50C878
-          #tileBackgroundColor: '#50C8789E'
-          tileBackgroundColor: '#0000004d'
+          tileBackgroundColor: '#50C8789E'
+          #tileBackgroundColor: '#0000004d'
           tileBackgroundImage: kamk-enterprice-and-business-development
           title:
             en: Enterprise and Business Development
@@ -301,8 +301,8 @@ views:
 
         IndustrialMaterialApplications:
           # Summer Sky: https://www.htmlcsscolor.com/hex/3498DB
-          #tileBackgroundColor: '#3498DB9E'
-          tileBackgroundColor: '#0000004d'
+          tileBackgroundColor: '#3498DB9E'
+          #tileBackgroundColor: '#0000004d'
           tileBackgroundImage: kamk-industrial-material-applications
           title:
             en: Industrial Material Applications
@@ -313,7 +313,19 @@ views:
                 en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Industrial-materials-applications
                 fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Teollisten-materiaalien-soveltaminen
 
-        #MeasurementInformationAndRobotics:
+        MeasurementInformationAndRobotics:
+          # Deep Lilac: https://www.htmlcsscolor.com/hex/9B59B6
+          tileBackgroundColor: '#9B59B69E'
+          tileBackgroundImage: kamk-cemis
+          title:
+            en: Measurement, Information And Robotics
+            fi: Mittaus- ja tietojärjestelmät sekä robotiikka
+          listeners:
+            click:
+              webpage:
+                en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Measurement-and-information-systems--Robotics
+                fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Mittaus--ja-tietojarjestelmat
+
         #ProjectPreparationExpertise:
         #SeriousGameApplications:
         #TourismAndSports:
