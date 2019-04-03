@@ -31,7 +31,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '32'
+  cScriptVersion: '33'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -206,19 +206,6 @@ views:
                 en: https://www.kamk.fi/en/RD-and-Business-Services/Centre-for-Measurements-and-Information-Systems
                 fi: https://www.kamk.fi/fi/Palvelut-tyoelamalle/Cemis-Business-Development--palvelut-
 
-        Projects:
-          # Summer Sky: https://www.htmlcsscolor.com/hex/3498DB
-          tileBackgroundColor: '#3498DB9E'
-          tileBackgroundImage: kamk-projects
-          title:
-            en: Projects
-            fi: Projektit
-          listeners:
-            click:
-              webpage:
-                en: https://www.kamk.fi/en/RD-and-Business-Services/Projects
-                fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Projektit
-
         Publications:
           # Deep Lilac: https://www.htmlcsscolor.com/hex/9B59B6
           tileBackgroundColor: '#9B59B69E'
@@ -244,6 +231,32 @@ views:
               webpage:
                 en: https://www.theseus.fi/handle/10024/1967
                 fi: https://www.theseus.fi/handle/10024/1967
+
+        Projects:
+          # Summer Sky: https://www.htmlcsscolor.com/hex/3498DB
+          tileBackgroundColor: '#3498DB9E'
+          tileBackgroundImage: kamk-projects
+          title:
+            en: Projects
+            fi: Projektit
+          listeners:
+            click:
+              webpage:
+                en: https://www.kamk.fi/en/RD-and-Business-Services/Projects
+                fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Projektit
+
+        AboutKAMK:
+          # Sininen (Iris Blue) #00B2E3: https://www.htmlcsscolor.com/hex/00B2E3
+          tileBackgroundColor: '#00B2E39E'
+          tileBackgroundImage: kamk-about-kamk
+          title:
+            en: About Kajaani University of Applied Sciences
+            fi: Kajaanin ammattikorkeakoulu
+          listeners:
+            click:
+              webpage:
+                en: https://www.kamk.fi/en/KAMK
+                fi: https://www.kamk.fi/fi/KAMK
 
     CoreR&DCompetences:
       type: page
