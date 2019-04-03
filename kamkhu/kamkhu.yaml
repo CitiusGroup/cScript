@@ -28,7 +28,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '40'
+  cScriptVersion: '41'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -474,7 +474,7 @@ views:
 
 controllers:
   constructor:
-    url: welcome
+    url: Welcome
   onAboutClick:
     url: About
   onBusinessServicesClick:
