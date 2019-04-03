@@ -30,7 +30,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '19'
+  cScriptVersion: '20'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -172,14 +172,16 @@ views:
         fi: Palvelut työelämälle
       # Jos on määritelty tänne, niin käytetään kaikissa items-asetuksissa
       # Väriin on määritelty myös alfa 70 % hex B3
-      textAreaBackgroundColor: '#00b2e3b3'
-      textAreaHeight: 40%
-      textAreaPosition: bottom
+      backgroundColor: '#009aa6'
+      #textAreaBackgroundColor: '#00b2e3b3'
+      #textAreaHeight: 40%
+      #textAreaPosition: bottom
       items:
 
         AIKOPA:
           #LightSeaGreen: https://www.htmlcsscolor.com/hex/1ABC9C
-          tileBackgroundColor: '#1ABC9C'
+          tileBackgroundColor: '#1ABC9CAA'
+          tileBackgroundImage: kamk-aikopa
           title:
             # Mahtuuko kolmelle riville vai pitäisikö muuttaa
             en: AIKOPA - Adult and Continuing Education
