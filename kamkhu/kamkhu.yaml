@@ -30,7 +30,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '26'
+  cScriptVersion: '27'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -103,34 +103,34 @@ views:
           listeners:
             click: onWelcomeClick
 
-        CoreR&DCompetencesitem:
-          title:
-            en: Core R&D Competences (page)
-            fi: Tutkimus ja kehitys (sivu)
-          icon: 'simplelineicons:home'
-          listeners:
-            click: onCoreR&DCompetencesClick
+        #CoreR&DCompetencesitem:
+          #title:
+            #en: Core R&D Competences (page)
+            #fi: Tutkimus ja kehitys (sivu)
+          #icon: 'simplelineicons:home'
+          #listeners:
+            #click: onCoreR&DCompetencesClick
 
-        BusinessServicesItem:
-          title:
-            en: Business Services (page)
-            fi: Palvelut työelämälle (sivu)
-          icon: 'simplelineicons:home'
-          listeners:
-            click: onBusinessServicesClick
+        #BusinessServicesItem:
+          #title:
+            #en: Business Services (page)
+            #fi: Palvelut työelämälle (sivu)
+          #icon: 'simplelineicons:home'
+          #listeners:
+            #click: onBusinessServicesClick
 
         CoreR&DCompetencesTileitem:
           title:
-            en: Core R&D Competences (tile)
-            fi: Tutkimus ja kehitys (tile)
+            en: Core R&D Competences
+            fi: Tutkimus ja kehitys
           icon: 'simplelineicons:home'
           listeners:
             click: onCoreR&DCompetencesTileClick
 
         BusinessServicesTileItem:
           title:
-            en: Business Services (tile)
-            fi: Palvelut työelämälle (tile)
+            en: Business Services
+            fi: Palvelut työelämälle
           icon: 'simplelineicons:home'
           listeners:
             click: onBusinessServicesTileClick
@@ -179,7 +179,7 @@ views:
       items:
 
         AIKOPA:
-          #LightSeaGreen: https://www.htmlcsscolor.com/hex/1ABC9C
+          # LightSeaGreen: https://www.htmlcsscolor.com/hex/1ABC9C
           tileBackgroundColor: '#1ABC9C9E'
           tileBackgroundImage: kamk-aikopa
           title:
@@ -326,10 +326,57 @@ views:
                 en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Measurement-and-information-systems--Robotics
                 fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Mittaus--ja-tietojarjestelmat
 
-        #ProjectPreparationExpertise:
-        #SeriousGameApplications:
-        #TourismAndSports:
-        #WellbeingHealthAndGreenCare:
+        ProjectPreparationExpertise:
+          # Cello: https://www.htmlcsscolor.com/hex/34495E
+          tileBackgroundColor: '#34495E9E'
+          tileBackgroundImage: kamk-project-preparation-expertise
+          title:
+            en: Project Preparation Expertise
+            fi: Asiantuntijuutta projektien valmisteluun
+          listeners:
+            click:
+              webpage:
+                en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Project-preparation-expertise
+                fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Asiantuntijuutta-projektien-valmisteluun
+
+        SeriousGameApplications:
+          # Petrooli (Bondi Blue) #009AA6: https://www.htmlcsscolor.com/hex/009AA6
+          tileBackgroundColor: '#009AA69E'
+          tileBackgroundImage: kamk-serious-game-applications
+          title:
+            en: Serious Game Applications
+            fi: Pelien hyötysovellukset (VR/AR)
+          listeners:
+            click:
+              webpage:
+                en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Serious-game-applications-(VRAR)
+                fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Pelien-hyotysovellukset
+
+        TourismAndSports:
+          # Pinkki (Razzmatazz) #D6006D: https://www.htmlcsscolor.com/hex/D6006D
+          tileBackgroundColor: '#D6006D9E'
+          tileBackgroundImage: kamk-tourism-and-sports
+          title:
+            en: Matkailun ja liikunnan osaaminen
+            fi: Tourism and Sports
+          listeners:
+            click:
+              webpage:
+                en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Tourism-and-sports-competence
+                fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Matkailun-ja-liikunnan-osaaminen
+
+        WellbeingHealthAndGreenCare:
+          # Violetti (Palatinate Purple) #612166: https://www.htmlcsscolor.com/hex/612166
+          tileBackgroundColor: '#6121669E'
+          tileBackgroundImage: kamk-wellbeing-health-and-green-care
+          title:
+            en: Hyvinvointi-, terveysosaaminen ja Green Care
+            fi: Wellbeing, Health and Green Care
+          listeners:
+            click:
+              webpage:
+                en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Wellbeing-and-health-competence--Green-Care
+                fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Hyvinvointi---ja-terveysosaaminen
 
     welcome:
       type: page
@@ -357,3 +404,18 @@ controllers:
     url: CoreR&DCompetencesTile
   onWelcomeClick:
     url: welcome
+
+# KAMK värit:
+# Petrooli (Bondi Blue) #009AA6: https://www.htmlcsscolor.com/hex/009AA6
+# Pinkki (Razzmatazz) #D6006D: https://www.htmlcsscolor.com/hex/D6006D
+# Violetti (Palatinate Purple) #612166: https://www.htmlcsscolor.com/hex/612166
+# Oranssi (Tahiti Gold) #EE7623: https://www.htmlcsscolor.com/hex/EE7623
+# Vihreä (Citrus) #80BC00: https://www.htmlcsscolor.com/hex/80BC00
+# Sininen (Iris Blue) #00B2E3: https://www.htmlcsscolor.com/hex/00B2E3
+# 
+# Muut värit:
+# LightSeaGreen #1ABC9C: https://www.htmlcsscolor.com/hex/1ABC9C
+# Emerald #50C878: https://www.htmlcsscolor.com/hex/50C878
+# Summer Sky #3498DB: https://www.htmlcsscolor.com/hex/3498DB
+# Deep Lilac #9B59B6: https://www.htmlcsscolor.com/hex/9B59B6
+# Cello #34495E: https://www.htmlcsscolor.com/hex/34495E
