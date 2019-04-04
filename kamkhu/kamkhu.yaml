@@ -28,7 +28,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '42'
+  cScriptVersion: '43'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -161,6 +161,17 @@ views:
           icon: 'simplelineicons:lock'
           listeners:
             click: onPrivacyPageClick
+
+        privacymodalitem:
+          title:
+            en: Privacy Modal
+            fi: Yksityisyys (modal)
+          icon: 'simplelineicons:lock'
+          listeners:
+            click:
+              webpage:
+                en: https://www.iubenda.com/privacy-policy/91125875
+                fi: https://www.iubenda.com/privacy-policy/91125875
 
         introductionitem:
           title:
