@@ -24,11 +24,11 @@ app:
         fi: Vipuvoimaa...
       text:
         en: ...from the EU. The KAMK Hub application has received EU funding. Read more from "About the App" in the menu.
-        fi: ...EU:lta. KAMK Hub applikaatio on saanut EU-tukea. Lue lisää valikon kohdasta "Tietoja ohjelmasta".
+        fi: ...EU:lta. KAMK Hub applikaatio on saanut EU-tukea. Lue lisää valikon kohdasta "Tietoa appsista".
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '43'
+  cScriptVersion: '44'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -141,31 +141,31 @@ views:
         aboutitem:
           title:
             en: About the App
-            fi: Tietoja ohjelmasta
+            fi: Tietoa appsista
           icon: 'simplelineicons:info'
           listeners:
             click: onAboutClick
 
-        privacyitem:
-          title:
-            en: Privacy
-            fi: Yksityisyys
-          icon: 'simplelineicons:lock'
-          listeners:
-            click: onPrivacyClick
+        #privacyitem:
+          #title:
+            #en: Privacy
+            #fi: Yksityisyys
+          #icon: 'simplelineicons:lock'
+          #listeners:
+            #click: onPrivacyClick
 
-        privacypageitem:
-          title:
-            en: Privacy Page
-            fi: Yksityisyys (sivu)
-          icon: 'simplelineicons:lock'
-          listeners:
-            click: onPrivacyPageClick
+        #privacypageitem:
+          #title:
+            #en: Privacy Page
+            #fi: Yksityisyys (sivu)
+          #icon: 'simplelineicons:lock'
+          #listeners:
+            #click: onPrivacyPageClick
 
         privacymodalitem:
           title:
-            en: Privacy Modal
-            fi: Yksityisyys (modal)
+            en: Privacy
+            fi: Yksityisyys
           icon: 'simplelineicons:lock'
           listeners:
             click:
@@ -188,7 +188,7 @@ views:
       type: page
       title:
         en: About the App
-        fi: Tietoja ohjelmasta
+        fi: Tietoa appsista
       ci:
         en: rwee
         fi: wmwt
@@ -403,7 +403,7 @@ views:
           title:
             # Mahtuuko kolmelle riville vai pitäisikö muuttaa
             en: Data Centre
-            fi: Datakeskus- osaaminen
+            fi: Datakeskusosaaminen
           listeners:
             click:
               webpage:
@@ -464,28 +464,26 @@ views:
                 en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Enterprise-and-business-development
                 fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Yrittajyys-ja-liiketoiminnan-kehittaminen
 
-    Privacy:
-      type: page
-      title:
-        en: Privacy
-        fi: Yksityisyys
-      ci:
-        en: cre9
-        fi: n8rh
-      icon: 'simplelineicons:lock'
-      headerNumbering: false
-      #imageTop: kajaani-winter
-      #imageTopCI: w3kkkkzmkch9cw3f
+    #Privacy:
+      #type: page
+      #title:
+        #en: Privacy
+        #fi: Yksityisyys
+      #ci:
+        #en: cre9
+        #fi: n8rh
+      #icon: 'simplelineicons:lock'
+      #headerNumbering: false
 
-    PrivacyPage:
-      type: webpage
-      title:
-        en: Privacy Page
-        fi: Yksityisyys (sivu)
-      url:
-        en: https://www.iubenda.com/privacy-policy/91125875
-        fi: https://www.iubenda.com/privacy-policy/91125875
-      icon: 'simplelineicons:lock'
+    #PrivacyPage:
+      #type: webpage
+      #title:
+        #en: Privacy Page
+        #fi: Yksityisyys (sivu)
+      #url:
+        #en: https://www.iubenda.com/privacy-policy/91125875
+        #fi: https://www.iubenda.com/privacy-policy/91125875
+      #icon: 'simplelineicons:lock'
 
     Welcome:
       type: page
@@ -514,10 +512,10 @@ controllers:
     url: CoreR&DCompetences
   onCoreR&DCompetencesTileClick:
     url: CoreR&DCompetencesTile
-  onPrivacyClick:
-    url: Privacy
-  onPrivacyPageClick:
-    url: PrivacyPage
+  #onPrivacyClick:
+    #url: Privacy
+  #onPrivacyPageClick:
+    #url: PrivacyPage
   onWelcomeClick:
     url: Welcome
 
