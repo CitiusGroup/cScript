@@ -28,7 +28,7 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '41'
+  cScriptVersion: '42'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -153,6 +153,14 @@ views:
           icon: 'simplelineicons:lock'
           listeners:
             click: onPrivacyClick
+
+        privacypageitem:
+          title:
+            en: Privacy Page
+            fi: Yksityisyys (sivu)
+          icon: 'simplelineicons:lock'
+          listeners:
+            click: onPrivacyPageClick
 
         introductionitem:
           title:
@@ -458,6 +466,16 @@ views:
       #imageTop: kajaani-winter
       #imageTopCI: w3kkkkzmkch9cw3f
 
+    PrivacyPage:
+      type: webpage
+      title:
+        en: Privacy Page
+        fi: Yksityisyys (sivu)
+      url:
+        en: https://www.iubenda.com/privacy-policy/91125875
+        fi: https://www.iubenda.com/privacy-policy/91125875
+      icon: 'simplelineicons:lock'
+
     Welcome:
       type: page
       title:
@@ -487,6 +505,8 @@ controllers:
     url: CoreR&DCompetencesTile
   onPrivacyClick:
     url: Privacy
+  onPrivacyPageClick:
+    url: PrivacyPage
   onWelcomeClick:
     url: Welcome
 
