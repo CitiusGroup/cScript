@@ -30,7 +30,7 @@ app:
   guestUsername: demo@citius.com
   guestPassword: demo
   version: 1.1.0
-  cScriptVersion: '46'
+  cScriptVersion: '47'
   
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -214,7 +214,7 @@ views:
       icon: 'simplelineicons:info'
       headerNumbering: false
       #imageTop: kajaani-winter
-      #imageTopCI: w3kkkkzmkch9cw3f
+      imageTopCI: E2WTWMNM2EFTPKMX
 
     BusinessServices:
       type: page
@@ -493,7 +493,7 @@ views:
         fi: xekn
       icon: 'simplelineicons:energy'
       headerNumbering: false
-      #imageTopCI: w3kkkkzmkch9cw3f
+      imageTopCI: N6N3EHE3MZZFTN32
 
     VRARLabEquipment:
       type: page
@@ -505,7 +505,7 @@ views:
         fi: xer8
       icon: 'simplelineicons:camrecorder'
       headerNumbering: false
-      #imageTopCI: w3kkkkzmkch9cw3f
+      imageTopCI: 2WWKR36Z96N8E6WC
 
     #Privacy:
       #type: page
@@ -539,7 +539,6 @@ views:
       icon: 'simplelineicons:home'
       headerNumbering: false
       #imageTop: kamk-rd-and-business-services
-      #imageTopCI: wtr9wxnmfmrrh36p
       imageTopCI: WTR9WXNMFMRRH36P
 
 controllers:
