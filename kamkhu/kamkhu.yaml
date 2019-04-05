@@ -30,7 +30,7 @@ app:
   guestUsername: demo@citius.com
   guestPassword: demo
   version: 1.1.0
-  cScriptVersion: '47'
+  cScriptVersion: '48'
   
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -489,7 +489,7 @@ views:
         en: EMC Lab Equipment
         fi: EMC-labran kalusto
       ci:
-        en: xekn
+        en: e9cr
         fi: xekn
       icon: 'simplelineicons:energy'
       headerNumbering: false
@@ -501,7 +501,7 @@ views:
         en: VR/AR Lab Equipment
         fi: VR/AR-labran kalusto
       ci:
-        en: xer8
+        en: 66zf
         fi: xer8
       icon: 'simplelineicons:camrecorder'
       headerNumbering: false
