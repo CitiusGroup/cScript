@@ -30,7 +30,7 @@ app:
   guestUsername: demo@citius.com
   guestPassword: demo
   version: 1.1.0
-  cScriptVersion: '45'
+  cScriptVersion: '46'
   
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -134,6 +134,22 @@ views:
           icon: 'simplelineicons:briefcase'
           listeners:
             click: onBusinessServicesTileClick
+
+        VRARLabEquipmentItem:
+          title:
+            en: VR/AR Lab Equipment
+            fi: VR/AR-labran kalusto
+          icon: 'simplelineicons:camrecorder'
+          listeners:
+            click: onVRARLabEquipmentClick
+
+        EMCLabEquipmentItem:
+          title:
+            en: EMC Lab Equipment
+            fi: EMC-labran kalusto
+          icon: 'simplelineicons:energy'
+          listeners:
+            click: onEMCLabEquipmentClick
 
         separatoritem:
           separator: true
@@ -467,6 +483,30 @@ views:
                 en: https://www.kamk.fi/en/RD-and-Business-Services/Core-Ramp;D-Competences/Enterprise-and-business-development
                 fi: https://www.kamk.fi/fi/Tutkimus-ja-kehitys/Yrittajyys-ja-liiketoiminnan-kehittaminen
 
+    EMCLabEquipment:
+      type: page
+      title:
+        en: EMC Lab Equipment
+        fi: EMC-labran kalusto
+      ci:
+        en: xekn
+        fi: xekn
+      icon: 'simplelineicons:energy'
+      headerNumbering: false
+      #imageTopCI: w3kkkkzmkch9cw3f
+
+    VRARLabEquipment:
+      type: page
+      title:
+        en: VR/AR Lab Equipment
+        fi: VR/AR-labran kalusto
+      ci:
+        en: xer8
+        fi: xer8
+      icon: 'simplelineicons:camrecorder'
+      headerNumbering: false
+      #imageTopCI: w3kkkkzmkch9cw3f
+
     #Privacy:
       #type: page
       #title:
@@ -515,6 +555,10 @@ controllers:
     url: CoreR&DCompetences
   onCoreR&DCompetencesTileClick:
     url: CoreR&DCompetencesTile
+  onEMCLabEquipmentClick:
+    url: EMCLabEquipment
+  onVRARLabEquipmentClick:
+    url: VRARLabEquipment
   #onPrivacyClick:
     #url: Privacy
   #onPrivacyPageClick:
