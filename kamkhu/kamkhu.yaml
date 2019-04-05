@@ -12,7 +12,6 @@ app:
     usernameAbbreviation:
       abbreviation: demo
       username: demo@citius.com
-      password: demo
   intro:
     kamkhubintro:
       title: KAMK Hub
@@ -28,6 +27,8 @@ app:
         fi: ...EU:lta. KAMK Hub applikaatio on saanut EU-tukea. Lue lisää valikon kohdasta "Tietoa appsista".
   name: KAMK Hub
   abbreviation: kamkhu
+  guestUsername: demo@citius.com
+  guestPassword: demo
   version: 1.1.0
   cScriptVersion: '45'
   
