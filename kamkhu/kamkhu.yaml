@@ -12,6 +12,7 @@ app:
     usernameAbbreviation:
       abbreviation: demo
       username: demo@citius.com
+      password: demo
   intro:
     kamkhubintro:
       title: KAMK Hub
@@ -28,8 +29,8 @@ app:
   name: KAMK Hub
   abbreviation: kamkhu
   version: 1.1.0
-  cScriptVersion: '44'
-
+  cScriptVersion: '45'
+  
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
     color: "#000000"
@@ -66,6 +67,7 @@ views:
     fieldBorderSize: 1
     fieldTextColor: '#00b2e3'
     fieldTextDisabledColor: '#bbbdbf'
+    guestLogin: true
     loginButtonBackgroundColor: '#00b2e3'
     loginButtonDisabledBackgroundColor: 'ffffff'
     loginButtonTextColor: '#00b2e3'
