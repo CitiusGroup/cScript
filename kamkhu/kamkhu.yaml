@@ -30,7 +30,7 @@ app:
   guestUsername: demo@citius.com
   guestPassword: demo
   version: 1.1.0
-  cScriptVersion: '52'
+  cScriptVersion: '53'
   
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -150,6 +150,14 @@ views:
           icon: 'simplelineicons:energy'
           listeners:
             click: onEMCLabEquipmentClick
+
+        HPCEquipmentItem:
+          title:
+            en: HPC Equipment
+            fi: Suurteholaskennan kalusto
+          icon: 'simplelineicons:energy'
+          listeners:
+            click: onHPCEquipmentClick
 
         separatoritem:
           separator: true
