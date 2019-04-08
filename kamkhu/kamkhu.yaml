@@ -30,7 +30,7 @@ app:
   guestUsername: demo@citius.com
   guestPassword: demo
   version: 1.1.0
-  cScriptVersion: '53'
+  cScriptVersion: '54'
   
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -155,7 +155,7 @@ views:
           title:
             en: HPC Equipment
             fi: Suurteholaskennan kalusto
-          icon: 'simplelineicons:energy'
+          icon: 'simplelineicons:speedometer'
           listeners:
             click: onHPCEquipmentClick
 
@@ -511,9 +511,9 @@ views:
       ci:
         en: mnhp
         fi: m9wx
-      icon: 'simplelineicons:energy'
+      icon: 'simplelineicons:speedometer'
       headerNumbering: false
-      imageTopCI: N6N3EHE3MZZFTN32
+      imageTopCI: ZNZHNKZ9WC8TKM6P
 
     VRARLabEquipment:
       type: page
