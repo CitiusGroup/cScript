@@ -30,7 +30,7 @@ app:
   guestUsername: demo@citius.com
   guestPassword: demo
   version: 1.1.0
-  cScriptVersion: '54'
+  cScriptVersion: '55'
   
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -513,7 +513,7 @@ views:
         fi: m9wx
       icon: 'simplelineicons:speedometer'
       headerNumbering: false
-      imageTopCI: ZNZHNKZ9WC8TKM6P
+      imageTopCI: R9333E3ZRRNMPPFX
 
     VRARLabEquipment:
       type: page
