@@ -503,6 +503,18 @@ views:
       headerNumbering: false
       imageTopCI: N6N3EHE3MZZFTN32
 
+    HPCEquipment:
+      type: page
+      title:
+        en: HPC Equipment
+        fi: Suurteholaskennan kalusto
+      ci:
+        en: mnhp
+        fi: m9wx
+      icon: 'simplelineicons:energy'
+      headerNumbering: false
+      imageTopCI: N6N3EHE3MZZFTN32
+
     VRARLabEquipment:
       type: page
       title:
@@ -564,6 +576,8 @@ controllers:
     url: CoreR&DCompetencesTile
   onEMCLabEquipmentClick:
     url: EMCLabEquipment
+  onHPCEquipmentClick:
+    url: HPCEquipment
   onVRARLabEquipmentClick:
     url: VRARLabEquipment
   #onPrivacyClick:
