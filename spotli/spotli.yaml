@@ -30,7 +30,7 @@ app:
   name: Spotlit
   abbreviation: spotli
   version: 1.1.3
-  cScriptVersion: '47'
+  cScriptVersion: '48'
 
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
@@ -250,11 +250,11 @@ views:
         en: Welcome
         fi: Tervetuloa
       ci:
-        en: thn6
-        fi: 88em
+        en: 6WH8
+        fi: 3W23
       icon: 'simplelineicons:home'
       headerNumbering: false
-      imageTop: kajaani-winter
+      #imageTop: kajaani-winter
       imageTopCI: w3kkkkzmkch9cw3f
 
 controllers:
