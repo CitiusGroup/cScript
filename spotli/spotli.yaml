@@ -34,7 +34,7 @@ app:
   name: Spotlit
   abbreviation: spotli
   version: 1.1.3
-  cScriptVersion: '60'
+  cScriptVersion: '61'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   # Color of the Spotlit logo is 0,174,239 #00AEEF (Deep Sky Blue): https://www.htmlcsscolor.com/hex/00AEEF
@@ -104,8 +104,8 @@ views:
 
         DevelopmentLogItem:
           title:
-            en: Welcome to Spotlit
-            fi: Tervetuloa Spotlitiin
+            en: Development Log
+            fi: Kehityslogi
           icon: 'simplelineicons:wrench'
           listeners:
             click: onDevelopmentLogClick
