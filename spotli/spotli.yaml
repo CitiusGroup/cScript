@@ -12,26 +12,25 @@ app:
       abbreviation: demo
       username: demo@citius.com
   intro:
-    spotlit:
+    Spotlit:
       title: Spotlit
       text:
         en: Welcome to the Spotlit application.
         fi: Tervetuloa testaamaan Spotlit-applikaatiota
-    meeting:
-      title: Blitz Meeting
+    Disclaimer:
+      itle: Disclaimer
       text:
-        en: From the application, you will find the basic information about the meeting.
-        fi: Applikaatiosta löydät kokouksen perustiedot
-    applications:
-      title: Applications
+        en: This application is used only for internal demonstration purposes for the Blitz-project.
+        fi: Tämä Spotlit-applikaatio on demosovellus, jota käytetään vain Blitz-projektin sisäisiin esitystarkoituksiin.
+    DemoContent:
+      title: Demo Content
       text:
-        en: As examples, Spotlit includes Juminkeko and Moat Brae applications.
-        fi: Esimerkkeinä Spotlit sisältää Juminkeko ja Moat Brae applikaatiot.
+        en: All the content, text and pictures, are just samples.
+        fi: Kaikki sisältö, teksti ja kuvat ovat vain näytteitä.
   name: Spotlit
   abbreviation: spotli
   version: 1.1.3
-  cScriptVersion: '51'
-
+  cScriptVersion: '54'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   # Color of the Spotlit logo is 0,174,239 #00AEEF (Deep Sky Blue): https://www.htmlcsscolor.com/hex/00AEEF
@@ -60,17 +59,17 @@ views:
   login:
     applicationImage: spotlit-login-applicationImage-transparent
     backgroundColor:
-      ios: '#ffffff'
-      android: '#e1e7f6'
+      ios: '#ACE4FA'
+      android: '#ACE4FA'
     repeatBackgroundImage: true
     fieldBackgroundColor: '#ffffff'
-    fieldBorderColor: '#0071b8'
+    fieldBorderColor: '#ffffff'
     fieldBorderSize: 1
-    fieldTextColor: '#0071b8'
+    fieldTextColor: '#00AEEF'
     fieldTextDisabledColor: '#bbbdbf'
-    loginButtonBackgroundColor: '#0071b8'
+    loginButtonBackgroundColor: '#00AEEF'
     loginButtonDisabledBackgroundColor: '#ffffff'
-    loginButtonTextColor: '#ffffff'
+    loginButtonTextColor: '#00AEEF'
     loginButtonDisabledTextColor: '#bbbdbf'
 
   leftPanel:
@@ -99,38 +98,6 @@ views:
           listeners:
             click: onWelcomeClick
 
-        scheduleitem:
-          title:
-            en: Schedule
-            fi: Aikataulu
-          icon: 'simplelineicons:clock'
-          listeners:
-            click: onScheduleClick
-
-        partnershipmeetingitem:
-          title:
-            en: Partnership Meeting
-            fi: Partnerikokous
-          icon: 'simplelineicons:doc'
-          listeners:
-            click: onPartnershipMeetingClick
-
-        steeringcommitteemeetingitem:
-          title:
-            en: Steering Committee Meeting
-            fi: Ohjausryhmän kokous
-          icon: 'simplelineicons:doc'
-          listeners:
-            click: onSteeringCommitteeMeetingClick
-
-        mapitem:
-          title:
-            en: Map
-            fi: Kartta
-          icon: 'simplelineicons:map'
-          listeners:
-            click: onMapClick
-
         #privacyitem:
           #title:
             #en: Privacy
@@ -155,6 +122,14 @@ views:
           title:
             en: Demo Applications
             fi: Demo-applikaatiot
+
+        KainuuItem:
+          title:
+            fi: Juminkeko
+            en: Juminkeko
+          icon: 'materialcommunityicons:application'
+          listeners:
+            click: onKainuuClick
 
         juminkekoitem:
           title:
@@ -258,7 +233,7 @@ views:
       icon: 'simplelineicons:home'
       headerNumbering: false
       #imageTop: kajaani-winter
-      imageTopCI: w3kkkkzmkch9cw3f
+      imageTopCI: TXWPCCWECMF9C3PZ
 
 controllers:
   constructor:
@@ -267,6 +242,8 @@ controllers:
     #application: barrie
   onJuminkekoClick:
     application: jumink
+  onKainuuClick:
+    application: spotka
   onMapClick:
     url: map
   onMoatBraeClick:
