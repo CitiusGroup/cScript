@@ -18,19 +18,23 @@ app:
         en: Welcome to the Spotlit application.
         fi: Tervetuloa testaamaan Spotlit-applikaatiota
     Disclaimer:
-      itle: Disclaimer
+      title:
+        en: Disclaimer
+        fi: Vastuuvapauslauseke
       text:
         en: This application is used only for internal demonstration purposes for the Blitz-project.
         fi: Tämä Spotlit-applikaatio on demosovellus, jota käytetään vain Blitz-projektin sisäisiin esitystarkoituksiin.
     DemoContent:
-      title: Demo Content
+      title:
+        en: Demo Content
+        fi: Demosisältö
       text:
         en: All the content, text and pictures, are just samples.
         fi: Kaikki sisältö, teksti ja kuvat ovat vain näytteitä.
   name: Spotlit
   abbreviation: spotli
   version: 1.1.3
-  cScriptVersion: '55'
+  cScriptVersion: '56'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   # Color of the Spotlit logo is 0,174,239 #00AEEF (Deep Sky Blue): https://www.htmlcsscolor.com/hex/00AEEF
