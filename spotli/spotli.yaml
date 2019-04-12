@@ -30,7 +30,7 @@ app:
   name: Spotlit
   abbreviation: spotli
   version: 1.1.3
-  cScriptVersion: '45'
+  cScriptVersion: '46'
 
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
@@ -74,7 +74,7 @@ views:
   leftPanel:
 
     header:
-      backgroundColor: '#BDE1EE'
+      backgroundColor: '#008BBF'
       headerBackgroundColor:
         ios: '#BDE1EE'
         android: '#BDE1EE'
