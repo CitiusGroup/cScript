@@ -30,7 +30,7 @@ app:
   name: Spotlit
   abbreviation: spotli
   version: 1.1.3
-  cScriptVersion: '49'
+  cScriptVersion: '50'
 
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
@@ -93,8 +93,8 @@ views:
 
         welcomeitem:
           title:
-            en: Welcome to Kajaani
-            fi: Tervetuloa Kajaaniin
+            en: Welcome to Spotlit
+            fi: Tervetuloa Spotlitiin
           icon: 'simplelineicons:home'
           listeners:
             click: onWelcomeClick
@@ -250,8 +250,8 @@ views:
     welcome:
       type: page
       title:
-        en: Welcome
-        fi: Tervetuloa
+        en: Welcome to Spotlit
+        fi: Tervetuloa Spotlitiin
       ci:
         en: 6WH8
         fi: 3W23
