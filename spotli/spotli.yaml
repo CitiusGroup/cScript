@@ -30,7 +30,7 @@ app:
   name: Spotlit
   abbreviation: spotli
   version: 1.1.3
-  cScriptVersion: '46'
+  cScriptVersion: '47'
 
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
@@ -128,13 +128,24 @@ views:
           listeners:
             click: onMapClick
 
-        privacyitem:
+        #privacyitem:
+          #title:
+            #en: Privacy
+            #fi: Yksityisyys
+          #icon: 'simplelineicons:lock'
+          #listeners:
+            #click: onPrivacyClick
+
+        privacymodalitem:
           title:
             en: Privacy
             fi: Yksityisyys
           icon: 'simplelineicons:lock'
           listeners:
-            click: onPrivacyClick
+            click:
+              webpage:
+                en: https://www.iubenda.com/privacy-policy/96548006
+                fi: https://www.iubenda.com/privacy-policy/96548006
 
         separatoritem:
           separator: true
