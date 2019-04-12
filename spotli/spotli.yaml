@@ -30,11 +30,13 @@ app:
   name: Spotlit
   abbreviation: spotli
   version: 1.1.3
-  cScriptVersion: '48'
+  cScriptVersion: '49'
 
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   # Color of the Spotlit logo is 0,174,239 #00AEEF (Deep Sky Blue): https://www.htmlcsscolor.com/hex/00AEEF
+  # Shade #008BBF: https://www.htmlcsscolor.com/hex/008BBF
+  # Tint #ACE4FA: https://www.htmlcsscolor.com/hex/ACE4FA
   theme:
     color: '#000000'
     android:
@@ -76,9 +78,10 @@ views:
     header:
       backgroundColor: '#008BBF'
       headerBackgroundColor:
-        ios: '#BDE1EE'
-        android: '#BDE1EE'
+        ios: '#ACE4FA'
+        android: '#ACE4FA'
       headerImage: spotlit-menu-headerImage-transparent
+      headerTextColor: '#008BBF'
       textColor: '#FFFFFF'
 
     mainmenu:
