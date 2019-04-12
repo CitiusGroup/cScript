@@ -1,7 +1,7 @@
 app:
-  spotlit:
+  kainuu:
     name: Spotlit Kainuu
-    abbreviation: spotli
+    abbreviation: spotka
     requires:
       - app: cwapps
       - app: cwcore
@@ -13,25 +13,19 @@ app:
       username: demo@citius.com
   intro:
     spotlit:
-      title: Spotlit
+      title: Spotlit Kainuu
       text:
-        en: Welcome to the Spotlit application.
-        fi: Tervetuloa testaamaan Spotlit-applikaatiota
+        en: Welcome to the Spotlit Kainuu application.
+        fi: Tervetuloa testaamaan Spotlit Kainuu -applikaatiota
     meeting:
       title: Blitz Meeting
       text:
         en: From the application, you will find the basic information about the meeting.
         fi: Applikaatiosta löydät kokouksen perustiedot
-    applications:
-      title: Applications
-      text:
-        en: As examples, Spotlit includes Juminkeko and Moat Brae applications.
-        fi: Esimerkkeinä Spotlit sisältää Juminkeko ja Moat Brae applikaatiot.
-  name: Spotlit
-  abbreviation: spotli
+  name: Spotlit Kainuu
+  abbreviation: spotka
   version: 1.1.3
-  cScriptVersion: '41'
-
+  cScriptVersion: '42'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -134,33 +128,33 @@ views:
           listeners:
             click: onPrivacyClick
 
-        separatoritem:
-          separator: true
-          title:
-            en: Demo Applications
-            fi: Demo-applikaatiot
+        #separatoritem:
+          #separator: true
+          #title:
+            #en: Demo Applications
+            #fi: Demo-applikaatiot
 
-        juminkekoitem:
-          title:
-            fi: Juminkeko
-            en: Juminkeko
-          icon: 'materialcommunityicons:application'
-          listeners:
-            click: onJuminkekoClick
+        #juminkekoitem:
+          #title:
+            #fi: Juminkeko
+            #en: Juminkeko
+          #icon: 'materialcommunityicons:application'
+          #listeners:
+            #click: onJuminkekoClick
 
-        moatbraeitem:
-          title:
-            fi: Moat Brae
-            en: Moat Brae
-          icon: 'materialcommunityicons:application'
-          listeners:
-            click: onMoatBraeClick
+        #moatbraeitem:
+          #title:
+            #fi: Moat Brae
+            #en: Moat Brae
+          #icon: 'materialcommunityicons:application'
+          #listeners:
+            #click: onMoatBraeClick
 
         separatoritem2:
           separator: true
-          title:
-            en: Demo Applications
-            fi: Demo-applikaatiot
+          #title:
+            #en: Demo Applications
+            #fi: Demo-applikaatiot
 
         introduction:
           title:
