@@ -14,7 +14,7 @@ app:
   name: Juminkeko
   abbreviation: jumink
   version: 1.0.0
-  cScriptVersion: '24'
+  cScriptVersion: '25'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -130,18 +130,6 @@ views:
       type: tabs
       items:
 
-        welcome:
-          type: page
-          title:
-            en: Welcome to Juminkeko
-            fi: Tervetuloa Juminkekoon
-          ci:
-            en: mpnn
-            fi: rex3
-          #icon: 'simplelineicons:home'
-          #headerNumbering: false
-          #imageTopCI: 3fhchx9zmn8znr6z
-
         building:
           type: page
           title:
@@ -190,6 +178,18 @@ views:
             longitude: 29.54923
             latitudeDelta: 0.08
           icon: 'simplelineicons:map'
+
+    welcome:
+      type: page
+      title:
+        en: Welcome to Juminkeko
+        fi: Tervetuloa Juminkekoon
+      ci:
+        en: mpnn
+        fi: rex3
+      #icon: 'simplelineicons:home'
+      #headerNumbering: false
+      #imageTopCI: 3fhchx9zmn8znr6z
 
     activities:
       type: page
