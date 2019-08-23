@@ -14,7 +14,7 @@ app:
   name: Juminkeko
   abbreviation: jumink
   version: 1.0.0
-  cScriptVersion: '21'
+  cScriptVersion: '22'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -204,7 +204,7 @@ views:
 
 controllers:
   constructor:
-    url: welcome
+    url: activities
   onActivitiesClick:
     url: activities
   onBuildingClick:
