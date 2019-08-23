@@ -14,7 +14,7 @@ app:
   name: Juminkeko
   abbreviation: jumink
   version: 1.0.0
-  cScriptVersion: '23'
+  cScriptVersion: '24'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -138,8 +138,8 @@ views:
           ci:
             en: mpnn
             fi: rex3
-          icon: 'simplelineicons:home'
-          headerNumbering: false
+          #icon: 'simplelineicons:home'
+          #headerNumbering: false
           #imageTopCI: 3fhchx9zmn8znr6z
 
         building:
