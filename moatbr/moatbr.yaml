@@ -14,7 +14,7 @@ app:
   name: Moat Brae
   abbreviation: moatbr
   version: 1.0.0
-  cScriptVersion: '20'
+  cScriptVersion: '21'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -61,6 +61,8 @@ views:
         ios: '#ffcc00'
         android: '#ffcc00'
       headerImage: moatbrae-menu-headerImage-transparent
+      headerTextColor: '#f3ab00'
+      textColor: '#f3ab00'
 
     mainmenu:
       type: menu
