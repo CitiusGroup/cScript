@@ -1,7 +1,7 @@
 app:
-  juminkeko:
-    name: Juminkeko
-    abbreviation: jumink
+  wtbf2019:
+    name: Wigtown Book Festival 2019
+    abbreviation: wtbf19
     requires:
       - app: cwapps
       - app: cwcore
@@ -11,10 +11,10 @@ app:
     usernameAbbreviation:
       abbreviation: demo
       username: demo@citius.com
-  name: Juminkeko
-  abbreviation: jumink
+  name: Wigtown Book Festival 2019
+  abbreviation: wtbf19
   version: 1.0.0
-  cScriptVersion: '27'
+  cScriptVersion: '1'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
