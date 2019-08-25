@@ -14,7 +14,7 @@ app:
   name: Wigtown Book Festival 2019
   abbreviation: wtbf19
   version: 1.0.0
-  cScriptVersion: '7'
+  cScriptVersion: '8'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -87,13 +87,17 @@ views:
           listeners:
             click: onBookTownClick
 
-        kalevalaitem:
+        programmeitem:
           title:
-            en: Kalevala, national epic
-            fi: Kalevala, kansalliseepos
+            en: Programme of events
+            fi: Programme of events
           icon: 'simplelineicons:book-open'
           listeners:
-            click: onKalevalaClick
+            click: onProgrammeClick
+
+
+
+
 
         lonnrotitem:
           title:
@@ -155,23 +159,21 @@ views:
       headerNumbering: false
       imageTopCI: hhpr36x6zcz3kf69
 
-
-
-
-
-
-
-    kalevala:
-      type: page
+    programme:
+      type: pdf
       title:
-        en: Kalevala, national epic
-        fi: Kalevala, kansalliseepos
+        en: Programme of events
+        fi: Programme of events
       ci:
-        en: rch6
-        fi: p29p
-      icon: 'simplelineicons:book-open'
-      headerNumbering: false
-      imageTopCI: p38rr3t8xf83rwft
+        en: hh8z3xfnwfkwrmtk
+        fi: hh8z3xfnwfkwrmtk
+      icon: 'simplelineicons:doc'
+
+
+
+
+
+
 
     lonnrot:
       type: page
@@ -212,10 +214,12 @@ views:
 controllers:
   constructor:
     url: about
-  onBookTownClick:
-    url: booktown
   onAboutClick:
     url: about
+  onBookTownClick:
+    url: booktown
+  onProgrammeClick:
+    url: programme
 
 
 
@@ -223,8 +227,6 @@ controllers:
 
   onActivitiesClick:
     url: activities
-  onKalevalaClick:
-    url: kalevala
   onLonnrotClick:
     url: lonnrot
   onMapClick:
