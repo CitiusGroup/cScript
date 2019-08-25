@@ -14,7 +14,7 @@ app:
   name: Wigtown Book Festival 2019
   abbreviation: wtbf19
   version: 1.0.0
-  cScriptVersion: '1'
+  cScriptVersion: '2'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -38,7 +38,7 @@ app:
 views:
 
   login:
-    applicationImage: juminkeko-login-applicationImage-transparent
+    applicationImage: wtbf19-login-applicationImage-transparent
     backgroundColor:
       ios: '#ffffff'
       android: '#e1e7f6'
@@ -60,7 +60,7 @@ views:
       headerBackgroundColor:
         ios: '#ffffff'
         android: '#ffffff'
-      headerImage: juminkeko-menu-headerImage-transparent
+      headerImage: wtbf19-menu-headerImage-transparent
 
     mainmenu:
       type: menu
