@@ -14,7 +14,7 @@ app:
   name: Wigtown Book Festival 2019
   abbreviation: wtbf19
   version: 1.0.0
-  cScriptVersion: '10'
+  cScriptVersion: '11'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -111,16 +111,13 @@ views:
           listeners:
             click: onHowToBookClick
 
-
-
-
-        #activitiesitem:
-          #title:
-            #en: Activities
-            #fi: Tapahtumat
-          #icon: 'simplelineicons:event'
-          #listeners:
-            #click: onActivitiesClick
+        howtogethereitem:
+          title:
+            en: How to get here
+            fi: How to get here
+          icon: 'simplelineicons:user'
+          listeners:
+            click: onHowToGetHereClick
 
         separatoritem:
           separator: true
@@ -170,6 +167,18 @@ views:
       headerNumbering: false
       imageTopCI: 99z8r88whmhhrz6z
 
+    howtogethere:
+      type: page
+      title:
+        en: How to get here
+        fi: How to get here
+      ci:
+        en: 368e
+        fi: 368e
+      icon: 'simplelineicons:user'
+      headerNumbering: false
+      imageTopCI: 99z8r88whmhhrz6z
+
     programme:
       type: pdf
       title:
@@ -198,17 +207,6 @@ views:
 
 
 
-    activities:
-      type: page
-      title:
-        en: Activities
-        fi: Tapahtumat
-      ci:
-        en: thn6
-        fi: thn6
-      icon: 'simplelineicons:event'
-      headerNumbering: false
-
 controllers:
   constructor:
     url: about
@@ -218,14 +216,9 @@ controllers:
     url: booktown
   onHowToBookClick:
     url: howtobook
+  onHowToGetHereClick:
+    url: howtogethere
   onProgrammeClick:
     url: programme
   onVenueMapClick:
     url: venuemap
-
-
-
-
-
-  onActivitiesClick:
-    url: activities
