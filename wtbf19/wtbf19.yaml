@@ -14,7 +14,7 @@ app:
   name: Wigtown Book Festival 2019
   abbreviation: wtbf19
   version: 1.0.0
-  cScriptVersion: '13'
+  cScriptVersion: '14'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -177,7 +177,7 @@ views:
         fi: 28pr
       icon: 'simplelineicons:grid'
       headerNumbering: false
-      imageTopCI: hhpr36x6zcz3kf69
+      imageTopCI: mxhnw9w8nnekn8hc
 
     findusonsocialmedia:
       type: page
