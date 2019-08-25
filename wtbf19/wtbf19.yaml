@@ -14,7 +14,7 @@ app:
   name: Wigtown Book Festival 2019
   abbreviation: wtbf19
   version: 1.0.0
-  cScriptVersion: '9'
+  cScriptVersion: '10'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -103,17 +103,16 @@ views:
           listeners:
             click: onVenueMapClick
 
-
-
-
-
-        lonnrotitem:
+        howtobookitem:
           title:
-            en: Elias Lönnrot
-            fi: Elias Lönnrot
+            en: How to Book
+            fi: How to Book
           icon: 'simplelineicons:user'
           listeners:
-            click: onLonnrotClick
+            click: onHowToBookClick
+
+
+
 
         #activitiesitem:
           #title:
@@ -159,6 +158,18 @@ views:
       headerNumbering: false
       imageTopCI: hhpr36x6zcz3kf69
 
+    howtobook:
+      type: page
+      title:
+        en: How to Book
+        fi: How to Book
+      ci:
+        en: 2prr
+        fi: 2prr
+      icon: 'simplelineicons:user'
+      headerNumbering: false
+      imageTopCI: 99z8r88whmhhrz6z
+
     programme:
       type: pdf
       title:
@@ -187,18 +198,6 @@ views:
 
 
 
-    lonnrot:
-      type: page
-      title:
-        en: Elias Lönnrot
-        fi: Elias Lönnrot
-      ci:
-        en: khh9
-        fi: hemh
-      icon: 'simplelineicons:user'
-      headerNumbering: false
-      imageTopCI: 99z8r88whmhhrz6z
-
     activities:
       type: page
       title:
@@ -217,6 +216,8 @@ controllers:
     url: about
   onBookTownClick:
     url: booktown
+  onHowToBookClick:
+    url: howtobook
   onProgrammeClick:
     url: programme
   onVenueMapClick:
@@ -228,5 +229,3 @@ controllers:
 
   onActivitiesClick:
     url: activities
-  onLonnrotClick:
-    url: lonnrot
