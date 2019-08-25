@@ -62,7 +62,7 @@ views:
         ios: '#d9c6a6'
         android: '#d9c6a6'
       headerImage: wtbf19-menu-headerImage-transparent
-      headerTextColor: '#008bbf'
+      headerTextColor: '#b54137'
       textColor: '#b54137'
 
     mainmenu:
