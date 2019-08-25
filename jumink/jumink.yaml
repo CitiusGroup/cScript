@@ -14,7 +14,7 @@ app:
   name: Juminkeko
   abbreviation: jumink
   version: 1.0.0
-  cScriptVersion: '27'
+  cScriptVersion: '28'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -61,6 +61,8 @@ views:
         ios: '#ffffff'
         android: '#ffffff'
       headerImage: juminkeko-menu-headerImage-transparent
+      headerTextColor: '#a14815'
+      textColor: '#a14815'
 
     mainmenu:
       type: menu
