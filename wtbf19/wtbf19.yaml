@@ -14,7 +14,7 @@ app:
   name: Wigtown Book Festival 2019
   abbreviation: wtbf19
   version: 1.0.0
-  cScriptVersion: '8'
+  cScriptVersion: '9'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -89,11 +89,19 @@ views:
 
         programmeitem:
           title:
-            en: Programme of events
-            fi: Programme of events
+            en: Programme of Events
+            fi: Programme of Events
           icon: 'simplelineicons:book-open'
           listeners:
             click: onProgrammeClick
+
+        mapitem:
+          title:
+            en: Venue Map
+            fi: Venue Map
+          icon: 'simplelineicons:map'
+          listeners:
+            click: onVenueMapClick
 
 
 
@@ -106,14 +114,6 @@ views:
           icon: 'simplelineicons:user'
           listeners:
             click: onLonnrotClick
-
-        mapitem:
-          title:
-            en: Map
-            fi: Kartta
-          icon: 'simplelineicons:map'
-          listeners:
-            click: onMapClick
 
         #activitiesitem:
           #title:
@@ -162,12 +162,24 @@ views:
     programme:
       type: pdf
       title:
-        en: Programme of events
-        fi: Programme of events
+        en: Programme of Events
+        fi: Programme of Events
       ci:
         en: hh8z3xfnwfkwrmtk
         fi: hh8z3xfnwfkwrmtk
       icon: 'simplelineicons:doc'
+
+    venuemap:
+      type: page
+      title:
+        en: Venue Map
+        fi: Venue Map
+      ci:
+        en: 8xw8
+        fi: 8xw8
+      icon: 'simplelineicons:grid'
+      headerNumbering: false
+      imageTopCI: hhpr36x6zcz3kf69
 
 
 
@@ -186,19 +198,6 @@ views:
       icon: 'simplelineicons:user'
       headerNumbering: false
       imageTopCI: 99z8r88whmhhrz6z
-
-    map:
-      type: map
-      title:
-        en: Map
-        fi: Kartta
-      items:
-        csql: "/RUKAST_Property{Name,NameEN,Description,DescriptionEN,Latitude,Longitude,ImageCI}.sort(Name).filter(City='Kuhmo')"
-      region:
-        latitude: 64.12356
-        longitude: 29.54923
-        latitudeDelta: 0.08
-      icon: 'simplelineicons:map'
 
     activities:
       type: page
@@ -220,6 +219,8 @@ controllers:
     url: booktown
   onProgrammeClick:
     url: programme
+  onVenueMapClick:
+    url: venuemap
 
 
 
@@ -229,5 +230,3 @@ controllers:
     url: activities
   onLonnrotClick:
     url: lonnrot
-  onMapClick:
-    url: map
