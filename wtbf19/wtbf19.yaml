@@ -14,7 +14,7 @@ app:
   name: Wigtown Book Festival 2019
   abbreviation: wtbf19
   version: 1.0.0
-  cScriptVersion: '20'
+  cScriptVersion: '21'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -75,7 +75,7 @@ views:
           title:
             en: About the Festival
             fi: About the Festival
-          icon: 'simplelineicons:home'
+          icon: 'simplelineicons:info'
           listeners:
             click: onAboutClick
 
@@ -83,7 +83,7 @@ views:
           title:
             en: Wigtown Book Town
             fi: Wigtown Book Town
-          icon: 'simplelineicons:grid'
+          icon: 'simplelineicons:home'
           listeners:
             click: onBookTownClick
 
@@ -95,7 +95,7 @@ views:
           listeners:
             click: onProgrammeClick
 
-        mapitem:
+        venuemapitem:
           title:
             en: Venue Map
             fi: Venue Map
@@ -107,7 +107,7 @@ views:
           title:
             en: How to Book
             fi: How to Book
-          icon: 'simplelineicons:user'
+          icon: 'simplelineicons:basket'
           listeners:
             click: onHowToBookClick
 
@@ -115,7 +115,7 @@ views:
           title:
             en: How to Get Here
             fi: How to Get Here
-          icon: 'simplelineicons:user'
+          icon: 'simplelineicons:directions'
           listeners:
             click: onHowToGetHereClick
 
@@ -123,7 +123,7 @@ views:
           title:
             en: Where to Eat, Drink and Stay
             fi: Where to Eat, Drink and Stay
-          icon: 'simplelineicons:user'
+          icon: 'simplelineicons:cup'
           listeners:
             click: onWhereToEatClick
 
@@ -131,7 +131,7 @@ views:
           title:
             en: What Else to See
             fi: What Else to See
-          icon: 'simplelineicons:user'
+          icon: 'simplelineicons:picture'
           listeners:
             click: onWhatElseToSeeClick
 
@@ -139,7 +139,7 @@ views:
           title:
             en: Find Us on Social Media
             fi: Find Us on Social Media
-          icon: 'simplelineicons:user'
+          icon: 'simplelineicons:social-twitter'
           listeners:
             click: onFindUsOnSocialMediaClick
 
@@ -163,7 +163,7 @@ views:
       ci:
         en: mfcm
         fi: mfcm
-      icon: 'simplelineicons:home'
+      icon: 'simplelineicons:info'
       headerNumbering: false
       imageTopCI: zfnchx89m9h2nhzp
 
@@ -175,7 +175,7 @@ views:
       ci:
         en: 28pr
         fi: 28pr
-      icon: 'simplelineicons:grid'
+      icon: 'simplelineicons:home'
       headerNumbering: false
       imageTopCI: mxhnw9w8nnekn8hc
 
@@ -187,7 +187,7 @@ views:
       ci:
         en: ztfp
         fi: ztfp
-      icon: 'simplelineicons:grid'
+      icon: 'simplelineicons:social-twitter'
       headerNumbering: false
       imageTopCI: rtw3c8z2nzxr62wp
 
@@ -199,7 +199,7 @@ views:
       ci:
         en: 2prr
         fi: 2prr
-      icon: 'simplelineicons:user'
+      icon: 'simplelineicons:basket'
       headerNumbering: false
       imageTopCI: zethrthx2whnhxp3
 
@@ -211,7 +211,7 @@ views:
       ci:
         en: 368e
         fi: 368e
-      icon: 'simplelineicons:user'
+      icon: 'simplelineicons:directions'
       headerNumbering: false
       imageTopCI: m2fn866rnhnkw6et
 
@@ -223,7 +223,7 @@ views:
       ci:
         en: 8m2wttt2nznt239w
         fi: 8m2wttt2nznt239w
-      icon: 'simplelineicons:doc'
+      icon: 'simplelineicons:book-open'
 
     venuemap:
       type: page
@@ -233,7 +233,7 @@ views:
       ci:
         en: 8xw8
         fi: 8xw8
-      icon: 'simplelineicons:grid'
+      icon: 'simplelineicons:map'
       headerNumbering: false
       imageTopCI: x2xexecnezk9wr8h
 
@@ -245,7 +245,7 @@ views:
       ci:
         en: pffk
         fi: pffk
-      icon: 'simplelineicons:grid'
+      icon: 'simplelineicons:picture'
       headerNumbering: false
       imageTopCI: kcxw6f8we6tkfk8t
 
@@ -257,7 +257,7 @@ views:
       ci:
         en: p86n
         fi: p86n
-      icon: 'simplelineicons:grid'
+      icon: 'simplelineicons:cup'
       headerNumbering: false
       imageTopCI: 86twkxpe3fxfpne8
 
