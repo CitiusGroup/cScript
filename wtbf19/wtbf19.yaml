@@ -14,7 +14,7 @@ app:
   name: Wigtown Book Festival 2019
   abbreviation: wtbf19
   version: 1.0.0
-  cScriptVersion: '11'
+  cScriptVersion: '12'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -113,11 +113,35 @@ views:
 
         howtogethereitem:
           title:
-            en: How to get here
-            fi: How to get here
+            en: How to Get Here
+            fi: How to Get Here
           icon: 'simplelineicons:user'
           listeners:
             click: onHowToGetHereClick
+
+        wheretoeatitem:
+          title:
+            en: Where to Eat, Drink and Stay
+            fi: Where to Eat, Drink and Stay
+          icon: 'simplelineicons:user'
+          listeners:
+            click: onWhereToEatClick
+
+        whatelsetoseeitem:
+          title:
+            en: What Else to See
+            fi: What Else to See
+          icon: 'simplelineicons:user'
+          listeners:
+            click: onWhatElseToSeeClick
+
+        findusonsocialmediaitem:
+          title:
+            en: Find Us on Social Media
+            fi: Find Us on Social Media
+          icon: 'simplelineicons:user'
+          listeners:
+            click: onFindUsOnSocialMediaClick
 
         separatoritem:
           separator: true
@@ -146,11 +170,23 @@ views:
     booktown:
       type: page
       title:
-        en: Wigtown Book Town 
-        fi: Wigtown Book Town 
+        en: Wigtown Book Town
+        fi: Wigtown Book Town
       ci:
         en: 28pr
         fi: 28pr
+      icon: 'simplelineicons:grid'
+      headerNumbering: false
+      imageTopCI: hhpr36x6zcz3kf69
+
+    findusonsocialmedia:
+      type: page
+      title:
+        en: Find Us on Social Media
+        fi: Find Us on Social Media
+      ci:
+        en: ztfp
+        fi: ztfp
       icon: 'simplelineicons:grid'
       headerNumbering: false
       imageTopCI: hhpr36x6zcz3kf69
@@ -170,8 +206,8 @@ views:
     howtogethere:
       type: page
       title:
-        en: How to get here
-        fi: How to get here
+        en: How to Get Here
+        fi: How to Get Here
       ci:
         en: 368e
         fi: 368e
@@ -201,11 +237,29 @@ views:
       headerNumbering: false
       imageTopCI: hhpr36x6zcz3kf69
 
+    whatelsetosee:
+      type: page
+      title:
+        en: What Else to See
+        fi: What Else to See
+      ci:
+        en: pffk
+        fi: pffk
+      icon: 'simplelineicons:grid'
+      headerNumbering: false
+      imageTopCI: hhpr36x6zcz3kf69
 
-
-
-
-
+    wheretoeat:
+      type: page
+      title:
+        en: Where to Eat, Drink and Stay
+        fi: Where to Eat, Drink and Stay
+      ci:
+        en: p86n
+        fi: p86n
+      icon: 'simplelineicons:grid'
+      headerNumbering: false
+      imageTopCI: hhpr36x6zcz3kf69
 
 controllers:
   constructor:
@@ -218,7 +272,13 @@ controllers:
     url: howtobook
   onHowToGetHereClick:
     url: howtogethere
+  onFindUsOnSocialMediaClick:
+    url: findusonsocialmedia
   onProgrammeClick:
     url: programme
   onVenueMapClick:
     url: venuemap
+  onWhatElseToSeeClick:
+    url: whatelsetosee
+  onWhereToEatClick:
+    url: wheretoeat
