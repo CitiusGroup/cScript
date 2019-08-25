@@ -165,7 +165,7 @@ views:
             en: Wigtown Book Festival 2019
           icon: 'materialcommunityicons:application'
           listeners:
-            click: onWTBF19Click
+            click: onWTBF2019Click
 
         separatoritem2:
           separator: true
@@ -291,5 +291,5 @@ controllers:
     url: steeringcommitteemeeting
   onWelcomeClick:
     url: welcome
-  onWTBF19Click:
-    application: cs_wtbf19
+  onWTBF2019Click:
+    application: wtbf19
