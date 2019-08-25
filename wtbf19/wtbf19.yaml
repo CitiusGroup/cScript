@@ -14,7 +14,7 @@ app:
   name: Wigtown Book Festival 2019
   abbreviation: wtbf19
   version: 1.0.0
-  cScriptVersion: '6'
+  cScriptVersion: '7'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -71,21 +71,21 @@ views:
 
       items:
 
-        welcomeitem:
+        aboutitem:
           title:
             en: About the Festival
             fi: About the Festival
           icon: 'simplelineicons:home'
           listeners:
-            click: onWelcomeClick
+            click: onAboutClick
 
-        buildingitem:
+        booktownitem:
           title:
-            en: The Building
-            fi: Rakennus
+            en: Wigtown Book Town
+            fi: Wigtown Book Town
           icon: 'simplelineicons:grid'
           listeners:
-            click: onBuildingClick
+            click: onBookTownClick
 
         kalevalaitem:
           title:
@@ -131,17 +131,35 @@ views:
       #type: tabs
       #items:
 
-    building:
+    about:
       type: page
       title:
-        en: Building
-        fi: Rakennus
+        en: About the Festival
+        fi: About the Festival
       ci:
-        en: ketp
-        fi: wte8
+        en: mfcm
+        fi: mfcm
+      icon: 'simplelineicons:home'
+      headerNumbering: false
+      imageTopCI: 3fhchx9zmn8znr6z
+
+    booktown:
+      type: page
+      title:
+        en: Wigtown Book Town 
+        fi: Wigtown Book Town 
+      ci:
+        en: 28pr
+        fi: 28pr
       icon: 'simplelineicons:grid'
       headerNumbering: false
       imageTopCI: hhpr36x6zcz3kf69
+
+
+
+
+
+
 
     kalevala:
       type: page
@@ -180,18 +198,6 @@ views:
         latitudeDelta: 0.08
       icon: 'simplelineicons:map'
 
-    welcome:
-      type: page
-      title:
-        en: About the Festival
-        fi: About the Festival
-      ci:
-        en: mfcm
-        fi: mfcm
-      icon: 'simplelineicons:home'
-      headerNumbering: false
-      imageTopCI: 3fhchx9zmn8znr6z
-
     activities:
       type: page
       title:
@@ -205,16 +211,21 @@ views:
 
 controllers:
   constructor:
-    url: welcome
+    url: about
+  onBookTownClick:
+    url: booktown
+  onAboutClick:
+    url: about
+
+
+
+
+
   onActivitiesClick:
     url: activities
-  onBuildingClick:
-    url: building
   onKalevalaClick:
     url: kalevala
   onLonnrotClick:
     url: lonnrot
   onMapClick:
     url: map
-  onWelcomeClick:
-    url: welcome
