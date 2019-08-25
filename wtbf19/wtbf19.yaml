@@ -14,14 +14,14 @@ app:
   name: Wigtown Book Festival 2019
   abbreviation: wtbf19
   version: 1.0.0
-  cScriptVersion: '5'
+  cScriptVersion: '6'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
     color: '#000000'
     android:
       fontFamily: Roboto light
-      brandPrimary: '#471815'
+      brandPrimary: '#b54137'
     ios:
       fontFamily: Avenir-Medium
     style:
@@ -57,10 +57,10 @@ views:
 
     header:
       #backgroundColor: '#ffffff'
-      backgroundColor: '#564d41'
+      backgroundColor: '#d9c6a6'
       headerBackgroundColor:
-        ios: '#564d41'
-        android: '#564d41'
+        ios: '#d9c6a6'
+        android: '#d9c6a6'
       headerImage: wtbf19-menu-headerImage-transparent
 
     mainmenu:
@@ -183,11 +183,11 @@ views:
     welcome:
       type: page
       title:
-        en: Welcome to Juminkeko
-        fi: Tervetuloa Juminkekoon
+        en: About the Festival
+        fi: About the Festival
       ci:
-        en: mpnn
-        fi: rex3
+        en: mfcm
+        fi: mfcm
       icon: 'simplelineicons:home'
       headerNumbering: false
       imageTopCI: 3fhchx9zmn8znr6z
@@ -205,7 +205,7 @@ views:
 
 controllers:
   constructor:
-    url: activities
+    url: welcome
   onActivitiesClick:
     url: activities
   onBuildingClick:
