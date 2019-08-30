@@ -14,7 +14,7 @@ app:
   name: Juminkeko
   abbreviation: jumink
   version: 1.0.0
-  cScriptVersion: '29'
+  cScriptVersion: '30'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -112,14 +112,6 @@ views:
           listeners:
             click: onMapClick
 
-        #activitiesitem:
-          #title:
-            #en: Activities
-            #fi: Tapahtumat
-          #icon: 'simplelineicons:event'
-          #listeners:
-            #click: onActivitiesClick
-
         separatoritem:
           separator: true
           title:
@@ -193,22 +185,9 @@ views:
             latitudeDelta: 0.08
           icon: 'simplelineicons:map'
 
-    activities:
-      type: page
-      title:
-        en: Activities
-        fi: Tapahtumat
-      ci:
-        en: thn6
-        fi: thn6
-      icon: 'simplelineicons:event'
-      headerNumbering: false
-
 controllers:
   constructor:
-    url: activities
-  onActivitiesClick:
-    url: activities
+    url: welcome
   onBuildingClick:
     url: building
   onKalevalaClick:
