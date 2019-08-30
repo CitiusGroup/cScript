@@ -14,7 +14,7 @@ app:
   name: Juminkeko
   abbreviation: jumink
   version: 1.0.0
-  cScriptVersion: '28'
+  cScriptVersion: '29'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -128,70 +128,70 @@ views:
 
   mainPanel:
 
-    #tabpanel:
-      #type: tabs
-      #items:
-
-    building:
-      type: page
-      title:
-        en: Building
-        fi: Rakennus
-      ci:
-        en: ketp
-        fi: wte8
-      icon: 'simplelineicons:grid'
-      headerNumbering: false
-      imageTopCI: hhpr36x6zcz3kf69
-
-    kalevala:
-      type: page
-      title:
-        en: Kalevala, national epic
-        fi: Kalevala, kansalliseepos
-      ci:
-        en: rch6
-        fi: p29p
-      icon: 'simplelineicons:book-open'
-      headerNumbering: false
-      imageTopCI: p38rr3t8xf83rwft
-
-    lonnrot:
-      type: page
-      title:
-        en: Elias Lönnrot
-        fi: Elias Lönnrot
-      ci:
-        en: khh9
-        fi: hemh
-      icon: 'simplelineicons:user'
-      headerNumbering: false
-      imageTopCI: 99z8r88whmhhrz6z
-
-    map:
-      type: map
-      title:
-        en: Map
-        fi: Kartta
+    tabpanel:
+      type: tabs
       items:
-        csql: "/RUKAST_Property{Name,NameEN,Description,DescriptionEN,Latitude,Longitude,ImageCI}.sort(Name).filter(City='Kuhmo')"
-      region:
-        latitude: 64.12356
-        longitude: 29.54923
-        latitudeDelta: 0.08
-      icon: 'simplelineicons:map'
 
-    welcome:
-      type: page
-      title:
-        en: Welcome to Juminkeko
-        fi: Tervetuloa Juminkekoon
-      ci:
-        en: mpnn
-        fi: rex3
-      icon: 'simplelineicons:home'
-      headerNumbering: false
-      imageTopCI: 3fhchx9zmn8znr6z
+        welcome:
+          type: page
+          title:
+            en: Welcome to Juminkeko
+            fi: Tervetuloa Juminkekoon
+          ci:
+            en: mpnn
+            fi: rex3
+          icon: 'simplelineicons:home'
+          headerNumbering: false
+          imageTopCI: 3fhchx9zmn8znr6z
+
+        building:
+          type: page
+          title:
+            en: Building
+            fi: Rakennus
+          ci:
+            en: ketp
+            fi: wte8
+          icon: 'simplelineicons:grid'
+          headerNumbering: false
+          imageTopCI: hhpr36x6zcz3kf69
+
+        kalevala:
+          type: page
+          title:
+            en: Kalevala, national epic
+            fi: Kalevala, kansalliseepos
+          ci:
+            en: rch6
+            fi: p29p
+          icon: 'simplelineicons:book-open'
+          headerNumbering: false
+          imageTopCI: p38rr3t8xf83rwft
+
+        lonnrot:
+          type: page
+          title:
+            en: Elias Lönnrot
+            fi: Elias Lönnrot
+          ci:
+            en: khh9
+            fi: hemh
+          icon: 'simplelineicons:user'
+          headerNumbering: false
+          imageTopCI: 99z8r88whmhhrz6z
+
+        map:
+          type: map
+          title:
+            en: Map
+            fi: Kartta
+          items:
+            csql: "/RUKAST_Property{Name,NameEN,Description,DescriptionEN,Latitude,Longitude,ImageCI}.sort(Name).filter(City='Kuhmo')"
+          region:
+            latitude: 64.12356
+            longitude: 29.54923
+            latitudeDelta: 0.08
+          icon: 'simplelineicons:map'
 
     activities:
       type: page
