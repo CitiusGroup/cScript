@@ -17,7 +17,7 @@ app:
   guestUsername: demo@citius.com
   guestPassword: demo
   version: 1.0.0
-  cScriptVersion: '25'
+  cScriptVersion: '26'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -100,13 +100,24 @@ views:
           listeners:
             click: onProgrammeClick
 
+        #venuemapitem:
+          #title:
+            #en: Venue Map
+            #fi: Venue Map
+          #icon: 'simplelineicons:map'
+          #listeners:
+            #click: onVenueMapClick
+
         venuemapitem:
           title:
             en: Venue Map
             fi: Venue Map
           icon: 'simplelineicons:map'
           listeners:
-            click: onVenueMapClick
+            click:
+              webpage:
+                en: https://www.wigtownbookfestival.com/visit/festival-venues
+                fi: https://www.wigtownbookfestival.com/visit/festival-venues
 
         howtobookitem:
           title:
