@@ -19,7 +19,7 @@ app:
   guestUsername: demo@citius.com
   guestPassword: demo
   version: 1.0.0
-  cScriptVersion: '28'
+  cScriptVersion: '29'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -45,15 +45,15 @@ views:
   login:
     applicationImage: wtbf19-login-applicationImage-transparent
     backgroundColor:
-      ios: '#ffffff'
-      android: '#e1e7f6'
+      ios: '#d9c6a6'
+      android: '#d9c6a6'
     repeatBackgroundImage: true
     fieldBackgroundColor: '#ffffff'
-    fieldBorderColor: '#0071b8'
+    fieldBorderColor: '#b54137'
     fieldBorderSize: 1
-    fieldTextColor: '#0071b8'
+    fieldTextColor: '#b54137'
     fieldTextDisabledColor: '#bbbdbf'
-    loginButtonBackgroundColor: '#0071b8'
+    loginButtonBackgroundColor: '#b54137'
     loginButtonDisabledBackgroundColor: '#ffffff'
     loginButtonTextColor: '#ffffff'
     loginButtonDisabledTextColor: '#bbbdbf'
