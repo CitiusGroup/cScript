@@ -13,11 +13,13 @@ app:
       username: demo@citius.com
   name: Wigtown Book Festival 2019
   abbreviation: wtbf19
+  defaultLocale: en
   disableLogin: true
+  disableLocale: true
   guestUsername: demo@citius.com
   guestPassword: demo
   version: 1.0.0
-  cScriptVersion: '26'
+  cScriptVersion: '27'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
