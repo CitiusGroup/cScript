@@ -19,7 +19,7 @@ app:
   guestUsername: demo@citius.com
   guestPassword: demo
   version: 1.0.0
-  cScriptVersion: '27'
+  cScriptVersion: '28'
 
   # Täällä määritellään applikaation perusväri; käytetään esim. toolbarissa; napeissa jne.
   theme:
@@ -102,14 +102,6 @@ views:
           listeners:
             click: onProgrammeClick
 
-        #venuemapitem:
-          #title:
-            #en: Venue Map
-            #fi: Venue Map
-          #icon: 'simplelineicons:map'
-          #listeners:
-            #click: onVenueMapClick
-
         venuemapitem:
           title:
             en: Venue Map
@@ -143,7 +135,10 @@ views:
             fi: Where to Eat, Drink and Stay
           icon: 'simplelineicons:cup'
           listeners:
-            click: onWhereToEatClick
+            click:
+              webpage:
+                en: https://www.wigtownbookfestival.com/visit/eat-drink-stay
+                fi: https://www.wigtownbookfestival.com/visit/eat-drink-stay
 
         whatelsetoseeitem:
           title:
@@ -243,18 +238,6 @@ views:
         fi: 8m2wttt2nznt239w
       icon: 'simplelineicons:book-open'
 
-    venuemap:
-      type: page
-      title:
-        en: Venue Map
-        fi: Venue Map
-      ci:
-        en: 8xw8
-        fi: 8xw8
-      icon: 'simplelineicons:map'
-      headerNumbering: false
-      imageTopCI: x2xexecnezk9wr8h
-
     whatelsetosee:
       type: page
       title:
@@ -266,18 +249,6 @@ views:
       icon: 'simplelineicons:picture'
       headerNumbering: false
       imageTopCI: kcxw6f8we6tkfk8t
-
-    wheretoeat:
-      type: page
-      title:
-        en: Where to Eat, Drink and Stay
-        fi: Where to Eat, Drink and Stay
-      ci:
-        en: p86n
-        fi: p86n
-      icon: 'simplelineicons:cup'
-      headerNumbering: false
-      imageTopCI: 86twkxpe3fxfpne8
 
 controllers:
   constructor:
@@ -294,9 +265,5 @@ controllers:
     url: findusonsocialmedia
   onProgrammeClick:
     url: programme
-  onVenueMapClick:
-    url: venuemap
   onWhatElseToSeeClick:
     url: whatelsetosee
-  onWhereToEatClick:
-    url: wheretoeat
